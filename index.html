@@ -5,15 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WatchPoint Security</title>
   <style>
-    /* Общие стили */
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
       background: #0a0f1e;
       color: #fff;
-      overflow-x: hidden;
+      scroll-behavior: smooth;
     }
-
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #111;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #fdbb2d; }
     header {
       height: 100vh;
       display: flex;
@@ -23,47 +39,48 @@
       text-align: center;
       background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
       color: #fff;
-      animation: fadeIn 2s ease-in-out;
     }
-
     header img {
-      width: 120px;
-      height: 120px;
+      width: 140px;
+      height: 140px;
       margin-bottom: 20px;
       border-radius: 50%;
       border: 3px solid #fff;
-      animation: pulse 2s infinite;
       object-fit: cover;
     }
-
-    header h1 {
-      font-size: 3rem;
-      margin: 10px 0;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
+    header h1 { font-size: 3rem; margin: 10px 0; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
     section {
       padding: 60px 20px;
       text-align: center;
-      animation: slideUp 1.5s ease;
     }
-
     section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
     }
-
     section p {
       font-size: 1.1rem;
       max-width: 700px;
       margin: 0 auto 30px;
       line-height: 1.6;
     }
-
+    .services {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background: #333;
+    }
     .btn {
       display: inline-block;
       margin-top: 10px;
@@ -75,11 +92,7 @@
       text-decoration: none;
       transition: 0.3s;
     }
-
-    .btn:hover {
-      background: #005bb5;
-    }
-
+    .btn:hover { background: #005bb5; }
     footer {
       padding: 20px;
       text-align: center;
@@ -87,45 +100,69 @@
       font-size: 0.9rem;
       opacity: 0.7;
     }
-
-    /* Анимации */
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    @keyframes slideUp {
-      from {transform: translateY(50px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
-
-    @keyframes pulse {
-      0% {transform: scale(1);}
-      50% {transform: scale(1.1);}
-      100% {transform: scale(1);}
-    }
   </style>
 </head>
 <body>
 
+  <!-- Меню -->
+  <nav>
+    <a href="#about">О нас</a>
+    <a href="#services">Услуги</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+
+  <!-- Главный экран -->
   <header>
-    <!-- Твой логотип, бери logo.png из репозитория -->
     <img src="logo.png" alt="WatchPoint Logo">
     <h1>WatchPoint Security</h1>
-    <p>Мы видим то, что недоступно другим.<br> 
+    <p>Мы видим то, что недоступно другим.<br>
     Ваша уверенность под надёжным прицелом технологий.</p>
   </header>
 
-  <section>
-    <h2>🔒 О нас</h2>
-    <p>WatchPoint Security — это надежные решения в сфере видеонаблюдения, контроля доступа и систем безопасности.  
-    Мы внедряем современные технологии, чтобы защитить ваш бизнес и ваш дом.</p>
-    <a href="#" class="btn">Связаться с нами</a>
+  <!-- О нас -->
+  <section id="about">
+    <h2>🔎 О нас</h2>
+    <p>WatchPoint Security — это надёжные решения в сфере видеонаблюдения, контроля доступа и охранных технологий.
+    Мы внедряем современные системы безопасности, чтобы защитить ваш бизнес и ваш дом.</p>
   </section>
 
+  <!-- Услуги -->
+  <section id="services" style="background:#1a1a1a;">
+    <h2>⚙️ Наши услуги</h2>
+    <div class="services">
+      <div class="card">
+        <h3>📹 Видеонаблюдение</h3>
+        <p>IP-камеры, NVR, умная видеоаналитика.</p>
+      </div>
+      <div class="card">
+        <h3>🔑 Контроль доступа</h3>
+        <p>Электронные замки, турникеты, учёт сотрудников.</p>
+      </div>
+      <div class="card">
+        <h3>🚨 Охранные системы</h3>
+        <p>Пожарные и охранные сигнализации.</p>
+      </div>
+      <div class="card">
+        <h3>🌐 IT-инфраструктура</h3>
+        <p>Сетевые решения, серверы, Wi-Fi для бизнеса.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contacts">
+    <h2>📞 Контакты</h2>
+    <p>📍 Ташкент, Узбекистан</p>
+    <p>📞 +998 88 636 25 45</p>
+    <p>✉️WatchPoint.intellegent.vision@outlook.com</p>
+    <a href="https://t.me/yourtelegram" class="btn">Написать в Telegram</a>
+  </section>
+
+  <!-- Подвал -->
   <footer>
     © 2025 WatchPoint Security. Все права защищены.
   </footer>
 
 </body>
 </html>
+
