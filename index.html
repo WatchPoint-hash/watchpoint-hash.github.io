@@ -42,9 +42,7 @@
       min-height:80vh;
       display:flex; flex-direction:column; align-items:center; justify-content:center;
       text-align:center; color:#fff; position:relative; overflow:hidden;
-
-      /* только фото */
-      background: url("bg.jpg?v=4") center/cover no-repeat;
+      background: url("bg.jpg?v=5") center/cover no-repeat;
     }
     header img{
       width:140px; height:140px; border-radius:50%; border:3px solid #fff;
@@ -57,6 +55,19 @@
     section{padding:72px 20px; text-align:center}
     section h2{font-size:2rem; margin:0 0 14px}
     section p{max-width:880px; margin:0 auto 28px; line-height:1.65; font-size:1.07rem}
+
+    /* SERVICES */
+    .services{display:flex; flex-wrap:wrap; justify-content:center; gap:22px}
+    .card{
+      width:270px; background:var(--panel); border-radius:16px; padding:22px;
+      text-align:left; box-shadow:0 4px 14px rgba(0,0,0,.25);
+      transition:transform .25s, box-shadow .25s, background .25s;
+      opacity:0; transform:translateY(30px);
+    }
+    .card.show{opacity:1; transform:none; transition:all .6s ease;}
+    .card:hover{transform:translateY(-6px); box-shadow:0 10px 28px rgba(0,0,0,.35); background:#1e2330}
+    .card h3{margin:8px 0}
+    .icon{width:28px; height:28px; display:inline-block; margin-right:8px;}
 
     /* BUTTONS */
     .btn{
@@ -72,6 +83,14 @@
 
     /* якоря не перекрываются фикс-меню */
     #about, #services, #contacts { scroll-margin-top: 80px; }
+
+    /* кнопка наверх */
+    #toTop{
+      position:fixed; right:18px; bottom:18px; width:50px; height:50px; border-radius:14px;
+      border:none; background:#222; color:#fff; cursor:pointer; display:none; font-size:20px;
+      box-shadow:0 6px 20px rgba(0,0,0,.35);
+    }
+    #toTop.show{display:block}
   </style>
 </head>
 <body>
@@ -91,20 +110,37 @@
   </header>
 
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" class="reveal">
     <h2>🔎 О нас</h2>
     <p>WatchPoint Security — надёжные решения в сфере видеонаблюдения, контроля доступа и охранных технологий.
        Мы проектируем, поставляем и внедряем системы безопасности под ваши задачи.</p>
   </section>
 
   <!-- SERVICES -->
-  <section id="services" style="background:#0f121b;">
+  <section id="services" class="reveal" style="background:#0f121b;">
     <h2>⚙️ Наши услуги</h2>
-    <p>IP-камеры, контроль доступа, охранные системы и IT-инфраструктура — полный спектр решений для вашего бизнеса.</p>
+    <div class="services">
+      <div class="card">
+        <h3>📹 Видеонаблюдение</h3>
+        <p>IP-камеры, NVR, видеоаналитика, удалённый доступ.</p>
+      </div>
+      <div class="card">
+        <h3>🔐 Контроль доступа</h3>
+        <p>RFID/биометрия, турникеты, учёт сотрудников.</p>
+      </div>
+      <div class="card">
+        <h3>🚨 Охранные системы</h3>
+        <p>Пожарная/охранная сигнализация, оповещение.</p>
+      </div>
+      <div class="card">
+        <h3>💻 IT-инфраструктура</h3>
+        <p>Сети, серверы, Wi-Fi, резервирование.</p>
+      </div>
+    </div>
   </section>
 
   <!-- CONTACTS -->
-  <section id="contacts">
+  <section id="contacts" class="reveal">
     <h2>📞 Контакты</h2>
     <p>📍 Ташкент, Узбекистан</p>
 
@@ -125,6 +161,45 @@
   </section>
 
   <footer>© 2025 WatchPoint Security. Все права защищены.</footer>
+
+  <!-- кнопка наверх -->
+  <button id="toTop" aria-label="Наверх">↑</button>
+
+  <script>
+    // Анимация при скролле
+    const reveals = document.querySelectorAll('.reveal, .card');
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15});
+    reveals.forEach(el=>observer.observe(el));
+
+    // Подсветка активного меню
+    const links = document.querySelectorAll('nav a');
+    const sections = [...document.querySelectorAll('section')];
+    const secObs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          links.forEach(a=>a.classList.remove('active'));
+          const id = '#' + e.target.id;
+          const link = document.querySelector(`nav a[href="${id}"]`);
+          if(link) link.classList.add('active');
+        }
+      });
+    }, {threshold:0.4});
+    sections.forEach(sec=>secObs.observe(sec));
+
+    // Кнопка наверх
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', ()=>{
+      if(window.scrollY > 500){ toTop.classList.add('show'); }
+      else{ toTop.classList.remove('show'); }
+    });
+    toTop.addEventListener('click', ()=>window.scrollTo({top:0, behavior:'smooth'}));
+  </script>
 </body>
 </html>
-
