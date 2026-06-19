@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>WatchPoint Security — Видеонаблюдение и системы безопасности</title>
-  <meta name="description" content="Монтаж и обслуживание видеонаблюдения, системы контроля доступа и умной безопасности в Узбекистане. WatchPoint Security — надёжная защита вашего бизнеса и дома.">
-  <meta name="keywords" content="видеонаблюдение, systems безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security">
+  <meta name="description" content="Профессиональный монтаж видеонаблюдения, систем контроля доступа и умной безопасности в Ташкенте и Узбекистане. Официальный интегратор Hikvision, Tiandy, UniFi, UNV.">
+  <meta name="keywords" content="видеонаблюдение, системы безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security, Hikvision, Tiandy, UniFi, UNV">
   <meta name="robots" content="index, follow">
 
   <meta property="og:title" content="WatchPoint Security — Видеонаблюдение и системы безопасности">
-  <meta property="og:description" content="Профессиональные решения для бизнеса и дома: камеры видеонаблюдения, контроль доступа, умная безопасность.">
+  <meta property="og:description" content="Надёжная защита вашего бизнеса и дома. Работаем с ведущими мировыми брендами: Hikvision, Tiandy, UniFi, UNV. Бесплатный выезд на замер!">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://watchpoint-hash.github.io/">
+  <meta property="og:url" content="https://watchpoint.uz">
   <meta property="og:image" content="https://watchpoint-hash.github.io/bg.jpg">
 
   <link rel="icon" href="https://watchpoint-hash.github.io/logo.png" type="image/png">
@@ -41,6 +41,7 @@
       backdrop-filter:blur(6px);
       display:flex; align-items:center; justify-content:center; gap:28px;
       z-index:1000;
+      border-bottom:1px solid rgba(255,255,255,0.05);
     }
     nav a{color:var(--muted);text-decoration:none;font-weight:600;transition:.3s}
     nav a:hover{color:var(--text)}
@@ -52,55 +53,74 @@
 
     /* HERO */
     header{
-      min-height:80vh;
+      min-height:85vh;
       display:flex; flex-direction:column; align-items:center; justify-content:center;
       text-align:center; color:#fff; position:relative; overflow:hidden;
-      background: url("https://watchpoint-hash.github.io/bg.jpg?v=5") center/cover no-repeat;
+      background: linear-gradient(rgba(10,15,30,0.7), rgba(10,15,30,0.85)), url("https://watchpoint-hash.github.io/bg.jpg?v=5") center/cover no-repeat;
     }
     header img{
       width:140px; height:140px; border-radius:50%; border:3px solid #fff;
       object-fit:cover; box-shadow:0 10px 30px rgba(0,0,0,.25);
     }
-    header h1{font-size:3rem;margin:18px 0 8px}
-    header p{font-size:1.15rem;opacity:.92}
+    header h1{font-size:3.5rem;margin:18px 0 8px; letter-spacing:1px}
+    header p{font-size:1.25rem;opacity:.92; max-width:700px; line-height:1.5}
 
     /* SECTIONS */
-    section{padding:72px 20px; text-align:center}
-    section h2{font-size:2rem; margin:0 0 14px}
-    section p{max-width:880px; margin:0 auto 28px; line-height:1.65; font-size:1.07rem}
+    section{padding:80px 20px; text-align:center}
+    section h2{font-size:2.2rem; margin:0 0 16px}
+    section p.section-desc{max-width:880px; margin:0 auto 40px; line-height:1.65; font-size:1.1rem; color:var(--muted)}
 
-    /* SERVICES */
-    .services{display:flex; flex-wrap:wrap; justify-content:center; gap:22px}
+    /* ADVANTAGES (Фишки) */
+    .features-grid{
+      display:flex; flex-wrap:wrap; justify-content:center; gap:24px;
+      max-width:1100px; margin:0 auto;
+    }
+    .feature-item{
+      flex:1 1 300px; max-width:340px; background:var(--panel); padding:30px 20px;
+      border-radius:14px; border-top:3px solid var(--active);
+      box-shadow:0 5px 15px rgba(0,0,0,.2);
+    }
+    .feature-item h3{font-size:1.25rem; margin-bottom:10px}
+    .feature-item p{font-size:0.95rem; color:var(--muted); line-height:1.5}
+
+    /* SERVICES & PRICES */
+    .services{display:flex; flex-wrap:wrap; justify-content:center; gap:22px; max-width:1200px; margin:0 auto}
     .card{
-      width:270px; background:var(--panel); border-radius:16px; padding:22px;
+      width:270px; background:var(--panel); border-radius:16px; padding:25px 22px;
       text-align:left; box-shadow:0 4px 14px rgba(0,0,0,.25);
       transition:transform .25s, box-shadow .25s, background .25s;
       opacity:0; transform:translateY(30px);
+      display:flex; flex-direction:column; justify-content:between;
     }
     .card.show{opacity:1; transform:none; transition:all .6s ease;}
-    .card:hover{transform:translateY(-6px); box-shadow:0 10px 28px rgba(0,0,0,.35); background:#1e2330}
-    .card h3{margin:8px 0}
+    .card:hover{transform:translateY(-6px); box-shadow:0 10px 28px rgba(31,124,255,0.15); background:#1e2330}
+    .card h3{margin:8px 0 10px 0; font-size:1.25rem}
+    .card p{font-size:0.95rem; line-height:1.5; color:var(--muted); margin-bottom:15px; flex-grow:1}
+    
+    .brand-tags{font-size:0.8rem; font-weight:700; color:var(--brand); margin-bottom:12px; letter-spacing:0.5px}
+    .price-tag{font-size:1.1rem; font-weight:700; color:var(--active); border-top:1px solid rgba(255,255,255,0.1); padding-top:12px}
 
     /* BUTTONS */
+    .contacts-container{display:flex; flex-direction:column; align-items:center; gap:16px; margin-top:20px}
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:8px;
-      padding:12px 22px; border-radius:10px;
-      background:var(--brand); color:#fff; text-decoration:none; font-weight:600;
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      width:280px; padding:14px; border-radius:12px;
+      background:var(--brand); color:#fff; text-decoration:none; font-weight:600; font-size:1.05rem;
       transition:.2s; box-shadow:0 8px 18px rgba(31,124,255,.25);
     }
     .btn:hover{background:#0d63d6; transform:translateY(-2px)}
+    .btn-tg{background:#0088cc; box-shadow:0 8px 18px rgba(0,136,204,.25)}
+    .btn-tg:hover{background:#0077b5}
 
-    footer{padding:22px; text-align:center; background:#0b0d12; opacity:.85}
+    footer{padding:30px; text-align:center; background:#0b0d12; opacity:.85; color:#666; font-size:0.9rem}
 
-    /* якоря */
-    #about, #services, #contacts { scroll-margin-top: 80px; }
+    #about, #features, #services, #contacts { scroll-margin-top: 80px; }
 
     /* кнопка наверх */
     #toTop{
       position:fixed; right:18px; bottom:18px; width:50px; height:50px; border-radius:14px;
       border:none; background:#222; color:#fff; cursor:pointer; display:none; font-size:20px;
-      box-shadow:0 6px 20px rgba(0,0,0,.35);
+      box-shadow:0 6px 20px rgba(0,0,0,.35); z-index:1000;
     }
     #toTop.show{display:block}
   </style>
@@ -109,88 +129,95 @@
 
   <nav>
     <a href="#about">О нас</a>
-    <a href="#services">Услуги</a>
+    <a href="#features">Преимущества</a>
+    <a href="#services">Услуги и цены</a>
     <a href="#contacts">Контакты</a>
   </nav>
 
   <header id="home">
-    <img src="https://watchpoint-hash.github.io/logo.png" alt="WatchPoint Security — видеонаблюдение в Ташкенте"/>
+    <img src="https://watchpoint-hash.github.io/logo.png" alt="WatchPoint Security — видеонаблюдение и системы безопасности в Ташкенте"/>
     <h1>WatchPoint Security</h1>
-    <p>Мы видим то, что недоступно другим.<br/>Ваша уверенность под надёжным прицелом технологий.</p>
+    <p>Мы видим то, что недоступно другим.<br/>Ваша уверенность под надёжным прицелом передовых технологий.</p>
   </header>
 
   <section id="about" class="reveal">
     <h2>🔎 О нас</h2>
-    <p>
-      <strong>WatchPoint Security</strong> — компания из Ташкента, специализирующаяся на
-      системах видеонаблюдения, контроля доступа и охранных решений в Узбекистане.<br><br>
-      Мы проектируем и устанавливаем современные системы безопасности для бизнеса,
-      офисов и частных домов. Наша цель — обеспечить надёжную защиту и полный контроль
-      над объектами в Ташкенте и по всей республике.
+    <p class="section-desc">
+      <strong>WatchPoint Security</strong> — специализированная инжиниринговая компания из Ташкента, эксперт в области проектирования, интеграции и монтажа комплексных систем безопасности. Мы создаём надёжные цифровые экосистемы защиты для крупного бизнеса, коммерческих офисов, производства и частного сектора по всей Республике Узбекистан.
     </p>
   </section>
 
-  <section id="services" class="reveal" style="background:#0f121b;">
-    <h2>⚙️ Наши услуги</h2>
-    <div class="services">
-      <div class="card">
-        <h3>📹 Видеонаблюдение</h3>
-        <p>
-          Установка и обслуживание IP-камер, видеорегистраторов (NVR), систем
-          видеоаналитики и удалённого доступа. Решения «под ключ» для квартир,
-          офисов и торговых объектов in Ташкенте и по всему Узбекистану.
-        </p>
+  <section id="features" class="reveal" style="background:#0b0e17;">
+    <h2>💎 Почему выбирают нас</h2>
+    <p class="section-desc">Мы делаем ставку на бескомпромиссное качество оборудования и стандарты монтажа.</p>
+    <div class="features-grid">
+      <div class="feature-item">
+        <h3>🛡️ Гарантия 1 год</h3>
+        <p>Предоставляем полноценную официальную гарантию на всё установленное оборудование и монтажные работы с оперативным выездом сервисной бригады.</p>
       </div>
-      <div class="card">
-        <h3>🔐 Контроль доступа</h3>
-        <p>
-          Турникеты, RFID-карты и биометрические сканеры для офисов и предприятий.
-          Надёжный учёт сотрудников и защита от несанкционированного доступа.
-        </p>
+      <div class="feature-item">
+        <h3>📐 Бесплатный замер</h3>
+        <p>Бесплатный выезд нашего инженера на объект в Ташкенте и Ташкентской области для точного расчёта углов обзора камер и составления прозрачной сметы.</p>
       </div>
-      <div class="card">
-        <h3>🚨 Охранные системы</h3>
-        <p>
-          Монтаж пожарной и охранной сигнализации, системы оповещения.
-          Защита бизнеса и дома от ЧП и взломов.
-        </p>
-      </div>
-      <div class="card">
-        <h3>💻 IT-инфраструктура</h3>
-        <p>
-          Настройка сетей, серверов, Wi-Fi и систем резервного копирования.
-          Комплексная поддержка и модернизация IT для вашего бизнеса.
-        </p>
+      <div class="feature-item">
+        <h3>📜 Лицензированные решения</h3>
+        <p>Используем только проверенное, сертифицированное оборудование от официальных дистрибьюторов. Никакого «серого» импорта и зависающих прошивок.</p>
       </div>
     </div>
   </section>
 
-  <section id="contacts" class="reveal">
-    <h2>📞 Контакты</h2>
-    <p>📍 Мы находимся в Ташкенте и работаем по всему Узбекистану.</p>
-    <p>Свяжитесь с нами для консультации и подбора решения по безопасности:</p>
-
-    <p style="margin-bottom: 15px;">
-      <a href="tel:+998886362545" class="btn">📞 Позвонить</a>
-    </p>
-
-    <p style="margin-bottom: 15px;">
-      <a 
-        class="btn"
-        href="mailto:WatchPoint.intellegent.vision@outlook.com?subject=Запрос%20по%20услугам&amp;body=Здравствуйте,%20хочу%20узнать%20подробнее%20про%20ваши%20услуги.%0A%0AСайт:%20watchpoint-hash.github.io"
-      >✉️ Написать на почту</a>
-    </p>
-
-    <p>
-      <a href="https://t.me/watchpoint24" class="btn">💬 Написать в Telegram</a>
-    </p>
+  <section id="services" class="reveal">
+    <h2>⚙️ Наши услуги и цены</h2>
+    <p class="section-desc">Интегрируем передовое оборудование от мировых технологических лидеров.</p>
+    <div class="services">
+      <div class="card">
+        <div class="brand-tags">HIKVISION / TIANDY / UNV</div>
+        <h3>📹 Видеонаблюдение</h3>
+        <p>Проектирование IP-систем, установка камер (ColorVu, купольные, PTZ), настройка NVR, удалённого доступа на смартфонах и интеллектуальной видеоаналитики.</p>
+        <div class="price-tag">от 1 200 000 сум</div>
+      </div>
+      <div class="card">
+        <div class="brand-tags">ПРОФЕССИОНАЛЬНЫЙ СКУД</div>
+        <h3>🔐 Контроль доступа</h3>
+        <p>Установка биометрических терминалов (распознавание лиц, отпечатки), турникетов, шлагбаумов и электромагнитных замков. Учёт рабочего времени.</p>
+        <div class="price-tag">от 1 500 000 сум</div>
+      </div>
+      <div class="card">
+        <div class="brand-tags">ОХРАННЫЕ КОМПЛЕКСЫ</div>
+        <h3>🚨 Охранные системы</h3>
+        <p>Монтаж охранно-пожарных сигнализаций, датчиков движения, разбития, задымления и периметральной защиты для мгновенного реагирования.</p>
+        <div class="price-tag">от 900 000 сум</div>
+      </div>
+      <div class="card">
+        <div class="brand-tags">CISCO / UNIFI / СЕТЕВОЕ ОБОРУДОВАНИЕ</div>
+        <h3>💻 IT-инфраструктура</h3>
+        <p>Профессиональный монтаж ЛВС, настройка бесшовного Wi-Fi, коммутаторов, маршрутизаторов, SFP-модулей, медиаконвертеров и сборка серверных шкафов.</p>
+        <div class="price-tag">от 2 000 000 сум</div>
+      </div>
+    </div>
   </section>
 
-  <footer>© 2026 WatchPoint Security. Все права защищены.</footer>
+  <section id="contacts" class="reveal" style="background:#0b0e17;">
+    <h2>📞 Начать проект</h2>
+    <p class="section-desc">📍 Наш инженерный центр находится в Ташкенте. Работаем по всему Узбекистану.</p>
+    <p class="section-desc" style="margin-top:-25px;">Свяжитесь с нами прямо сейчас, чтобы получить расчёт сметы под ваш объект:</p>
+
+    <div class="contacts-container">
+      <a href="tel:+998886362545" class="btn">📞 Позвонить инженеру</a>
+      <a href="https://t.me/watchpoint24" class="btn btn-tg">💬 Написать в Telegram</a>
+      <a 
+        class="btn" style="background:#232733; box-shadow:none;"
+        href="mailto:WatchPoint.intellegent.vision@outlook.com?subject=Запрос%20на%20расчет%20системы%20безопасности"
+      >✉️ Отправить ТЗ на почту</a>
+    </div>
+  </section>
+
+  <footer>© 2026 WatchPoint Security. Все права защищены. Надежные технологии безопасности в Узбекистане.</footer>
 
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script>
+    // Анимация при скролле
     const reveals = document.querySelectorAll('.reveal, .card');
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
@@ -202,6 +229,7 @@
     }, {threshold:0.15});
     reveals.forEach(el=>observer.observe(el));
 
+    // Подсветка активного меню
     const links = document.querySelectorAll('nav a');
     const sections = [...document.querySelectorAll('section')];
     const secObs = new IntersectionObserver((entries)=>{
@@ -216,6 +244,7 @@
     }, {threshold:0.4});
     sections.forEach(sec=>secObs.observe(sec));
 
+    // Кнопка наверх
     const toTop = document.getElementById('toTop');
     window.addEventListener('scroll', ()=>{
       if(window.scrollY > 500){ toTop.classList.add('show'); }
