@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WatchPoint Security — Видеонаблюдение и системы безопасности</title>
-  <meta name="description" content="Профессиональный монтаж видеонаблюдения, систем контроля доступа и умной безопасности в Ташкенте и Узбекистане. Официальный интегратор Hikvision, Tiandy, UniFi, UNV.">
-  <meta name="keywords" content="видеонаблюдение, системы безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security, Hikvision, Tiandy, UniFi, UNV">
+  <title>WatchPoint Security — Видеонаблюдение и системы безопасности в Узбекистане</title>
+  <meta name="description" content="Монтаж и интеграция систем видеонаблюдения, СКУД и ИТ-инфраструктуры в Ташкенте. Профессиональные решения для бизнеса под ключ от официального интегратора Hikvision, Tiandy, UniFi, UNV.">
+  <meta name="keywords" content="видеонаблюдение, системы безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security, Hikvision, Tiandy, UniFi, UNV, СКУД">
   <meta name="robots" content="index, follow">
 
   <meta property="og:title" content="WatchPoint Security — Видеонаблюдение и системы безопасности">
-  <meta property="og:description" content="Надёжная защита вашего бизнеса и дома. Работаем с ведущими мировыми брендами: Hikvision, Tiandy, UniFi, UNV. Бесплатный выезд на замер!">
+  <meta property="og:description" content="Надёжная защита вашего бизнеса и дома в Узбекистане. Реализованные кейсы, честные цены и официальный договор. Бесплатный замер!">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://watchpoint.uz">
   <meta property="og:image" content="https://watchpoint-hash.github.io/bg.jpg">
@@ -39,11 +39,11 @@
       position:fixed; top:0; left:0; right:0; height:64px;
       background:rgba(14,14,14,.9);
       backdrop-filter:blur(6px);
-      display:flex; align-items:center; justify-content:center; gap:28px;
+      display:flex; align-items:center; justify-content:center; gap:24px;
       z-index:1000;
       border-bottom:1px solid rgba(255,255,255,0.05);
     }
-    nav a{color:var(--muted);text-decoration:none;font-weight:600;transition:.3s}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:0.95rem;transition:.3s}
     nav a:hover{color:var(--text)}
     nav a.active{color:var(--active); position:relative}
     nav a.active::after{
@@ -56,29 +56,25 @@
       min-height:85vh;
       display:flex; flex-direction:column; align-items:center; justify-content:center;
       text-align:center; color:#fff; position:relative; overflow:hidden;
-      background: linear-gradient(rgba(10,15,30,0.7), rgba(10,15,30,0.85)), url("https://watchpoint-hash.github.io/bg.jpg?v=5") center/cover no-repeat;
+      background: linear-gradient(rgba(10,15,30,0.75), rgba(10,15,30,0.9)), url("https://watchpoint-hash.github.io/bg.jpg?v=5") center/cover no-repeat;
     }
     header img{
       width:140px; height:140px; border-radius:50%; border:3px solid #fff;
       object-fit:cover; box-shadow:0 10px 30px rgba(0,0,0,.25);
     }
-    header h1{font-size:3rem;margin:18px 0 8px; letter-spacing:1px}
-    header p{font-size:1.15rem;opacity:.92; max-width:700px; line-height:1.5}
+    header h1{font-size:3.2rem;margin:18px 0 8px; letter-spacing:1px}
+    header p{font-size:1.2rem;opacity:.92; max-width:700px; line-height:1.5; margin-bottom:24px}
 
     /* SECTIONS */
     section{padding:80px 20px; text-align:center}
-    section h2{font-size:2rem; margin:0 0 16px}
+    section h2{font-size:2.2rem; margin:0 0 16px; position:relative}
     section p.section-desc{max-width:880px; margin:0 auto 40px; line-height:1.65; font-size:1.1rem; color:var(--muted)}
 
     /* ADVANTAGES */
-    .features-grid{
-      display:flex; flex-wrap:wrap; justify-content:center; gap:24px;
-      max-width:1100px; margin:0 auto;
-    }
+    .features-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:24px; max-width:1100px; margin:0 auto}
     .feature-item{
       flex:1 1 300px; max-width:340px; background:var(--panel); padding:30px 20px;
-      border-radius:14px; border-top:3px solid var(--active);
-      box-shadow:0 5px 15px rgba(0,0,0,.2);
+      border-radius:14px; border-top:3px solid var(--active); box-shadow:0 5px 15px rgba(0,0,0,.2);
     }
     .feature-item h3{font-size:1.25rem; margin-bottom:10px}
     .feature-item p{font-size:0.95rem; color:var(--muted); line-height:1.5}
@@ -89,59 +85,57 @@
       width:270px; background:var(--panel); border-radius:16px; padding:25px 22px;
       text-align:left; box-shadow:0 4px 14px rgba(0,0,0,.25);
       transition:transform .25s, box-shadow .25s, background .25s;
-      opacity:0; transform:translateY(30px);
-      display:flex; flex-direction:column; justify-content:between;
+      opacity:0; transform:translateY(30px); display:flex; flex-direction:column; justify-content:between;
     }
     .card.show{opacity:1; transform:none; transition:all .6s ease;}
     .card:hover{transform:translateY(-6px); box-shadow:0 10px 28px rgba(31,124,255,0.15); background:#1e2330}
     .card h3{margin:8px 0 10px 0; font-size:1.25rem}
     .card p{font-size:0.95rem; line-height:1.5; color:var(--muted); margin-bottom:15px; flex-grow:1}
-    
     .brand-tags{font-size:0.8rem; font-weight:700; color:var(--brand); margin-bottom:12px; letter-spacing:0.5px}
     .price-tag{font-size:1.1rem; font-weight:700; color:var(--active); border-top:1px solid rgba(255,255,255,0.1); padding-top:12px}
 
-    /* REVIEWS (Отзывы) */
-    .reviews-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 24px;
-      max-width: 1100px;
-      margin: 0 auto;
+    /* PROJECTS (Кейсы) */
+    .projects-grid {display:flex; flex-wrap:wrap; justify-content:center; gap:24px; max-width:1100px; margin:0 auto}
+    .project-card {
+      flex:1 1 300px; max-width:340px; background:var(--panel); border-radius:16px; padding:28px 22px;
+      text-align:left; border-bottom:3px solid var(--brand); box-shadow:0 4px 15px rgba(0,0,0,0.2);
     }
+    .project-card h3 {font-size:1.2rem; margin-bottom:12px; color:#fff}
+    .project-badge {display:inline-block; padding:4px 8px; background:rgba(31,124,255,0.15); color:var(--brand); border-radius:6px; font-size:0.8rem; font-weight:700; margin-bottom:14px}
+    .project-meta {font-size:0.9rem; line-height:1.5; color:var(--muted); margin-bottom:10px}
+    .project-meta strong {color:var(--text)}
+
+    /* REVIEWS */
+    .reviews-grid {display:flex; flex-wrap:wrap; justify-content:center; gap:24px; max-width:1100px; margin:0 auto}
     .review-card {
-      flex: 1 1 300px;
-      max-width: 340px;
-      background: var(--panel);
-      padding: 30px 24px;
-      border-radius: 16px;
-      text-align: left;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      border-left: 3px solid var(--brand);
+      flex:1 1 300px; max-width:340px; background:var(--panel); padding:30px 24px;
+      border-radius:16px; text-align:left; box-shadow:0 4px 15px rgba(0,0,0,0.2); border-left:3px solid var(--brand);
     }
-    .review-text {
-      font-style: italic;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-    .review-author {
-      font-weight: 600;
-      font-size: 1rem;
-      color: var(--text);
-    }
-    .review-company {
-      font-size: 0.85rem;
-      color: var(--brand);
-      margin-top: 2px;
-    }
+    .review-text {font-style:italic; font-size:0.95rem; line-height:1.6; color:var(--muted); margin-bottom:20px}
+    .review-author {font-weight:600; font-size:1rem; color:var(--text)}
+    .review-company {font-size:0.85rem; color:var(--brand); margin-top:2px}
+
+    /* FAQ (Вопросы и ответы) */
+    .faq-container {max-width:800px; margin:0 auto; text-align:left}
+    .faq-item {background:var(--panel); border-radius:10px; margin-bottom:12px; padding:18px 22px; cursor:pointer; transition:0.3s}
+    .faq-item:hover {background:#1f2430}
+    .faq-question {font-weight:600; font-size:1.1rem; display:flex; justify-content:between; align-items:center}
+    .faq-question::after {content:'+'; font-size:1.3rem; color:var(--brand); transition:0.3s}
+    .faq-item.open .faq-question::after {content:'−'; transform:rotate(90deg); color:var(--active)}
+    .faq-answer {max-height:0; overflow:hidden; transition:max-height 0.3s ease-out, margin-top 0.3s ease; color:var(--muted); font-size:0.98rem; line-height:1.6}
+    .faq-item.open .faq-answer {max-height:200px; margin-top:14px}
+
+    /* CONTACTS & MAP */
+    .contacts-layout {display:flex; flex-wrap:wrap; justify-content:center; gap:40px; max-width:1100px; margin:0 auto; text-align:left}
+    .contacts-info {flex:1 1 350px; max-width:450px}
+    .contacts-container{display:flex; flex-direction:column; gap:14px; margin-top:20px}
+    .map-container {flex:1 1 450px; max-width:550px; height:350px; border-radius:16px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.05)}
+    .map-container iframe {width:100%; height:100%; border:0}
 
     /* BUTTONS */
-    .contacts-container{display:flex; flex-direction:column; align-items:center; gap:16px; margin-top:20px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      width:280px; padding:14px; border-radius:12px;
+      width:100%; max-width:280px; padding:14px; border-radius:12px;
       background:var(--brand); color:#fff; text-decoration:none; font-weight:600; font-size:1.05rem;
       transition:.2s; box-shadow:0 8px 18px rgba(31,124,255,.25);
     }
@@ -149,9 +143,9 @@
     .btn-tg{background:#0088cc; box-shadow:0 8px 18px rgba(0,136,204,.25)}
     .btn-tg:hover{background:#0077b5}
 
-    footer{padding:30px; text-align:center; background:#0b0d12; opacity:.85; color:#666; font-size:0.9rem}
+    footer{padding:30px; text-align:center; background:#0b0d12; opacity:.85; color:#666; font-size:0.9rem; border-top:1px solid rgba(255,255,255,0.05)}
 
-    #about, #features, #services, #reviews, #contacts { scroll-margin-top: 80px; }
+    #about, #features, #services, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
 
     /* кнопка наверх */
     #toTop{
@@ -168,116 +162,171 @@
     <a href="#about">О нас</a>
     <a href="#features">Преимущества</a>
     <a href="#services">Услуги</a>
+    <a href="#projects">Проекты</a>
     <a href="#reviews">Отзывы</a>
+    <a href="#faq">FAQ</a>
     <a href="#contacts">Контакты</a>
   </nav>
 
   <header id="home">
-    <img src="https://watchpoint-hash.github.io/logo.png" alt="WatchPoint Security — видеонаблюдение и системы безопасности в Ташкенте"/>
+    <img src="https://watchpoint-hash.github.io/logo.png" alt="WatchPoint Security — видеонаблюдение в Ташкенте"/>
     <h1>WatchPoint Security</h1>
     <p>Мы видим то, что недоступно другим.<br/>Ваша уверенность под надёжным прицелом передовых технологий.</p>
+    <a href="#contacts" class="btn" style="background:var(--active); color:#000; box-shadow: 0 8px 18px rgba(0,224,164,0.25);">🎯 Рассчитать стоимость</a>
   </header>
 
   <section id="about" class="reveal">
-    <h2>🔎 О нас</h2>
+    <h2>🔎 О компании</h2>
     <p class="section-desc">
-      <strong>WatchPoint Security</strong> — специализированная инжиниринговая компания из Ташкента, эксперт в области проектирования, интеграции и монтажа комплексных систем безопасности. Мы создаём надёжные цифровые экосистемы защиты для крупного бизнеса, коммерческих офисов, производства и частного сектора по всей Республике Узбекистан.
+      <strong>WatchPoint Security</strong> — инжиниринговая компания из Ташкента, специализирующаяся на проектировании, поставке и монтаже комплексных систем безопасности. Мы разрабатываем и внедряем отказоустойчивые цифровые решения для защиты промышленных объектов, логистических центров, коммерческих офисов и частного сектора по всей территории Республики Узбекистан.
     </p>
   </section>
 
   <section id="features" class="reveal" style="background:#0b0e17;">
     <h2>💎 Почему выбирают нас</h2>
-    <p class="section-desc">Мы делаем ставку на бескомпромиссное качество оборудования и стандарты монтажа.</p>
+    <p class="section-desc">Мы создаем технологичные решения, ориентированные на жесткие стандарты B2B-сегмента.</p>
     <div class="features-grid">
       <div class="feature-item">
         <h3>🛡️ Гарантия 1 год</h3>
-        <p>Предоставляем полноценную официальную гарантию на всё установленное оборудование и монтажные работы с оперативным выездом сервисной бригады.</p>
+        <p>Предоставляем полноценную официальную гарантию на всё установленное оборудование и монтажные работы с оперативным выездом технической поддержки.</p>
       </div>
       <div class="feature-item">
         <h3>📐 Бесплатный замер</h3>
-        <p>Бесплатный выезд нашего инженера на объект в Ташкенте и Ташкентской области для точного расчёта углов обзора камер и составления прозрачной сметы.</p>
+        <p>Бесплатный выезд инженера на объект в Ташкенте и Ташобласти для детального анализа углов обзора, слепых зон и составления прозрачной сметы.</p>
       </div>
       <div class="feature-item">
-        <h3>📜 Лицензированные решения</h3>
-        <p>Используем только проверенное, сертифицированное оборудование от официальных дистрибьюторов. Никакого «серого» импорта и зависающих прошивок.</p>
+        <h3>📜 Сертифицированные бренды</h3>
+        <p>Работаем только с официальным, лицензированным оборудованием от лидеров рынка. Никаких сбоев прошивок и проблем с стабильностью связи.</p>
       </div>
     </div>
   </section>
 
   <section id="services" class="reveal">
     <h2>⚙️ Наши услуги и цены</h2>
-    <p class="section-desc">Интегрируем передовое оборудование от мировых технологических лидеров.</p>
+    <p class="section-desc">Интегрируем передовое оборудование от мировых технологических лидеров под ключ.</p>
     <div class="services">
       <div class="card">
         <div class="brand-tags">HIKVISION / TIANDY / UNV</div>
         <h3>📹 Видеонаблюдение</h3>
-        <p>Проектирование IP-систем, установка камер (ColorVu, купольные, PTZ), настройка NVR, удалённого доступа на смартфонах и интеллектуальной видеоаналитики.</p>
+        <p>Проектирование IP-систем, установка умных камер (ColorVu, купольные, PTZ), настройка видеорегистраторов (NVR), удалённого доступа на смартфонах и видеоаналитики.</p>
         <div class="price-tag">от 1 200 000 сум</div>
       </div>
       <div class="card">
-        <div class="brand-tags">ПРОФЕССИОНАЛЬНЫЙ СКУД</div>
-        <h3>🔐 Контроль доступа</h3>
-        <p>Установка биометрических терминалов (распознавание лиц, отпечатки), турникеты, шлагбаумы и электромагнитные замков. Учёт рабочего времени.</p>
+        <div class="brand-tags">БИОМЕТРИЯ / RFID / ШЛАГБАУМЫ</div>
+        <h3>🔐 Контроль доступа (СКУД)</h3>
+        <p>Установка терминалов распознавания лиц, турникетов, RFID-считывателей и электромагнитных замков. Полная автоматизация учёта рабочего времени.</p>
         <div class="price-tag">от 1 500 000 сум</div>
       </div>
       <div class="card">
-        <div class="brand-tags">ОХРАННЫЕ КОМПЛЕКСЫ</div>
         <h3>🚨 Охранные системы</h3>
-        <p>Монтаж охранно-пожарных сигнализаций, датчиков движения, разбития, задымления и периметральной защиты для мгновенного реагирования.</p>
+        <div class="brand-tags">ОХРАННО-ПОЖАРНЫЕ КОМПЛЕКСЫ</div>
+        <p>Монтаж современных датчиков движения, размыкания, разбития стекла и систем пожарной сигнализации. Мгновенные пуш-уведомления о тревоге на ваш телефон.</p>
         <div class="price-tag">от 900 000 сум</div>
       </div>
       <div class="card">
-        <div class="brand-tags">CISCO / UNIFI / СЕТЕВОЕ ОБОРУДОВАНИЕ</div>
+        <div class="brand-tags">CISCO / UNIFI / МЕДИАКОНВЕРТЕРЫ</div>
         <h3>💻 IT-инфраструктура</h3>
-        <p>Профессиональный монтаж ЛВС, настройка бесшовного Wi-Fi, коммутаторов, маршрутизаторов, SFP-модулей, медиаконвертеров и сборка серверных шкафов.</p>
+        <p>Монтаж структурированных кабельных сетей (СКС), настройка бесшовного Wi-Fi, коммутаторов, SFP-модулей, оптических трасс и сборка серверных шкафов.</p>
         <div class="price-tag">от 2 000 000 сум</div>
       </div>
     </div>
   </section>
 
-  <section id="reviews" class="reveal" style="background:#0b0e17;">
+  <section id="projects" class="reveal" style="background:#0b0e17;">
+    <h2>💼 Выполненные проекты</h2>
+    <p class="section-desc">Реальные примеры того, как мы решаем технические задачи наших клиентов.</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-badge">Логистика</div>
+        <h3>Распределительный склад</h3>
+        <p class="project-meta"><strong>Задача:</strong> Перекрыть слепые зоны на погрузочной рампе и по периметру территории склада (Ташкент).</p>
+        <p class="project-meta"><strong>Решение:</strong> Установлено 32 IP-камеры Tiandy 4Мп с аналитикой пересечения линий, протянута сеть, настроен пост охраны.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-badge">Бизнес-центры</div>
+        <h3>Современный офис компании</h3>
+        <p class="project-meta"><strong>Задача:</strong> Ограничить доступ посторонних в серверную и автоматизировать учет рабочего времени для 120 сотрудников.</p>
+        <p class="project-meta"><strong>Решение:</strong> Интегрирована СКУД-система Hikvision с распознаванием лиц и термографией, настроены графики отчетов для HR.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-badge">Инфраструктура</div>
+        <h3>Производственный цех</h3>
+        <p class="project-meta"><strong>Задача:</strong> Объединить два цеха на расстоянии 800 метров в единую локальную сеть и систему видеонаблюдения.</p>
+        <p class="project-meta"><strong>Решение:</strong> Проложена оптическая линия, установлены медиаконвертеры, SFP-модули и мощные коммутаторы UniFi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reveal">
     <h2>💬 Отзывы наших клиентов</h2>
-    <p class="section-desc">Нам доверяют безопасность своего бизнеса и имущества. Вот что говорят наши заказчики:</p>
+    <p class="section-desc">Нам доверяют безопасность своего бизнеса и имущества.</p>
     <div class="reviews-grid">
       <div class="review-card">
-        <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали камеры UNV с отличной ночной съёмкой. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах всех учредителей. Рекомендуем!»</p>
+        <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»</p>
         <div class="review-author">Фарход Ш.</div>
         <div class="review-company">Логистический центр, Ташкент</div>
       </div>
       <div class="review-card">
-        <p class="review-text">«Обратились для модернизации IT-сети и установки биометрического контроля доступа в новом офисе. Была задача настроить учёт рабочего времени сотрудников. Всё работает как часы, терминалы Hikvision распознают лица мгновенно. Отдельное спасибо инженеру Ниязу за грамотную консультацию.»</p>
+        <p class="review-text">«Обратились для модернизации IT-сети и установки биометрического контроля доступа. Задача учета рабочего времени сотрудников решена полностью. Терминалы Hikvision распознают лица мгновенно. Спасибо инженерам за работу.»</p>
         <div class="review-author">Елена В.</div>
         <div class="review-company">IT-компания / Офисный центр</div>
       </div>
       <div class="review-card">
-        <p class="review-text">«Отличный сервис и честный подход. Установили охранную сигнализацию и периметральное видеонаблюдение Tiandy для частного загородного дома. Всё работает без ложных срабатываний, поддержка всегда на связи. Гарантия реальная, один раз возникал вопрос по настройке приложения — решили за 5 минут.»</p>
+        <p class="review-text">«Отличный сервис и честный подход. Установили охранную сигнализацию и периметральное видеонаблюдение для загородного дома. Всё работает без ложных срабатываний, поддержка всегда на связи. Гарантия реальная.»</p>
         <div class="review-author">Анвар ака</div>
         <div class="review-company">Частный сектор, Ташобласть</div>
       </div>
     </div>
   </section>
 
-  <section id="contacts" class="reveal">
-    <h2>📞 Начать проект</h2>
-    <p class="section-desc">📍 Наш инженерный центр находится в Ташкенте. Работаем по всему Узбекистану.</p>
-    <p class="section-desc" style="margin-top:-25px;">Свяжитесь с нами прямо сейчас, чтобы получить расчёт сметы под ваш объект:</p>
-
-    <div class="contacts-container">
-      <a href="tel:+998886362545" class="btn">📞 Позвонить инженеру</a>
-      <a href="https://t.me/watchpoint24" class="btn btn-tg">💬 Написать в Telegram</a>
-      <a 
-        class="btn" style="background:#232733; box-shadow:none;"
-        href="mailto:WatchPoint.intellegent.vision@outlook.com?subject=Запрос%20на%20расчет%20системы%20безопасности"
-      >✉️ Отправить ТЗ на почту</a>
+  <section id="faq" class="reveal" style="background:#0b0e17;">
+    <h2>❓ Часто задаваемые вопросы</h2>
+    <p class="section-desc">Отвечаем на ключевые вопросы перед началом совместной работы.</p>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">Вы работаете по официальному договору и перечислению (с НДС)?</div>
+        <div class="faq-answer">Да, мы являемся юридическим лицом. Заключаем официальный договор, предоставляем полный пакет закрывающих документов, сметы и работаем по перечислению. Все процессы прозрачны.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Входит ли настройка удаленного просмотра на телефонах в общую стоимость?</div>
+        <div class="faq-answer">Да, при сдаче объекта наши инженеры полностью бесплатно устанавливают официальные приложения и настраивают удаленный доступ со смартфонов, планшетов или компьютеров для всех ответственных лиц.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Как рассчитывается глубина архива (время хранения записей камер)?</div>
+        <div class="faq-answer">Глубина архива подбирается индивидуально под требования вашей безопасности (обычно от 14 до 30 дней). Мы рассчитываем точный объем специализированных жестких дисков (HDD) исходя из разрешения камер и записи по датчику движения.</div>
+      </div>
     </div>
   </section>
 
-  <footer>© 2026 WatchPoint Security. Все права защищены. Надежные технологии безопасности в Узбекистане.</footer>
+  <section id="contacts" class="reveal">
+    <h2>📞 Контакты и локация</h2>
+    <p class="section-desc">Свяжитесь с нами для детального обсуждения вашего технического задания или заказа бесплатного выезда на замер.</p>
+    
+    <div class="contacts-layout">
+      <div class="contacts-info">
+        <p>📍 <strong>Адрес инженерного центра:</strong> г. Ташкент, Узбекистан (работаем с выездом по всей республике).</p>
+        <br>
+        <p>⏱️ <strong>Режим работы:</strong> Понедельник — Суббота, с 09:00 до 18:00.</p>
+        <br>
+        <div class="contacts-container">
+          <a href="tel:+998886362545" class="btn">📞 Позвонить инженеру</a>
+          <a href="https://t.me/watchpoint24" class="btn btn-tg">💬 Связаться в Telegram</a>
+          <a href="mailto:WatchPoint.intellegent.vision@outlook.com?subject=Запрос%20на%20расчет%20системы" class="btn" style="background:#232733; box-shadow:none;">✉️ Отправить ТЗ на Email</a>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m10!1m3!1d191885.50263833758!2d69.13928256191771!3d41.31106646549091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1m3!1s0x38ae8b0cc379e9bb%3A0xa5a9323b4aa57371!2sTashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 WatchPoint Security. Все права защищены. Комплексная интеграция безопасности и ИТ-решений в Узбекистане.</footer>
 
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script>
-    const reveals = document.querySelectorAll('.reveal, .card, .review-card');
+    // Анимация при скролле
+    const reveals = document.querySelectorAll('.reveal, .card, .project-card, .review-card');
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting){
@@ -285,29 +334,38 @@
           observer.unobserve(entry.target);
         }
       });
-    }, {threshold:0.15});
+    }, {threshold:0.1});
     reveals.forEach(el=>observer.observe(el));
 
+    // Подсветка активного меню
     const links = document.querySelectorAll('nav a');
-    const sections = [...document.querySelectorAll('section')];
-    const secObs = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          links.forEach(a=>a.classList.remove('active'));
-          const id = '#' + e.target.id;
-          const link = document.querySelector(`nav a[href="${id}"]`);
-          if(link) link.classList.add('active');
-        }
+    const sections = [...document.querySelectorAll('section, header')];
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) { current = section.getAttribute('id'); }
       });
-    }, {threshold:0.4});
-    sections.forEach(sec=>secObs.observe(sec));
+      links.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === `#${current}`) { a.classList.add('active'); }
+      });
 
-    const toTop = document.getElementById('toTop');
-    window.addEventListener('scroll', ()=>{
+      // Кнопка наверх
+      const toTop = document.getElementById('toTop');
       if(window.scrollY > 500){ toTop.classList.add('show'); }
       else{ toTop.classList.remove('show'); }
     });
-    toTop.addEventListener('click', ()=>window.scrollTo({top:0, behavior:'smooth'}));
+    document.getElementById('toTop').addEventListener('click', ()=>window.scrollTo({top:0, behavior:'smooth'}));
+
+    // Логика Аккордеона FAQ
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) { item.classList.add('open'); }
+      });
+    });
   </script>
 </body>
 </html>
