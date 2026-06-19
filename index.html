@@ -6,7 +6,7 @@
 
   <title>WatchPoint Security — Видеонаблюдение и системы безопасности</title>
   <meta name="description" content="Монтаж и обслуживание видеонаблюдения, системы контроля доступа и умной безопасности в Узбекистане. WatchPoint Security — надёжная защита вашего бизнеса и дома.">
-  <meta name="keywords" content="видеонаблюдение, системы безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security">
+  <meta name="keywords" content="видеонаблюдение, systems безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security">
   <meta name="robots" content="index, follow">
 
   <meta property="og:title" content="WatchPoint Security — Видеонаблюдение и системы безопасности">
@@ -114,7 +114,7 @@
   </nav>
 
   <header id="home">
-    <img src="https://watchpoint-hash.github.io/logo.png" alt="WatchPoint Security — видеонаблюдение и системы безопасности в Ташкенте"/>
+    <img src="https://watchpoint-hash.github.io/logo.png" alt="WatchPoint Security — видеонаблюдение в Ташкенте"/>
     <h1>WatchPoint Security</h1>
     <p>Мы видим то, что недоступно другим.<br/>Ваша уверенность под надёжным прицелом технологий.</p>
   </header>
@@ -138,7 +138,7 @@
         <p>
           Установка и обслуживание IP-камер, видеорегистраторов (NVR), систем
           видеоаналитики и удалённого доступа. Решения «под ключ» для квартир,
-          офисов и торговых объектов в Ташкенте и по всему Узбекистану.
+          офисов и торговых объектов in Ташкенте и по всему Узбекистану.
         </p>
       </div>
       <div class="card">
@@ -191,7 +191,6 @@
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script>
-    // Анимация при скролле
     const reveals = document.querySelectorAll('.reveal, .card');
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
@@ -203,7 +202,6 @@
     }, {threshold:0.15});
     reveals.forEach(el=>observer.observe(el));
 
-    // Подсветка активного меню
     const links = document.querySelectorAll('nav a');
     const sections = [...document.querySelectorAll('section')];
     const secObs = new IntersectionObserver((entries)=>{
@@ -218,7 +216,6 @@
     }, {threshold:0.4});
     sections.forEach(sec=>secObs.observe(sec));
 
-    // Кнопка наверх
     const toTop = document.getElementById('toTop');
     window.addEventListener('scroll', ()=>{
       if(window.scrollY > 500){ toTop.classList.add('show'); }
