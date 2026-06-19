@@ -62,15 +62,15 @@
       width:140px; height:140px; border-radius:50%; border:3px solid #fff;
       object-fit:cover; box-shadow:0 10px 30px rgba(0,0,0,.25);
     }
-    header h1{font-size:3.5rem;margin:18px 0 8px; letter-spacing:1px}
-    header p{font-size:1.25rem;opacity:.92; max-width:700px; line-height:1.5}
+    header h1{font-size:3rem;margin:18px 0 8px; letter-spacing:1px}
+    header p{font-size:1.15rem;opacity:.92; max-width:700px; line-height:1.5}
 
     /* SECTIONS */
     section{padding:80px 20px; text-align:center}
-    section h2{font-size:2.2rem; margin:0 0 16px}
+    section h2{font-size:2rem; margin:0 0 16px}
     section p.section-desc{max-width:880px; margin:0 auto 40px; line-height:1.65; font-size:1.1rem; color:var(--muted)}
 
-    /* ADVANTAGES (Фишки) */
+    /* ADVANTAGES */
     .features-grid{
       display:flex; flex-wrap:wrap; justify-content:center; gap:24px;
       max-width:1100px; margin:0 auto;
@@ -100,6 +100,43 @@
     .brand-tags{font-size:0.8rem; font-weight:700; color:var(--brand); margin-bottom:12px; letter-spacing:0.5px}
     .price-tag{font-size:1.1rem; font-weight:700; color:var(--active); border-top:1px solid rgba(255,255,255,0.1); padding-top:12px}
 
+    /* REVIEWS (Отзывы) */
+    .reviews-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .review-card {
+      flex: 1 1 300px;
+      max-width: 340px;
+      background: var(--panel);
+      padding: 30px 24px;
+      border-radius: 16px;
+      text-align: left;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      border-left: 3px solid var(--brand);
+    }
+    .review-text {
+      font-style: italic;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .review-author {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+    }
+    .review-company {
+      font-size: 0.85rem;
+      color: var(--brand);
+      margin-top: 2px;
+    }
+
     /* BUTTONS */
     .contacts-container{display:flex; flex-direction:column; align-items:center; gap:16px; margin-top:20px}
     .btn{
@@ -114,7 +151,7 @@
 
     footer{padding:30px; text-align:center; background:#0b0d12; opacity:.85; color:#666; font-size:0.9rem}
 
-    #about, #features, #services, #contacts { scroll-margin-top: 80px; }
+    #about, #features, #services, #reviews, #contacts { scroll-margin-top: 80px; }
 
     /* кнопка наверх */
     #toTop{
@@ -130,7 +167,8 @@
   <nav>
     <a href="#about">О нас</a>
     <a href="#features">Преимущества</a>
-    <a href="#services">Услуги и цены</a>
+    <a href="#services">Услуги</a>
+    <a href="#reviews">Отзывы</a>
     <a href="#contacts">Контакты</a>
   </nav>
 
@@ -179,7 +217,7 @@
       <div class="card">
         <div class="brand-tags">ПРОФЕССИОНАЛЬНЫЙ СКУД</div>
         <h3>🔐 Контроль доступа</h3>
-        <p>Установка биометрических терминалов (распознавание лиц, отпечатки), турникетов, шлагбаумов и электромагнитных замков. Учёт рабочего времени.</p>
+        <p>Установка биометрических терминалов (распознавание лиц, отпечатки), турникеты, шлагбаумы и электромагнитные замков. Учёт рабочего времени.</p>
         <div class="price-tag">от 1 500 000 сум</div>
       </div>
       <div class="card">
@@ -197,7 +235,29 @@
     </div>
   </section>
 
-  <section id="contacts" class="reveal" style="background:#0b0e17;">
+  <section id="reviews" class="reveal" style="background:#0b0e17;">
+    <h2>💬 Отзывы наших клиентов</h2>
+    <p class="section-desc">Нам доверяют безопасность своего бизнеса и имущества. Вот что говорят наши заказчики:</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали камеры UNV с отличной ночной съёмкой. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах всех учредителей. Рекомендуем!»</p>
+        <div class="review-author">Фарход Ш.</div>
+        <div class="review-company">Логистический центр, Ташкент</div>
+      </div>
+      <div class="review-card">
+        <p class="review-text">«Обратились для модернизации IT-сети и установки биометрического контроля доступа в новом офисе. Была задача настроить учёт рабочего времени сотрудников. Всё работает как часы, терминалы Hikvision распознают лица мгновенно. Отдельное спасибо инженеру Ниязу за грамотную консультацию.»</p>
+        <div class="review-author">Елена В.</div>
+        <div class="review-company">IT-компания / Офисный центр</div>
+      </div>
+      <div class="review-card">
+        <p class="review-text">«Отличный сервис и честный подход. Установили охранную сигнализацию и периметральное видеонаблюдение Tiandy для частного загородного дома. Всё работает без ложных срабатываний, поддержка всегда на связи. Гарантия реальная, один раз возникал вопрос по настройке приложения — решили за 5 минут.»</p>
+        <div class="review-author">Анвар ака</div>
+        <div class="review-company">Частный сектор, Ташобласть</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="reveal">
     <h2>📞 Начать проект</h2>
     <p class="section-desc">📍 Наш инженерный центр находится в Ташкенте. Работаем по всему Узбекистану.</p>
     <p class="section-desc" style="margin-top:-25px;">Свяжитесь с нами прямо сейчас, чтобы получить расчёт сметы под ваш объект:</p>
@@ -217,8 +277,7 @@
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script>
-    // Анимация при скролле
-    const reveals = document.querySelectorAll('.reveal, .card');
+    const reveals = document.querySelectorAll('.reveal, .card, .review-card');
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting){
@@ -229,7 +288,6 @@
     }, {threshold:0.15});
     reveals.forEach(el=>observer.observe(el));
 
-    // Подсветка активного меню
     const links = document.querySelectorAll('nav a');
     const sections = [...document.querySelectorAll('section')];
     const secObs = new IntersectionObserver((entries)=>{
@@ -244,7 +302,6 @@
     }, {threshold:0.4});
     sections.forEach(sec=>secObs.observe(sec));
 
-    // Кнопка наверх
     const toTop = document.getElementById('toTop');
     window.addEventListener('scroll', ()=>{
       if(window.scrollY > 500){ toTop.classList.add('show'); }
