@@ -4,23 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
   <title>WatchPoint Security — Видеонаблюдение и системы безопасности</title>
   <meta name="description" content="Монтаж и обслуживание видеонаблюдения, системы контроля доступа и умной безопасности в Узбекистане. WatchPoint Security — надёжная защита вашего бизнеса и дома.">
   <meta name="keywords" content="видеонаблюдение, системы безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph (для соцсетей и мессенджеров) -->
   <meta property="og:title" content="WatchPoint Security — Видеонаблюдение и системы безопасности">
   <meta property="og:description" content="Профессиональные решения для бизнеса и дома: камеры видеонаблюдения, контроль доступа, умная безопасность.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://watchpoint-hash.github.io/">
   <meta property="og:image" content="https://watchpoint-hash.github.io/bg.jpg">
 
-  <!-- Favicon -->
   <link rel="icon" href="logo.png" type="image/png">
 
-  <!-- Стили -->
   <style>
     :root{
       --bg:#0a0f1e;
@@ -108,37 +104,55 @@
       box-shadow:0 6px 20px rgba(0,0,0,.35);
     }
     #toTop.show{display:block}
+
+    /* СТИЛИ ДЛЯ ПЛАВАЮЩЕЙ КНОПКИ TELEGRAM-БОТА */
+    .tg-bot-floating {
+      position: fixed;
+      bottom: 80px; /* Чуть выше кнопки "Наверх", чтобы они не перекрывали друг друга */
+      right: 18px;
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: #0088cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+      z-index: 999;
+      transition: transform 0.25s, background-color 0.25s;
+      text-decoration: none;
+    }
+    .tg-bot-floating:hover {
+      transform: scale(1.08);
+      background-color: #0077b5;
+    }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="#about">О нас</a>
     <a href="#services">Услуги</a>
     <a href="#contacts">Контакты</a>
   </nav>
 
-  <!-- HERO -->
   <header id="home">
     <img src="logo.png" alt="WatchPoint Security — видеонаблюдение и системы безопасности в Ташкенте"/>
     <h1>WatchPoint Security</h1>
     <p>Мы видим то, что недоступно другим.<br/>Ваша уверенность под надёжным прицелом технологий.</p>
   </header>
 
-  <!-- ABOUT -->
   <section id="about" class="reveal">
     <h2>🔎 О нас</h2>
     <p>
       <strong>WatchPoint Security</strong> — компания из Ташкента, специализирующаяся на
-      системах видеонаблюдения, контроля доступа и охранных решений в Узбекистане.<br><br>
+      систем видеонаблюдения, контроля доступа и охранных решений в Узбекистане.<br><br>
       Мы проектируем и устанавливаем современные системы безопасности для бизнеса,
       офисов и частных домов. Наша цель — обеспечить надёжную защиту и полный контроль
       над объектами в Ташкенте и по всей республике.
     </p>
   </section>
 
-  <!-- SERVICES -->
   <section id="services" class="reveal" style="background:#0f121b;">
     <h2>⚙️ Наши услуги</h2>
     <div class="services">
@@ -174,7 +188,6 @@
     </div>
   </section>
 
-  <!-- CONTACTS -->
   <section id="contacts" class="reveal">
     <h2>📞 Контакты</h2>
     <p>📍 Мы находимся в Ташкенте и работаем по всему Узбекистану.</p>
@@ -198,8 +211,13 @@
 
   <footer>© 2025 WatchPoint Security. Все права защищены.</footer>
 
-  <!-- кнопка наверх -->
   <button id="toTop" aria-label="Наверх">↑</button>
+
+  <a href="https://t.me/hikvision_help_bot" target="_blank" class="tg-bot-floating" title="Помощник Hikvision Бот">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="white" style="display: block;">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.73-2.5 2.78-2.7.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.83 1.16-5.16 3.42-.49.34-.93.5-1.33.49-.44-.01-1.29-.25-1.92-.45-.77-.25-1.39-.39-1.34-.83.03-.23.35-.46.97-.71 3.8-1.65 6.34-2.74 7.61-3.27 3.62-1.52 4.37-1.78 4.86-1.79.11 0 .35.03.5.15.13.1.16.24.18.34-.01.06.01.21 0 .28z"/>
+    </svg>
+  </a>
 
   <script>
     // Анимация при скролле
