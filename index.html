@@ -174,24 +174,54 @@
     .cta-box-card p {font-size:1.02rem; color:var(--muted); line-height:1.6; margin-bottom:24px}
     .cta-box-card .highlight {color:var(--active); font-weight:700}
 
-    /* КНОПКИ БЕЗ ПОДЧЕРКИВАНИЙ И С СОВРЕМЕННЫМИ SVG */
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:12px;
-      width:100%; max-width:280px; padding:14px; border-radius:12px;
-      background:var(--brand); color:#ffffff; text-decoration:none; font-weight:600; font-size:1.05rem;
-      transition:.2s; box-shadow:0 8px 18px rgba(31,124,255,.25); border:none; outline: none;
+    /* НЕУБИВАЕМЫЕ КНОПКИ С SVG ИКОНКАМИ */
+    .contact-button {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 12px !important;
+      width: 100% !important;
+      max-width: 290px !important;
+      padding: 14px 20px !important;
+      border-radius: 12px !important;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      font-size: 1.05rem !important;
+      transition: .25s ease !important;
+      border: none !important;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2) !important;
     }
-    .btn:hover{background:#0d63d6; transform:translateY(-2px); color:#ffffff;}
-    .btn-tg{background:#0088cc; box-shadow:0 8px 18px rgba(0,136,204,.25)}
-    .btn-tg:hover{background:#0077b5}
-    .btn-wa{background:var(--whatsapp); box-shadow:0 8px 18px rgba(37,211,102,.25)}
-    .btn-wa:hover{background:#1ebe57}
+    .contact-button:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.35) !important;
+      color: #ffffff !important;
+    }
     
-    .btn svg {
-      width: 20px;
-      height: 20px;
+    /* Цветовые схемы кнопок */
+    .cb-phone { background-color: #1f7cff !important; }
+    .cb-phone:hover { background-color: #0b66e3 !important; }
+    
+    .cb-telegram { background-color: #0088cc !important; }
+    .cb-telegram:hover { background-color: #0072ab !important; }
+    
+    .cb-whatsapp { background-color: #25d366 !important; }
+    .cb-whatsapp:hover { background-color: #1fba55 !important; }
+    
+    .cb-email { background-color: #2b313d !important; }
+    .cb-email:hover { background-color: #1e222b !important; }
+    
+    .cb-cta { background-color: #00e0a4 !important; color: #0a0f1e !important; }
+    .cb-cta:hover { background-color: #00b887 !important; color: #0a0f1e !important; }
+    .cb-cta svg { fill: #0a0f1e !important; }
+
+    .contact-button svg {
+      width: 20px !important;
+      height: 20px !important;
       fill: #ffffff;
-      flex-shrink: 0;
+      flex-shrink: 0 !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
     }
 
     footer{padding:30px; text-align:center; background:#0b0d12; opacity:.85; color:#666; font-size:0.9rem; border-top:1px solid rgba(255,255,255,0.05)}
@@ -225,8 +255,8 @@
     <img src="logo.png" alt="WatchPoint Security — видеонаблюдение в Ташкенте"/>
     <h1>WatchPoint Security</h1>
     <p>Мы видим то, что недоступно другим.<br/>Ваша уверенность под надёжным прицелом передовых технологий.</p>
-    <a href="#bundles" class="btn" style="background:var(--active); color:#000; box-shadow: 0 8px 18px rgba(0,224,164,0.25);">
-      <svg style="fill:#000;" viewBox="0 0 24 24"><path d="M11 20v-5.5H5.5l5.5 5.5zm2 0l5.5-5.5H13V20zM2 13h9V4H2v9zm11-9v9h9V4h-9z"/></svg>
+    <a href="#bundles" class="contact-button cb-cta">
+      <svg viewBox="0 0 24 24"><path d="M11 20v-5.5H5.5l5.5 5.5zm2 0l5.5-5.5H13V20zM2 13h9V4H2v9zm11-9v9h9V4h-9z"/></svg>
       Выбрать готовый комплект
     </a>
   </header>
@@ -234,7 +264,7 @@
   <section id="about">
     <h2>🔎 О компании</h2>
     <p class="section-desc">
-      <strong>WatchPoint Security</strong> — инжиниринговая компания из Ташкента, специализирующаяся на проектировании, поставке и монтаже комплексных систем безопасности. Мы разрабатываем и внедряем отказоустойчивые цифровые решения для защиты промышленных объектов, логистических центров, коммерческих offices и частного сектора по всей территории Республики Узбекистан.
+      <strong>WatchPoint Security</strong> — инжиниринговая компания из Ташкента, специализирующаяся на проектировании, поставке и монтаже комплексных систем безопасности. Мы разрабатываем и внедряем отказоустойчивые цифровые решения для защиты промышленных объектов, логистических центров, коммерческих офисов и частного сектора по всей территории Республики Узбекистан.
     </p>
   </section>
 
@@ -413,7 +443,7 @@
       <div class="review-card">
         <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»</p>
         <div class="review-author">Фарход Ш.</div>
-        <div class="review-company">Логистический中心, Ташкент</div>
+        <div class="review-company">Логистический центр, Ташкент</div>
       </div>
       <div class="review-card">
         <p class="review-text">«Обратились для модернизации IT-сети и установки биометрического контроля доступа. Задача учета рабочего времени сотрудников решена полностью. Терминалы Hikvision распознают лица мгновенно. Спасибо инженерам за работу.»</p>
@@ -442,7 +472,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-question">Как рассчитывается глубина архива (время хранения записей камер)?</div>
-        <div class="faq-answer">Глубина архива подбирается индивидуально под требования вашей безопасности (обычно от 14 до 30 дней). Мы рассчитываем точный объем специализированных жестких дисков (HDD) исходя из разрешения камер и записи по датчику движения.</div>
+        <div class="faq-answer">Глубина архива подбирается индивидуально под требования вашей безопасности (обычно от 14 до 30 дней). Мы рассчитываем точный объем специализированных жестких дисков (HDD) исходя из разрешения камер и записи по датчению движения.</div>
       </div>
     </div>
   </section>
@@ -459,22 +489,22 @@
         <p>⏱️ <strong>Режим работы:</strong> Понедельник — Суббота, с 09:00 до 18:00.</p>
         <br>
         <div class="contacts-container">
-          <a href="tel:+998886362545" class="btn">
+          <a href="tel:+998886362545" class="contact-button cb-phone">
             <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             Позвонить инженеру
           </a>
           
-          <a href="https://t.me/watchpointcctv24" target="_blank" class="btn btn-tg">
+          <a href="https://t.me/watchpointcctv24" target="_blank" class="contact-button cb-telegram">
             <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.28 7.68-6.92c.34-.31-.07-.48-.52-.19L7.74 12.54l-4.15-1.3c-.9-.28-.92-.9.19-1.33L19.88 3.5c.74-.28 1.38.17 1.14 1.2l-2.74 12.89c-.2 1-.8 1.25-1.63.78l-4.17-3.07-2 1.93c-.23.23-.42.42-.85.42z"/></svg>
             Связаться в Telegram
           </a>
           
-          <a href="https://wa.me/998886362545" target="_blank" class="btn btn-wa">
+          <a href="https://wa.me/998886362545" target="_blank" class="contact-button cb-whatsapp">
             <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 13.56c-.24.67-1.39 1.28-1.9 1.34-.51.06-1 .24-3.17-.65-2.61-1.07-4.26-3.74-4.39-3.92-.13-.18-1.07-1.42-1.07-2.71 0-1.29.67-1.93.91-2.19.24-.26.54-.32.72-.32.18 0 .36.01.52.02.17.01.39-.06.61.47.23.54.78 1.91.85 2.04.07.13.11.29.02.47-.09.18-.14.29-.29.46-.14.17-.3.38-.43.51-.15.14-.3.29-.13.58.17.29.75 1.24 1.62 2.01.12.11.23.22.35.32.77.68 1.35.88 1.54.97.19.09.3.07.41-.05.11-.12.47-.55.6-.74.12-.19.25-.16.41-.1.17.06 1.06.5 1.24.59.18.09.3.14.34.22.05.08.05.47-.19 1.14z"/></svg>
             Написать в WhatsApp
           </a>
           
-          <a href="mailto:WatchPoint.intellegent.vision@outlook.com?subject=Запрос%20на%20расчет%20системы" class="btn" style="background:#232733; box-shadow:none;">
+          <a href="mailto:WatchPoint.intellegent.vision@outlook.com?subject=Запрос%20на%20расчет%20системы" class="contact-button cb-email">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             Отправить ТЗ на Email
           </a>
@@ -485,8 +515,8 @@
         <h3>Заказать бесплатный замер 📐</h3>
         <p>Наш ведущий инженер приедет на ваш объект, рассчитает углы обзора камер, подберет спецификацию оборудования и составит точную смету <span class="highlight">абсолютно бесплатно</span>.</p>
         <div style="display:flex; justify-content:center;">
-           <a href="https://t.me/watchpointcctv24" target="_blank" class="btn" style="background:var(--active); color:#000; font-weight:700; box-shadow: 0 8px 18px rgba(0,224,164,0.15);">
-             <svg style="fill:#000;" viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.28 7.68-6.92c.34-.31-.07-.48-.52-.19L7.74 12.54l-4.15-1.3c-.9-.28-.92-.9.19-1.33L19.88 3.5c.74-.28 1.38.17 1.14 1.2l-2.74 12.89c-.2 1-.8 1.25-1.63.78l-4.17-3.07-2 1.93c-.23.23-.42.42-.85.42z"/></svg>
+           <a href="https://t.me/watchpointcctv24" target="_blank" class="contact-button cb-cta" style="font-weight:700;">
+             <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.28 7.68-6.92c.34-.31-.07-.48-.52-.19L7.74 12.54l-4.15-1.3c-.9-.28-.92-.9.19-1.33L19.88 3.5c.74-.28 1.38.17 1.14 1.2l-2.74 12.89c-.2 1-.8 1.25-1.63.78l-4.17-3.07-2 1.93c-.23.23-.42.42-.85.42z"/></svg>
              Получить расчет проекта
            </a>
         </div>
