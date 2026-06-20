@@ -10,7 +10,7 @@
   <meta name="robots" content="index, follow">
 
   <meta property="og:title" content="WatchPoint Security — Видеонаблюдение и системы безопасности">
-  <meta property="og:description" content="Надёжная защита вашего бизнеса и дома в Узбекистане. Реализованные кейсы, готовые комплекты оборудования под ключ и официальный договор. Бесплатный замер!">
+  <meta property="og:description" content="Надёжная защита вашего бизнеса и дома в Узбекистане. Реализованные кейсы, готовые комплекты оборудования под ключ и официальный договор.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://watchpoint.uz">
   <meta property="og:image" content="https://watchpoint-hash.github.io/bg.jpg">
@@ -97,17 +97,16 @@
     .card{
       width:270px; background:var(--panel); border-radius:16px; padding:25px 22px;
       text-align:left; box-shadow:0 4px 14px rgba(0,0,0,.25);
-      transition:transform .25s, box-shadow .25s, background .25s;
-      opacity:0; transform:translateY(30px); display:flex; flex-direction:column; justify-content:between;
+      transition:transform .25s, box-shadow .25s;
+      display:flex; flex-direction:column; justify-content:space-between;
     }
-    .card.show{opacity:1; transform:none; transition:all .6s ease;}
     .card:hover{transform:translateY(-6px); box-shadow:0 10px 28px rgba(31,124,255,0.15); background:#1e2330}
     .card h3{margin:8px 0 10px 0; font-size:1.25rem}
     .card p{font-size:0.95rem; line-height:1.5; color:var(--muted); margin-bottom:15px; flex-grow:1}
     .brand-tags{font-size:0.8rem; font-weight:700; color:var(--brand); margin-bottom:12px; letter-spacing:0.5px}
     .price-tag{font-size:1.1rem; font-weight:700; color:var(--active); border-top:1px solid rgba(255,255,255,0.1); padding-top:12px}
 
-    /* BUNDLES с интеграцией твоих загруженных фото */
+    /* BUNDLES */
     .bundles-grid {display:flex; flex-wrap:wrap; justify-content:center; gap:26px; max-width:1200px; margin:0 auto}
     .bundle-card {
       flex:1 1 320px; max-width:360px; background:var(--panel); border-radius:20px; padding:0;
@@ -156,7 +155,7 @@
     .faq-container {max-width:800px; margin:0 auto; text-align:left}
     .faq-item {background:var(--panel); border-radius:10px; margin-bottom:12px; padding:18px 22px; cursor:pointer; transition:0.3s}
     .faq-item:hover {background:#1f2430}
-    .faq-question {font-weight:600; font-size:1.1rem; display:flex; justify-content:between; align-items:center}
+    .faq-question {font-weight:600; font-size:1.1rem; display:flex; justify-content:space-between; align-items:center}
     .faq-question::after {content:'+'; font-size:1.3rem; color:var(--brand); transition:0.3s}
     .faq-item.open .faq-question::after {content:'−'; transform:rotate(90deg); color:var(--active)}
     .faq-answer {max-height:0; overflow:hidden; transition:max-height 0.3s ease-out, margin-top 0.3s ease; color:var(--muted); font-size:0.98rem; line-height:1.6}
@@ -175,14 +174,14 @@
     .cta-box-card p {font-size:1.02rem; color:var(--muted); line-height:1.6; margin-bottom:24px}
     .cta-box-card .highlight {color:var(--active); font-weight:700}
 
-    /* ПРОФЕССИОНАЛЬНЫЕ КНОПКИ (Без подчеркиваний, с SVG) */
+    /* КНОПКИ БЕЗ ПОДЧЕРКИВАНИЙ И С СОВРЕМЕННЫМИ SVG */
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:12px;
       width:100%; max-width:280px; padding:14px; border-radius:12px;
-      background:var(--brand); color:#fff; text-decoration:none !important; font-weight:600; font-size:1.05rem;
-      transition:.2s; box-shadow:0 8px 18px rgba(31,124,255,.25); border:none;
+      background:var(--brand); color:#ffffff; text-decoration:none; font-weight:600; font-size:1.05rem;
+      transition:.2s; box-shadow:0 8px 18px rgba(31,124,255,.25); border:none; outline: none;
     }
-    .btn:hover{background:#0d63d6; transform:translateY(-2px); color:#fff !important}
+    .btn:hover{background:#0d63d6; transform:translateY(-2px); color:#ffffff;}
     .btn-tg{background:#0088cc; box-shadow:0 8px 18px rgba(0,136,204,.25)}
     .btn-tg:hover{background:#0077b5}
     .btn-wa{background:var(--whatsapp); box-shadow:0 8px 18px rgba(37,211,102,.25)}
@@ -232,14 +231,14 @@
     </a>
   </header>
 
-  <section id="about" class="reveal">
+  <section id="about">
     <h2>🔎 О компании</h2>
     <p class="section-desc">
-      <strong>WatchPoint Security</strong> — инжиниринговая компания из Ташкента, специализирующаяся на проектировании, поставке и монтаже комплексных систем безопасности. Мы разрабатываем и внедряем отказоустойчивые цифровые решения для защиты промышленных объектов, логистических центров, коммерческих офисов и частного сектора по всей территории Республики Узбекистан.
+      <strong>WatchPoint Security</strong> — инжиниринговая компания из Ташкента, специализирующаяся на проектировании, поставке и монтаже комплексных систем безопасности. Мы разрабатываем и внедряем отказоустойчивые цифровые решения для защиты промышленных объектов, логистических центров, коммерческих offices и частного сектора по всей территории Республики Узбекистан.
     </p>
   </section>
 
-  <section id="features" class="reveal" style="background:#0b0e17;">
+  <section id="features" style="background:#0b0e17;">
     <h2>💎 Почему выбирают нас</h2>
     <p class="section-desc">Мы создаем технологичные решения, ориентированные на жесткие стандарты B2B-сегмента.</p>
     <div class="features-grid">
@@ -258,7 +257,7 @@
     </div>
   </section>
 
-  <section id="standards" class="reveal">
+  <section id="standards">
     <h2>🛠️ Наши стандарты инженерного монтажа</h2>
     <p class="section-desc">Видеонаблюдение — это не просто камеры, это инженерная трасса. Мы строго следуем регламенту, гарантирующему годы непрерывной работы.</p>
     <div class="standards-grid">
@@ -281,7 +280,7 @@
     </div>
   </section>
 
-  <section id="services" class="reveal" style="background:#0b0e17;">
+  <section id="services" style="background:#0b0e17;">
     <h2>⚙️ Наши услуги и цены</h2>
     <p class="section-desc">Интегрируем передовое оборудование от мировых технологических лидеров под ключ.</p>
     <div class="services">
@@ -312,7 +311,7 @@
     </div>
   </section>
 
-  <section id="bundles" class="reveal">
+  <section id="bundles">
     <h2>📦 Готовые комплекты оборудования «Под Ключ»</h2>
     <p class="section-desc">Всё необходимое оборудование, расходные материалы и профессиональный монтаж уже включены в стоимость.</p>
     <div class="bundles-grid">
@@ -382,7 +381,7 @@
     </div>
   </section>
 
-  <section id="projects" class="reveal" style="background:#0b0e17;">
+  <section id="projects" style="background:#0b0e17;">
     <h2>💼 Выполненные проекты</h2>
     <p class="section-desc">Реальные примеры того, как мы решаем технические задачи наших клиентов.</p>
     <div class="projects-grid">
@@ -407,14 +406,14 @@
     </div>
   </section>
 
-  <section id="reviews" class="reveal">
+  <section id="reviews">
     <h2>💬 Отзывы наших клиентов</h2>
     <p class="section-desc">Нам доверяют безопасность своего бизнеса и имущества.</p>
     <div class="reviews-grid">
       <div class="review-card">
         <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»</p>
         <div class="review-author">Фарход Ш.</div>
-        <div class="review-company">Логистический центр, Ташкент</div>
+        <div class="review-company">Логистический中心, Ташкент</div>
       </div>
       <div class="review-card">
         <p class="review-text">«Обратились для модернизации IT-сети и установки биометрического контроля доступа. Задача учета рабочего времени сотрудников решена полностью. Терминалы Hikvision распознают лица мгновенно. Спасибо инженерам за работу.»</p>
@@ -429,7 +428,7 @@
     </div>
   </section>
 
-  <section id="faq" class="reveal" style="background:#0b0e17;">
+  <section id="faq" style="background:#0b0e17;">
     <h2>❓ Часто задаваемые вопросы</h2>
     <p class="section-desc">Отвечаем на ключевые вопросы перед началом совместной работы.</p>
     <div class="faq-container">
@@ -448,7 +447,7 @@
     </div>
   </section>
 
-  <section id="contacts" class="reveal">
+  <section id="contacts">
     <h2>📞 Контакты и локация</h2>
     <p class="section-desc">Свяжитесь с нами для детального обсуждения вашего технического задания или заказа бесплатного выезда на замер.</p>
     
@@ -500,18 +499,6 @@
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script>
-    // Анимация при скролле
-    const reveals = document.querySelectorAll('.reveal, .card, .bundle-card, .project-card, .review-card, .standard-item, .cta-box-card');
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold:0.1});
-    reveals.forEach(el=>observer.observe(el));
-
     // Подсветка активного меню
     const links = document.querySelectorAll('nav a');
     const sections = [...document.querySelectorAll('section, header')];
