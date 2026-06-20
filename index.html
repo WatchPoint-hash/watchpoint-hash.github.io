@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>WatchPoint Security — Видеонаблюдение и системы безопасности в Узбекистане</title>
-  <meta name="description" content="Монтаж и обслуживание видеонаблюдения, систем контроля доступа и умной безопасности в Узбекистане. Официальный интегратор Hikvision, Tiandy, UniFi, UNV.">
+  <meta name="description" content="Монтаж и интеграция систем видеонаблюдения, СКУД и ИТ-инфраструктуры в Ташкенте. Официальный интегратор Hikvision, Tiandy, UniFi, UNV.">
   <meta name="keywords" content="видеонаблюдение, системы безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security, Hikvision, Tiandy, UniFi, UNV">
   <meta name="robots" content="index, follow">
 
@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://watchpoint.uz">
   <meta property="og:image" content="https://watchpoint-hash.github.io/bg.jpg">
 
-  <link rel="icon" href="https://watchpoint-hash.github.io/logo.png" type="image/png">
+  <link rel="icon" href="logo.png" type="image/png">
 
   <style>
     :root{
@@ -58,7 +58,7 @@
       min-height:85vh;
       display:flex; flex-direction:column; align-items:center; justify-content:center;
       text-align:center; color:#fff; position:relative; overflow:hidden;
-      background: linear-gradient(rgba(10,15,30,0.75), rgba(10,15,30,0.9)), url("https://watchpoint-hash.github.io/bg.jpg?v=5") center/cover no-repeat;
+      background: linear-gradient(rgba(10,15,30,0.75), rgba(10,15,30,0.9)), url("bg.jpg?v=5") center/cover no-repeat;
     }
     header img{
       width:140px; height:140px; border-radius:50%; border:3px solid #fff;
@@ -81,7 +81,7 @@
     .feature-item h3{font-size:1.25rem; margin-bottom:10px}
     .feature-item p{font-size:0.95rem; color:var(--muted); line-height:1.5}
 
-    /* STANDARDS (Стандарты монтажа) */
+    /* STANDARDS */
     .standards-grid {
       display:flex; flex-wrap:wrap; justify-content:center; gap:24px; max-width:1100px; margin:0 auto;
     }
@@ -107,17 +107,21 @@
     .brand-tags{font-size:0.8rem; font-weight:700; color:var(--brand); margin-bottom:12px; letter-spacing:0.5px}
     .price-tag{font-size:1.1rem; font-weight:700; color:var(--active); border-top:1px solid rgba(255,255,255,0.1); padding-top:12px}
 
-    /* BUNDLES */
+    /* BUNDLES с интеграцией твоих загруженных фото */
     .bundles-grid {display:flex; flex-wrap:wrap; justify-content:center; gap:26px; max-width:1200px; margin:0 auto}
     .bundle-card {
-      flex:1 1 320px; max-width:360px; background:var(--panel); border-radius:20px; padding:35px 26px;
+      flex:1 1 320px; max-width:360px; background:var(--panel); border-radius:20px; padding:0;
       text-align:left; box-shadow:0 6px 20px rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.03);
       display:flex; flex-direction:column; position:relative; overflow:hidden;
     }
     .bundle-card.hit {border:2px solid var(--brand)}
+    .bundle-img {
+      width:100%; height:160px; object-fit:cover; border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+    .bundle-content { padding:25px 22px; display:flex; flex-direction:column; flex-grow:1; }
     .bundle-badge {
       position:absolute; top:15px; right:-35px; background:var(--accent); color:#000;
-      font-size:0.75rem; font-weight:800; padding:4px 35px; transform:rotate(45deg); letter-spacing:1px;
+      font-size:0.75rem; font-weight:800; padding:4px 35px; transform:rotate(45deg); letter-spacing:1px; z-index:2;
     }
     .bundle-card h3 {font-size:1.4rem; margin-bottom:6px; color:#fff}
     .bundle-subtitle {font-size:0.88rem; color:var(--brand); font-weight:700; margin-bottom:20px; text-transform:uppercase}
@@ -171,6 +175,26 @@
     .cta-box-card p {font-size:1.02rem; color:var(--muted); line-height:1.6; margin-bottom:24px}
     .cta-box-card .highlight {color:var(--active); font-weight:700}
 
+    /* ПРОФЕССИОНАЛЬНЫЕ КНОПКИ (Без подчеркиваний, с SVG) */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:12px;
+      width:100%; max-width:280px; padding:14px; border-radius:12px;
+      background:var(--brand); color:#fff; text-decoration:none !important; font-weight:600; font-size:1.05rem;
+      transition:.2s; box-shadow:0 8px 18px rgba(31,124,255,.25); border:none;
+    }
+    .btn:hover{background:#0d63d6; transform:translateY(-2px); color:#fff !important}
+    .btn-tg{background:#0088cc; box-shadow:0 8px 18px rgba(0,136,204,.25)}
+    .btn-tg:hover{background:#0077b5}
+    .btn-wa{background:var(--whatsapp); box-shadow:0 8px 18px rgba(37,211,102,.25)}
+    .btn-wa:hover{background:#1ebe57}
+    
+    .btn svg {
+      width: 20px;
+      height: 20px;
+      fill: #ffffff;
+      flex-shrink: 0;
+    }
+
     footer{padding:30px; text-align:center; background:#0b0d12; opacity:.85; color:#666; font-size:0.9rem; border-top:1px solid rgba(255,255,255,0.05)}
 
     #about, #features, #standards, #services, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
@@ -199,10 +223,13 @@
   </nav>
 
   <header id="home">
-    <img src="https://watchpoint-hash.github.io/logo.png" alt="WatchPoint Security — видеонаблюдение в Ташкенте"/>
+    <img src="logo.png" alt="WatchPoint Security — видеонаблюдение в Ташкенте"/>
     <h1>WatchPoint Security</h1>
     <p>Мы видим то, что недоступно другим.<br/>Ваша уверенность под надёжным прицелом передовых технологий.</p>
-    <a href="#bundles" class="btn" style="background:var(--active); color:#000; box-shadow: 0 8px 18px rgba(0,224,164,0.25);">📦 Выбрать готовый комплект</a>
+    <a href="#bundles" class="btn" style="background:var(--active); color:#000; box-shadow: 0 8px 18px rgba(0,224,164,0.25);">
+      <svg style="fill:#000;" viewBox="0 0 24 24"><path d="M11 20v-5.5H5.5l5.5 5.5zm2 0l5.5-5.5H13V20zM2 13h9V4H2v9zm11-9v9h9V4h-9z"/></svg>
+      Выбрать готовый комплект
+    </a>
   </header>
 
   <section id="about" class="reveal">
@@ -291,55 +318,64 @@
     <div class="bundles-grid">
       
       <div class="bundle-card">
-        <h3>Комплект «Старт»</h3>
-        <div class="bundle-subtitle">Для небольшого офиса / магазина</div>
-        <ul class="bundle-includes">
-          <li>4× IP-камеры купольные (2 Мп, ИК-подсветка до 30м)</li>
-          <li>1× Сетевой видеорегистратор NVR (4 канала)</li>
-          <li>1× Жесткий диск HDD 1 Тб (До 2 недель архива)</li>
-          <li>1× PoE-коммутатор (Питание и сеть по одному кабелю)</li>
-          <li>Расходные материалы (Кабель UTP, разъемы, коробки)</li>
-          <li>Монтаж, юстировка и бесплатная настройка телефона</li>
-        </ul>
-        <div class="bundle-price">
-          4 800 000 сум
-          <span>Оборудование + Работа под ключ</span>
+        <img class="bundle-img" src="tiandy1.jpg" alt="Комплект Старт"/>
+        <div class="bundle-content">
+          <h3>Комплект «Старт»</h3>
+          <div class="bundle-subtitle">Для небольшого офиса / магазина</div>
+          <ul class="bundle-includes">
+            <li>4× IP-камеры купольные (2 Мп, ИК-подсветка до 30м)</li>
+            <li>1× Сетевой видеорегистратор NVR (4 канала)</li>
+            <li>1× Жесткий диск HDD 1 Тб (До 2 недель архива)</li>
+            <li>1× PoE-коммутатор (Питание и сеть по одному кабелю)</li>
+            <li>Расходные материалы (Кабель UTP, разъемы, коробки)</li>
+            <li>Монтаж, юстировка и бесплатная настройка телефона</li>
+          </ul>
+          <div class="bundle-price">
+            4 800 000 сум
+            <span>Оборудование + Работа под ключ</span>
+          </div>
         </div>
       </div>
 
       <div class="bundle-card hit">
         <div class="bundle-badge">ХИТ</div>
-        <h3>Комплект «Бизнес»</h3>
-        <div class="bundle-subtitle">Для складов, ритейла и ресторанов</div>
-        <ul class="bundle-includes">
-          <li>8× IP-камер уличных/купольных (4 Мп, <strong>Встроенный микрофон</strong>)</li>
-          <li>Технология <strong>ColorVu / ColorMaker</strong> (Цветная съемка ночью)</li>
-          <li>1× Видеорегистратор NVR (8 каналов)</li>
-          <li>1× Жесткий диск HDD 2 Тб (Спец. серия для видеонаблюдения)</li>
-          <li>1× PoE-коммутатор (9 портов)</li>
-          <li>Все необходимые расходники и защитные трассы</li>
-          <li>Монтаж, пусконаладка и подключение удаленного доступа</li>
-        </ul>
-        <div class="bundle-price">
-          9 600 000 сум
-          <span>Оборудование + Работа под ключ</span>
+        <img class="bundle-img" src="hik1.jpg" alt="Комплект Бизнес"/>
+        <div class="bundle-content">
+          <h3>Комплект «Бизнес»</h3>
+          <div class="bundle-subtitle">Для складов, ритейла и ресторанов</div>
+          <ul class="bundle-includes">
+            <li>8× IP-камер уличных/купольных (4 Мп, <strong>Встроенный микрофон</strong>)</li>
+            <li>Технология <strong>ColorVu / ColorMaker</strong> (Цветная съемка ночью)</li>
+            <li>1× Видеорегистратор NVR (8 каналов)</li>
+            <li>1× Жесткий диск HDD 2 Тб (Спец. серия для видеонаблюдения)</li>
+            <li>1× PoE-коммутатор (9 портов)</li>
+            <li>Все необходимые расходники и защитные трассы</li>
+            <li>Монтаж, пусконаладка и подключение удаленного доступа</li>
+          </ul>
+          <div class="bundle-price">
+            9 600 000 сум
+            <span>Оборудование + Работа под ключ</span>
+          </div>
         </div>
       </div>
 
       <div class="bundle-card">
-        <h3>Комплект «Премиум»</h3>
-        <div class="bundle-subtitle">Максимальная защита объекта</div>
-        <ul class="bundle-includes">
-          <li>4× IP-камеры премиум (4 Мп, Smart-аналитика ИИ)</li>
-          <li>1× Скоростная поворотная <strong>PTZ-камера</strong> (25х зум, автотрекинг)</li>
-          <li>Система распознавания лиц и детекции людей/транспорта</li>
-          <li>1× Видеорегистратор NVR (16 каналов) + HDD 4 Тб</li>
-          <li>1× Бесшовная Wi-Fi точка доступа <strong>UniFi</strong> для объекта</li>
-          <li>Комплексный высокотехнологичный монтаж под ключ</li>
-        </ul>
-        <div class="bundle-price">
-          16 500 000 сум
-          <span>Оборудование + Работа под ключ</span>
+        <img class="bundle-img" src="unv1.jpg" alt="Комплект Премиум"/>
+        <div class="bundle-content">
+          <h3>Комплект «Премиум»</h3>
+          <div class="bundle-subtitle">Максимальная защита объекта</div>
+          <ul class="bundle-includes">
+            <li>4× IP-камеры премиум (4 Мп, Smart-аналитика ИИ)</li>
+            <li>1× Скоростная поворотная <strong>PTZ-камера</strong> (25х зум, автотрекинг)</li>
+            <li>Система распознавания лиц и детекции людей/транспорта</li>
+            <li>1× Видеорегистратор NVR (16 каналов) + HDD 4 Тб</li>
+            <li>1× Бесшовная Wi-Fi точка доступа <strong>UniFi</strong> для объекта</li>
+            <li>Комплексный высокотехнологичный монтаж под ключ</li>
+          </ul>
+          <div class="bundle-price">
+            16 500 000 сум
+            <span>Оборудование + Работа под ключ</span>
+          </div>
         </div>
       </div>
 
@@ -424,10 +460,25 @@
         <p>⏱️ <strong>Режим работы:</strong> Понедельник — Суббота, с 09:00 до 18:00.</p>
         <br>
         <div class="contacts-container">
-          <a href="tel:+998886362545" class="btn">📞 Позвонить инженеру</a>
-          <a href="https://t.me/watchpointcctv24" target="_blank" class="btn btn-tg">💬 Связаться в Telegram</a>
-          <a href="https://wa.me/998886362545" target="_blank" class="btn btn-wa">💬 Написать в WhatsApp</a>
-          <a href="mailto:WatchPoint.intellegent.vision@outlook.com?subject=Запрос%20на%20расчет%20системы" class="btn" style="background:#232733; box-shadow:none;">✉️ Отправить ТЗ на Email</a>
+          <a href="tel:+998886362545" class="btn">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            Позвонить инженеру
+          </a>
+          
+          <a href="https://t.me/watchpointcctv24" target="_blank" class="btn btn-tg">
+            <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.28 7.68-6.92c.34-.31-.07-.48-.52-.19L7.74 12.54l-4.15-1.3c-.9-.28-.92-.9.19-1.33L19.88 3.5c.74-.28 1.38.17 1.14 1.2l-2.74 12.89c-.2 1-.8 1.25-1.63.78l-4.17-3.07-2 1.93c-.23.23-.42.42-.85.42z"/></svg>
+            Связаться в Telegram
+          </a>
+          
+          <a href="https://wa.me/998886362545" target="_blank" class="btn btn-wa">
+            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 13.56c-.24.67-1.39 1.28-1.9 1.34-.51.06-1 .24-3.17-.65-2.61-1.07-4.26-3.74-4.39-3.92-.13-.18-1.07-1.42-1.07-2.71 0-1.29.67-1.93.91-2.19.24-.26.54-.32.72-.32.18 0 .36.01.52.02.17.01.39-.06.61.47.23.54.78 1.91.85 2.04.07.13.11.29.02.47-.09.18-.14.29-.29.46-.14.17-.3.38-.43.51-.15.14-.3.29-.13.58.17.29.75 1.24 1.62 2.01.12.11.23.22.35.32.77.68 1.35.88 1.54.97.19.09.3.07.41-.05.11-.12.47-.55.6-.74.12-.19.25-.16.41-.1.17.06 1.06.5 1.24.59.18.09.3.14.34.22.05.08.05.47-.19 1.14z"/></svg>
+            Написать в WhatsApp
+          </a>
+          
+          <a href="mailto:WatchPoint.intellegent.vision@outlook.com?subject=Запрос%20на%20расчет%20системы" class="btn" style="background:#232733; box-shadow:none;">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Отправить ТЗ на Email
+          </a>
         </div>
       </div>
       
@@ -435,7 +486,10 @@
         <h3>Заказать бесплатный замер 📐</h3>
         <p>Наш ведущий инженер приедет на ваш объект, рассчитает углы обзора камер, подберет спецификацию оборудования и составит точную смету <span class="highlight">абсолютно бесплатно</span>.</p>
         <div style="display:flex; justify-content:center;">
-           <a href="https://t.me/watchpointcctv24" target="_blank" class="btn" style="background:var(--active); color:#000; font-weight:700; box-shadow: 0 8px 18px rgba(0,224,164,0.15);">Получить расчет проекта</a>
+           <a href="https://t.me/watchpointcctv24" target="_blank" class="btn" style="background:var(--active); color:#000; font-weight:700; box-shadow: 0 8px 18px rgba(0,224,164,0.15);">
+             <svg style="fill:#000;" viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.28 7.68-6.92c.34-.31-.07-.48-.52-.19L7.74 12.54l-4.15-1.3c-.9-.28-.92-.9.19-1.33L19.88 3.5c.74-.28 1.38.17 1.14 1.2l-2.74 12.89c-.2 1-.8 1.25-1.63.78l-4.17-3.07-2 1.93c-.23.23-.42.42-.85.42z"/></svg>
+             Получить расчет проекта
+           </a>
         </div>
       </div>
     </div>
