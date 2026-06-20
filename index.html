@@ -81,6 +81,17 @@
     .feature-item h3{font-size:1.25rem; margin-bottom:10px}
     .feature-item p{font-size:0.95rem; color:var(--muted); line-height:1.5}
 
+    /* STANDARDS (Стандарты монтажа) */
+    .standards-grid {
+      display:flex; flex-wrap:wrap; justify-content:center; gap:24px; max-width:1100px; margin:0 auto;
+    }
+    .standard-item {
+      flex:1 1 450px; max-width:520px; background:var(--panel); border-radius:16px; padding:30px;
+      text-align:left; box-shadow:0 4px 15px rgba(0,0,0,0.2); border-left:4px solid var(--active);
+    }
+    .standard-item h3 {font-size:1.3rem; color:#fff; margin-bottom:10px; display:flex; align-items:center; gap:10px}
+    .standard-item p {font-size:0.98rem; color:var(--muted); line-height:1.6}
+
     /* SERVICES & PRICES */
     .services{display:flex; flex-wrap:wrap; justify-content:center; gap:22px; max-width:1200px; margin:0 auto}
     .card{
@@ -151,8 +162,6 @@
     .contacts-layout {display:flex; flex-wrap:wrap; justify-content:center; gap:40px; max-width:1100px; margin:0 auto; text-align:left}
     .contacts-info {flex:1 1 350px; max-width:450px}
     .contacts-container{display:flex; flex-direction:column; gap:14px; margin-top:20px}
-    
-    /* Новая промо-карточка вместо сломанной карты гугл */
     .cta-box-card {
       flex:1 1 400px; max-width:500px; background:var(--panel); border-radius:20px; padding:40px 30px;
       box-shadow:0 8px 24px rgba(0,0,0,0.3); border:2px dashed rgba(31,124,255,0.4);
@@ -162,22 +171,9 @@
     .cta-box-card p {font-size:1.02rem; color:var(--muted); line-height:1.6; margin-bottom:24px}
     .cta-box-card .highlight {color:var(--active); font-weight:700}
 
-    /* BUTTONS */
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      width:100%; max-width:280px; padding:14px; border-radius:12px;
-      background:var(--brand); color:#fff; text-decoration:none; font-weight:600; font-size:1.05rem;
-      transition:.2s; box-shadow:0 8px 18px rgba(31,124,255,.25);
-    }
-    .btn:hover{background:#0d63d6; transform:translateY(-2px)}
-    .btn-tg{background:#0088cc; box-shadow:0 8px 18px rgba(0,136,204,.25)}
-    .btn-tg:hover{background:#0077b5}
-    .btn-wa{background:var(--whatsapp); box-shadow:0 8px 18px rgba(37,211,102,.25)}
-    .btn-wa:hover{background:#1ebe57}
-
     footer{padding:30px; text-align:center; background:#0b0d12; opacity:.85; color:#666; font-size:0.9rem; border-top:1px solid rgba(255,255,255,0.05)}
 
-    #about, #features, #services, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
+    #about, #features, #standards, #services, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
 
     /* кнопка наверх */
     #toTop{
@@ -193,6 +189,7 @@
   <nav>
     <a href="#about">О нас</a>
     <a href="#features">Преимущества</a>
+    <a href="#standards">Стандарты</a>
     <a href="#services">Услуги</a>
     <a href="#bundles">Комплекты</a>
     <a href="#projects">Проекты</a>
@@ -234,7 +231,30 @@
     </div>
   </section>
 
-  <section id="services" class="reveal">
+  <section id="standards" class="reveal">
+    <h2>🛠️ Наши стандарты инженерного монтажа</h2>
+    <p class="section-desc">Видеонаблюдение — это не просто камеры, это инженерная трасса. Мы строго следуем регламенту, гарантирующему годы непрерывной работы.</p>
+    <div class="standards-grid">
+      <div class="standard-item">
+        <h3>⚡ 100% Медный кабель по ГОСТу</h3>
+        <p>Мы никогда не используем дешёвый биметаллический (алюминиевый) кабель, который окисляется и теряет сигнал через полгода. Только качественная чистая медь (UTP/FTP), обеспечивающая стабильную скорость PoE-питания и видеопотока без зависаний.</p>
+      </div>
+      <div class="standard-item">
+        <h3>🔒 Полная защита кабельных линий</h3>
+        <p>Все линии связи укладываются в специализированные защитные кабельные каналы, ПВХ-гофру или жёсткие трубы. На индустриальных объектах монтируем в металлические лотки. Это защищает сеть от грызунов, ультрафиолета, влаги и механических повреждений.</p>
+      </div>
+      <div class="standard-item">
+        <h3>🌧️ Герметичные коммутационные боксы</h3>
+        <p>Все уличные разъёмы, коннекторы RJ-45 и приёмопередатчики мы надёжно изолируем в распаечных коробках со степенью защиты не ниже IP66. Никакой снег, проливной дождь или пыль Ташкента не вызовут короткого замыкания или окисления контактов.</p>
+      </div>
+      <div class="standard-item">
+        <h3>🗄️ Маркировка и культура серверных шкафов</h3>
+        <p>Каждый входящий кабель на патч-панели маркируется согласно проектной схеме. Мы аккуратно укладываем провода в органайзеры внутри серверного шкафа. Любой системный администратор компании сможет легко разобраться в сети и провести обслуживание за 5 минут.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="reveal" style="background:#0b0e17;">
     <h2>⚙️ Наши услуги и цены</h2>
     <p class="section-desc">Интегрируем передовое оборудование от мировых технологических лидеров под ключ.</p>
     <div class="services">
@@ -265,7 +285,7 @@
     </div>
   </section>
 
-  <section id="bundles" class="reveal" style="background:#0b0e17;">
+  <section id="bundles" class="reveal">
     <h2>📦 Готовые комплекты оборудования «Под Ключ»</h2>
     <p class="section-desc">Всё необходимое оборудование, расходные материалы и профессиональный монтаж уже включены в стоимость.</p>
     <div class="bundles-grid">
@@ -326,7 +346,7 @@
     </div>
   </section>
 
-  <section id="projects" class="reveal">
+  <section id="projects" class="reveal" style="background:#0b0e17;">
     <h2>💼 Выполненные проекты</h2>
     <p class="section-desc">Реальные примеры того, как мы решаем технические задачи наших клиентов.</p>
     <div class="projects-grid">
@@ -351,12 +371,12 @@
     </div>
   </section>
 
-  <section id="reviews" class="reveal" style="background:#0b0e17;">
+  <section id="reviews" class="reveal">
     <h2>💬 Отзывы наших клиентов</h2>
     <p class="section-desc">Нам доверяют безопасность своего бизнеса и имущества.</p>
     <div class="reviews-grid">
       <div class="review-card">
-        <p class="review-text">«Заказывали у WatchPoint установка IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»</p>
+        <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»</p>
         <div class="review-author">Фарход Ш.</div>
         <div class="review-company">Логистический центр, Ташкент</div>
       </div>
@@ -373,7 +393,7 @@
     </div>
   </section>
 
-  <section id="faq" class="reveal">
+  <section id="faq" class="reveal" style="background:#0b0e17;">
     <h2>❓ Часто задаваемые вопросы</h2>
     <p class="section-desc">Отвечаем на ключевые вопросы перед началом совместной работы.</p>
     <div class="faq-container">
@@ -392,7 +412,7 @@
     </div>
   </section>
 
-  <section id="contacts" class="reveal" style="background:#0b0e17;">
+  <section id="contacts" class="reveal">
     <h2>📞 Контакты и локация</h2>
     <p class="section-desc">Свяжитесь с нами для детального обсуждения вашего технического задания или заказа бесплатного выезда на замер.</p>
     
@@ -427,7 +447,7 @@
 
   <script>
     // Анимация при скролле
-    const reveals = document.querySelectorAll('.reveal, .card, .bundle-card, .project-card, .review-card, .cta-box-card');
+    const reveals = document.querySelectorAll('.reveal, .card, .bundle-card, .project-card, .review-card, .standard-item, .cta-box-card');
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting){
