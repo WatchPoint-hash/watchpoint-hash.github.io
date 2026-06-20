@@ -147,12 +147,20 @@
     .faq-answer {max-height:0; overflow:hidden; transition:max-height 0.3s ease-out, margin-top 0.3s ease; color:var(--muted); font-size:0.98rem; line-height:1.6}
     .faq-item.open .faq-answer {max-height:200px; margin-top:14px}
 
-    /* CONTACTS & MAP */
+    /* CONTACTS & CTA CARD */
     .contacts-layout {display:flex; flex-wrap:wrap; justify-content:center; gap:40px; max-width:1100px; margin:0 auto; text-align:left}
     .contacts-info {flex:1 1 350px; max-width:450px}
     .contacts-container{display:flex; flex-direction:column; gap:14px; margin-top:20px}
-    .map-container {flex:1 1 450px; max-width:550px; height:350px; border-radius:16px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.05)}
-    .map-container iframe {width:100%; height:100%; border:0}
+    
+    /* Новая промо-карточка вместо сломанной карты гугл */
+    .cta-box-card {
+      flex:1 1 400px; max-width:500px; background:var(--panel); border-radius:20px; padding:40px 30px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.3); border:2px dashed rgba(31,124,255,0.4);
+      display:flex; flex-direction:column; justify-content:center; text-align:center;
+    }
+    .cta-box-card h3 {font-size:1.6rem; color:var(--text); margin-bottom:12px}
+    .cta-box-card p {font-size:1.02rem; color:var(--muted); line-height:1.6; margin-bottom:24px}
+    .cta-box-card .highlight {color:var(--active); font-weight:700}
 
     /* BUTTONS */
     .btn{
@@ -348,7 +356,7 @@
     <p class="section-desc">Нам доверяют безопасность своего бизнеса и имущества.</p>
     <div class="reviews-grid">
       <div class="review-card">
-        <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»</p>
+        <p class="review-text">«Заказывали у WatchPoint установка IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»</p>
         <div class="review-author">Фарход Ш.</div>
         <div class="review-company">Логистический центр, Ташкент</div>
       </div>
@@ -390,7 +398,8 @@
     
     <div class="contacts-layout">
       <div class="contacts-info">
-        <p>📍 <strong>Адрес инженерного центра:</strong> г. Ташкент, Узбекистан (работаем с выездом по всей республике).</p>
+        <p>📍 <strong>Инженерный центр WatchPoint:</strong> Ташкент, Узбекистан.</p>
+        <p style="color:var(--brand); margin-top:4px; font-weight:600;">🚀 Работаем оперативно с выездом по всей республике!</p>
         <br>
         <p>⏱️ <strong>Режим работы:</strong> Понедельник — Суббота, с 09:00 до 18:00.</p>
         <br>
@@ -401,8 +410,13 @@
           <a href="mailto:WatchPoint.intellegent.vision@outlook.com?subject=Запрос%20на%20расчет%20системы" class="btn" style="background:#232733; box-shadow:none;">✉️ Отправить ТЗ на Email</a>
         </div>
       </div>
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d11984.747209355476!2d69.240562!3d41.299496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9ea%3A0x49d901b5de0d554a!2z0KLQsNGI0LrQtdC90YIsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1710000000000!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+      <div class="cta-box-card">
+        <h3>Заказать бесплатный замер 📐</h3>
+        <p>Наш ведущий инженер приедет на ваш объект, рассчитает углы обзора камер, подберет спецификацию оборудования и составит точную смету <span class="highlight">абсолютно бесплатно</span>.</p>
+        <div style="display:flex; justify-content:center;">
+           <a href="https://t.me/watchpointcctv24" target="_blank" class="btn" style="background:var(--active); color:#000; font-weight:700; box-shadow: 0 8px 18px rgba(0,224,164,0.15);">Получить расчет проекта</a>
+        </div>
       </div>
     </div>
   </section>
@@ -413,7 +427,7 @@
 
   <script>
     // Анимация при скролле
-    const reveals = document.querySelectorAll('.reveal, .card, .bundle-card, .project-card, .review-card');
+    const reveals = document.querySelectorAll('.reveal, .card, .bundle-card, .project-card, .review-card, .cta-box-card');
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting){
