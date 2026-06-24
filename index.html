@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>WatchPoint Security — Видеонаблюдение и системы безопасности в Узбекистане</title>
-  <meta name="description" content="Монтаж и интеграция систем видеонаблюдения, СКУД и ИТ-инфраструктуры в Ташкенте. Официальный интегратор Hikvision, Tiandy, UniFi, UNV.">
+  <meta name="description" content="Монтаж и интеграция систем видеонаблюдения, СКУД и ИТ-инфраструктуры in Ташкенте. Официальный интегратор Hikvision, Tiandy, UniFi, UNV.">
   <meta name="keywords" content="видеонаблюдение, системы безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security, Hikvision, Tiandy, UniFi, UNV">
   <meta name="robots" content="index, follow">
 
@@ -20,163 +20,160 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
   <style>
-    :root{
-      --bg:#0a0f1e;
-      --panel:#171a22;
-      --text:#ffffff;
-      --muted:#cfcfcf;
-      --brand:#1f7cff;
-      --active:#00e0a4;
-      --accent:#ffaa00;
-      --whatsapp:#25d366;
+    :root {
+      --bg: #f4f7fc;                  /* Светлый чистый фон как на скриншоте image_6fe3b6.jpg */
+      --panel: #ffffff;               /* Белоснежные панели блоков */
+      --text: #1a202c;                /* Глубокий темный цвет для идеальной читаемости текста */
+      --muted: #4a5568;               /* Мягкий серый цвет для описаний */
+      --brand: #0056ff;               /* Яркий синий ИТ-цвет */
+      --active: #00b887;              /* Фирменный сочный зеленый цвет Tiandy */
+      --accent: #ffaa00;              /* Оранжевый акцент для ХИТ-плашек */
+      --whatsapp: #25d366;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:"Segoe UI",Arial,sans-serif;
-      background:var(--bg); color:var(--text);
-      scroll-behavior:smooth;
-      padding-top:64px;
-    }
-
-    /* NAV */
-    nav{
-      position:fixed; top:0; left:0; right:0; height:64px;
-      background:rgba(14,14,14,.9);
-      backdrop-filter:blur(6px);
-      display:flex; align-items:center; justify-content:center; gap:20px;
-      z-index:1000;
-      border-bottom:1px solid rgba(255,255,255,0.05);
-    }
-    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:0.92rem;transition:.3s}
-    nav a:hover{color:var(--text)}
-    nav a.active{color:var(--active); position:relative}
-    nav a.active::after{
-      content:""; position:absolute; left:0; right:0; bottom:-4px;
-      height:3px; background:var(--active); border-radius:3px;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg); color: var(--text);
+      scroll-behavior: smooth;
+      padding-top: 64px;
     }
 
-    /* HERO */
-    header{
-      min-height:85vh;
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-      text-align:center; color:#fff; position:relative; overflow:hidden;
-      background: linear-gradient(rgba(10,15,30,0.75), rgba(10,15,30,0.9)), url("bg.jpg") center/cover no-repeat;
+    /* NAV (Светлое премиальное меню) */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; height: 64px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(6px);
+      display: flex; align-items: center; justify-content: center; gap: 20px;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     }
-    header img{
-      width:140px; height:140px; border-radius:50%; border:3px solid #fff;
-      object-fit:cover; box-shadow:0 10px 30px rgba(0,0,0,.25);
+    nav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.92rem; transition: .3s; }
+    nav a:hover { color: var(--brand); }
+    nav a.active { color: var(--brand); position: relative; }
+    nav a.active::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: -4px;
+      height: 3px; background: var(--brand); border-radius: 3px;
     }
-    header h1{font-size:3.2rem;margin:18px 0 8px; letter-spacing:1px}
-    header p{font-size:1.2rem;opacity:.92; max-width:700px; line-height:1.5; margin-bottom:24px}
+
+    /* HERO БАННЕР (Яркий сочный градиент в стиле Tiandy со скриншота image_6fe3b6.jpg) */
+    header {
+      min-height: 85vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; color: #fff; position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #00b887 0%, #0056ff 100%); 
+    }
+    header img {
+      width: 140px; height: 140px; border-radius: 50%; border: 4px solid #fff;
+      object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    header h1 { font-size: 3.2rem; margin: 18px 0 8px; letter-spacing: 1px; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    header p { font-size: 1.2rem; opacity: .95; max-width: 700px; line-height: 1.5; margin-bottom: 24px; color: #ffffff; }
 
     /* SECTIONS */
-    section{padding:80px 20px; text-align:center}
-    section h2{font-size:2.2rem; margin:0 0 16px; position:relative}
-    section p.section-desc{max-width:880px; margin:0 auto 40px; line-height:1.65; font-size:1.1rem; color:var(--muted)}
+    section { padding: 80px 20px; text-align: center; }
+    section h2 { font-size: 2.2rem; margin: 0 0 16px; position: relative; color: #0a0f1e; }
+    section p.section-desc { max-width: 880px; margin: 0 auto 40px; line-height: 1.65; font-size: 1.1rem; color: var(--muted); }
 
     /* ADVANTAGES */
-    .features-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:24px; max-width:1100px; margin:0 auto}
-    .feature-item{
-      flex:1 1 300px; max-width:340px; background:var(--panel); padding:30px 20px;
-      border-radius:14px; border-top:3px solid var(--active); box-shadow:0 5px 15px rgba(0,0,0,.2);
+    .features-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .feature-item {
+      flex: 1 1 300px; max-width: 340px; background: var(--panel); padding: 30px 20px;
+      border-radius: 14px; border-top: 4px solid var(--active); box-shadow: 0 10px 25px rgba(0,0,0,0.04);
     }
-    .feature-item h3{font-size:1.25rem; margin-bottom:10px}
-    .feature-item p{font-size:0.95rem; color:var(--muted); line-height:1.5}
+    .feature-item h3 { font-size: 1.25rem; margin-bottom: 10px; color: #0a0f1e; }
+    .feature-item p { font-size: 0.95rem; color: var(--muted); line-height: 1.5; }
 
     /* STANDARDS */
-    .standards-grid {
-      display:flex; flex-wrap:wrap; justify-content:center; gap:24px; max-width:1100px; margin:0 auto;
-    }
+    .standards-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1100px; margin: 0 auto; }
     .standard-item {
-      flex:1 1 450px; max-width:520px; background:var(--panel); border-radius:16px; padding:30px;
-      text-align:left; box-shadow:0 4px 15px rgba(0,0,0,0.2); border-left:4px solid var(--active);
+      flex: 1 1 450px; max-width: 520px; background: var(--panel); border-radius: 16px; padding: 30px;
+      text-align: left; box-shadow: 0 10px 25px rgba(0,0,0,0.04); border-left: 4px solid var(--brand);
     }
-    .standard-item h3 {font-size:1.3rem; color:#fff; margin-bottom:10px; display:flex; align-items:center; gap:10px}
-    .standard-item p {font-size:0.98rem; color:var(--muted); line-height:1.6}
+    .standard-item h3 { font-size: 1.3rem; color: #0a0f1e; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+    .standard-item p { font-size: 0.98rem; color: var(--muted); line-height: 1.6; }
 
     /* SERVICES & PRICES */
-    .services{display:flex; flex-wrap:wrap; justify-content:center; gap:22px; max-width:1200px; margin:0 auto}
-    .card{
-      width:270px; background:var(--panel); border-radius:16px; padding:25px 22px;
-      text-align:left; box-shadow:0 4px 14px rgba(0,0,0,.25);
-      transition:transform .25s, box-shadow .25s;
-      display:flex; flex-direction:column; justify-content:space-between;
+    .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; max-width: 1200px; margin: 0 auto; }
+    .card {
+      width: 270px; background: var(--panel); border-radius: 16px; padding: 25px 22px;
+      text-align: left; box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+      transition: transform .25s, box-shadow .25s;
+      display: flex; flex-direction: column; justify-content: space-between;
+      border: 1px solid rgba(0,0,0,0.03);
     }
-    .card:hover{transform:translateY(-6px); box-shadow:0 10px 28px rgba(31,124,255,0.15); background:#1e2330}
-    .card h3{margin:8px 0 10px 0; font-size:1.25rem}
-    .card p{font-size:0.95rem; line-height:1.5; color:var(--muted); margin-bottom:15px; flex-grow:1}
-    .brand-tags{font-size:0.8rem; font-weight:700; color:var(--brand); margin-bottom:12px; letter-spacing:0.5px}
-    .price-tag{font-size:1.1rem; font-weight:700; color:var(--active); border-top:1px solid rgba(255,255,255,0.1); padding-top:12px}
+    .card:hover { transform: translateY(-6px); box-shadow: 0 15px 35px rgba(31,124,255,0.12); background: #ffffff; }
+    .card h3 { margin: 8px 0 10px 0; font-size: 1.25rem; color: #0a0f1e; }
+    .card p { font-size: 0.95rem; line-height: 1.5; color: var(--muted); margin-bottom: 15px; flex-grow: 1; }
+    .brand-tags { font-size: 0.8rem; font-weight: 700; color: var(--brand); margin-bottom: 12px; letter-spacing: 0.5px; }
+    .price-tag { font-size: 1.1rem; font-weight: 700; color: var(--active); border-top: 1px solid rgba(0,0,0,0.06); padding-top: 12px; }
 
     /* BUNDLES */
-    .bundles-grid {display:flex; flex-wrap:wrap; justify-content:center; gap:26px; max-width:1200px; margin:0 auto}
+    .bundles-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 26px; max-width: 1200px; margin: 0 auto; }
     .bundle-card {
-      flex:1 1 320px; max-width:360px; background:var(--panel); border-radius:20px; padding:0;
-      text-align:left; box-shadow:0 6px 20px rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.03);
-      display:flex; flex-direction:column; position:relative; overflow:hidden;
+      flex: 1 1 320px; max-width: 360px; background: var(--panel); border-radius: 20px; padding: 0;
+      text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.04);
+      display: flex; flex-direction: column; position: relative; overflow: hidden;
     }
-    .bundle-card.hit {border:2px solid var(--brand)}
-    .bundle-img {
-      width:100%; height:160px; object-fit:cover; border-bottom:1px solid rgba(255,255,255,0.05);
-    }
-    .bundle-content { padding:25px 22px; display:flex; flex-direction:column; flex-grow:1; }
+    .bundle-card.hit { border: 2px solid var(--brand); box-shadow: 0 15px 35px rgba(31,124,255,0.1); }
+    .bundle-img { width: 100%; height: 160px; object-fit: cover; border-bottom: 1px solid rgba(0,0,0,0.05); }
+    .bundle-content { padding: 25px 22px; display: flex; flex-direction: column; flex-grow: 1; }
     .bundle-badge {
-      position:absolute; top:15px; right:-35px; background:var(--accent); color:#000;
-      font-size:0.75rem; font-weight:800; padding:4px 35px; transform:rotate(45deg); letter-spacing:1px; z-index:2;
+      position: absolute; top: 15px; right: -35px; background: var(--accent); color: #000;
+      font-size: 0.75rem; font-weight: 800; padding: 4px 35px; transform: rotate(45deg); letter-spacing: 1px; z-index: 2;
     }
-    .bundle-card h3 {font-size:1.4rem; margin-bottom:6px; color:#fff}
-    .bundle-subtitle {font-size:0.88rem; color:var(--brand); font-weight:700; margin-bottom:20px; text-transform:uppercase}
-    .bundle-includes {list-style:none; margin-bottom:25px; flex-grow:1}
-    .bundle-includes li {font-size:0.95rem; color:var(--muted); margin-bottom:10px; display:flex; align-items:start; gap:8px}
-    .bundle-includes li::before {content:'✔'; color:var(--active); font-weight:bold}
-    .bundle-price {font-size:1.6rem; font-weight:800; color:var(--active); border-top:1px solid rgba(255,255,255,0.08); padding-top:18px; display:flex; flex-direction:column}
-    .bundle-price span {font-size:0.85rem; color:var(--muted); font-weight:normal; margin-top:2px}
+    .bundle-card h3 { font-size: 1.4rem; margin-bottom: 6px; color: #0a0f1e; }
+    .bundle-subtitle { font-size: 0.88rem; color: var(--brand); font-weight: 700; margin-bottom: 20px; text-transform: uppercase; }
+    .bundle-includes { list-style: none; margin-bottom: 25px; flex-grow: 1; }
+    .bundle-includes li { font-size: 0.95rem; color: var(--muted); margin-bottom: 10px; display: flex; align-items: start; gap: 8px; }
+    .bundle-includes li::before { content: '✔'; color: var(--active); font-weight: bold; }
+    .bundle-price { font-size: 1.6rem; font-weight: 800; color: var(--active); border-top: 1px solid rgba(0,0,0,0.06); padding-top: 18px; display: flex; flex-direction: column; }
+    .bundle-price span { font-size: 0.85rem; color: var(--muted); font-weight: normal; margin-top: 2px; }
 
     /* PROJECTS */
-    .projects-grid {display:flex; flex-wrap:wrap; justify-content:center; gap:24px; max-width:1100px; margin:0 auto}
+    .projects-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1100px; margin: 0 auto; }
     .project-card {
-      flex:1 1 300px; max-width:340px; background:var(--panel); border-radius:16px; padding:28px 22px;
-      text-align:left; border-bottom:3px solid var(--brand); box-shadow:0 4px 15px rgba(0,0,0,0.2);
+      flex: 1 1 300px; max-width: 340px; background: var(--panel); border-radius: 16px; padding: 28px 22px;
+      text-align: left; border-bottom: 4px solid var(--brand); box-shadow: 0 10px 25px rgba(0,0,0,0.04);
     }
-    .project-card h3 {font-size:1.2rem; margin-bottom:12px; color:#fff}
-    .project-badge {display:inline-block; padding:4px 8px; background:rgba(31,124,255,0.15); color:var(--brand); border-radius:6px; font-size:0.8rem; font-weight:700; margin-bottom:14px}
-    .project-meta {font-size:0.9rem; line-height:1.5; color:var(--muted); margin-bottom:10px}
-    .project-meta strong {color:var(--text)}
+    .project-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: #0a0f1e; }
+    .project-badge { display: inline-block; padding: 4px 8px; background: rgba(31,124,255,0.08); color: var(--brand); border-radius: 6px; font-size: 0.8rem; font-weight: 700; margin-bottom: 14px; }
+    .project-meta { font-size: 0.9rem; line-height: 1.5; color: var(--muted); margin-bottom: 10px; }
+    .project-meta strong { color: #0a0f1e; }
 
     /* REVIEWS */
-    .reviews-grid {display:flex; flex-wrap:wrap; justify-content:center; gap:24px; max-width:1100px; margin:0 auto}
+    .reviews-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1100px; margin: 0 auto; }
     .review-card {
-      flex:1 1 300px; max-width:340px; background:var(--panel); padding:30px 24px;
-      border-radius:16px; text-align:left; box-shadow:0 4px 15px rgba(0,0,0,0.2); border-left:3px solid var(--brand);
+      flex: 1 1 300px; max-width: 340px; background: var(--panel); padding: 30px 24px;
+      border-radius: 16px; text-align: left; box-shadow: 0 10px 25px rgba(0,0,0,0.04); border-left: 4px solid var(--brand);
     }
-    .review-text {font-style:italic; font-size:0.95rem; line-height:1.6; color:var(--muted); margin-bottom:20px}
-    .review-author {font-weight:600; font-size:1rem; color:var(--text)}
-    .review-company {font-size:0.85rem; color:var(--brand); margin-top:2px}
+    .review-text { font-style: italic; font-size: 0.95rem; line-height: 1.6; color: var(--muted); margin-bottom: 20px; }
+    .review-author { font-weight: 600; font-size: 1rem; color: #0a0f1e; }
+    .review-company { font-size: 0.85rem; color: var(--brand); margin-top: 2px; }
 
     /* FAQ */
-    .faq-container {max-width:800px; margin:0 auto; text-align:left}
-    .faq-item {background:var(--panel); border-radius:10px; margin-bottom:12px; padding:18px 22px; cursor:pointer; transition:0.3s}
-    .faq-item:hover {background:#1f2430}
-    .faq-question {font-weight:600; font-size:1.1rem; display:flex; justify-content:space-between; align-items:center}
-    .faq-question::after {content:'+'; font-size:1.3rem; color:var(--brand); transition:0.3s}
-    .faq-item.open .faq-question::after {content:'−'; transform:rotate(90deg); color:var(--active)}
-    .faq-answer {max-height:0; overflow:hidden; transition:max-height 0.3s ease-out, margin-top 0.3s ease; color:var(--muted); font-size:0.98rem; line-height:1.6}
-    .faq-item.open .faq-answer {max-height:200px; margin-top:14px}
+    .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
+    .faq-item { background: var(--panel); border-radius: 10px; margin-bottom: 12px; padding: 18px 22px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+    .faq-item:hover { background: #f8fafc; }
+    .faq-question { font-weight: 600; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; color: #0a0f1e; }
+    .faq-question::after { content: '+'; font-size: 1.3rem; color: var(--brand); transition: 0.3s; }
+    .faq-item.open .faq-question::after { content: '−'; transform: rotate(90deg); color: var(--active); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, margin-top 0.3s ease; color: var(--muted); font-size: 0.98rem; line-height: 1.6; }
+    .faq-item.open .faq-answer { max-height: 200px; margin-top: 14px; }
 
     /* CONTACTS & CTA CARD */
-    .contacts-layout {display:flex; flex-wrap:wrap; justify-content:center; gap:40px; max-width:1100px; margin:0 auto; text-align:left}
-    .contacts-info {flex:1 1 350px; max-width:450px}
-    .contacts-container{display:flex; flex-direction:column; gap:14px; margin-top:20px}
+    .contacts-layout { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1100px; margin: 0 auto; text-align: left; }
+    .contacts-info { flex: 1 1 350px; max-width: 450px; color: #0a0f1e; }
+    .contacts-container { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
     .cta-box-card {
-      flex:1 1 400px; max-width:500px; background:var(--panel); border-radius:20px; padding:40px 30px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.3); border:2px dashed rgba(31,124,255,0.4);
-      display:flex; flex-direction:column; justify-content:center; text-align:center;
+      flex: 1 1 400px; max-width: 500px; background: var(--panel); border-radius: 20px; padding: 40px 30px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 2px dashed rgba(31,124,255,0.3);
+      display: flex; flex-direction: column; justify-content: center; text-align: center;
     }
-    .cta-box-card h3 {font-size:1.6rem; color:var(--text); margin-bottom:12px}
-    .cta-box-card p {font-size:1.02rem; color:var(--muted); line-height:1.6; margin-bottom:24px}
-    .cta-box-card .highlight {color:var(--active); font-weight:700}
+    .cta-box-card h3 { font-size: 1.6rem; color: #0a0f1e; margin-bottom: 12px; }
+    .cta-box-card p { font-size: 1.02rem; color: var(--muted); line-height: 1.6; margin-bottom: 24px; }
+    .cta-box-card .highlight { color: var(--active); font-weight: 700; }
 
-    /* СТИЛИ КОНТАКТНЫХ КНОПОК */
+    /* КНОПКИ СВЯЗИ */
     .contact-button {
       display: inline-flex !important;
       align-items: center !important;
@@ -192,59 +189,51 @@
       font-size: 1.05rem !important;
       transition: .25s ease !important;
       border: none !important;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2) !important;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1) !important;
     }
     .contact-button:hover {
       transform: translateY(-2px) !important;
-      box-shadow: 0 10px 22px rgba(0,0,0,0.35) !important;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.2) !important;
       color: #ffffff !important;
     }
     
     .cb-phone { background-color: #1f7cff !important; }
     .cb-phone:hover { background-color: #0b66e3 !important; }
-    
     .cb-telegram { background-color: #0088cc !important; }
     .cb-telegram:hover { background-color: #0072ab !important; }
-    
     .cb-whatsapp { background-color: #25d366 !important; }
     .cb-whatsapp:hover { background-color: #1fba55 !important; }
+    .cb-email { background-color: #4a5568 !important; }
+    .cb-email:hover { background-color: #2d3748 !important; }
     
-    .cb-email { background-color: #2b313d !important; }
-    .cb-email:hover { background-color: #1e222b !important; }
-    
-    .cb-cta { background-color: #00e0a4 !important; color: #0a0f1e !important; }
-    .cb-cta:hover { background-color: #00b887 !important; color: #0a0f1e !important; }
-    .cb-cta svg { fill: #0a0f1e !important; }
+    .cb-cta { background-color: #00e0a4 !important; color: #ffffff !important; }
+    .cb-cta:hover { background-color: #00b887 !important; }
+    .cb-cta svg { fill: #ffffff !important; }
+    .contact-button svg { width: 20px !important; height: 20px !important; fill: #ffffff; flex-shrink: 0 !important; }
 
-    .contact-button svg {
-      width: 20px !important;
-      height: 20px !important;
-      fill: #ffffff;
-      flex-shrink: 0 !important;
-      display: inline-block !important;
-      vertical-align: middle !important;
-    }
-
-    /* SEO СЕКЦИЯ ДЛЯ РОБОТОВ GOOGLE И ЯНДЕКСА */
+    /* SEO СЕКЦИЯ */
     .seo-text-block {
       max-width: 1100px; margin: 40px auto 0; padding: 30px;
-      background: rgba(255,255,255,0.02); border-radius: 14px;
-      text-align: left; font-size: 0.9rem; line-height: 1.6; color: #8892b0;
-      border-top: 1px solid rgba(255,255,255,0.05);
+      background: rgba(0,0,0,0.02); border-radius: 14px;
+      text-align: left; font-size: 0.9rem; line-height: 1.6; color: #4a5568;
+      border-top: 1px solid rgba(0,0,0,0.05);
     }
-    .seo-text-block h4 { color: #fff; font-size: 1.1rem; margin-bottom: 12px; font-weight: 600; }
+    .seo-text-block h4 { color: #0a0f1e; font-size: 1.1rem; margin-bottom: 12px; font-weight: 600; }
     .seo-text-block p { margin-bottom: 10px; }
 
-    footer{padding:30px; text-align:center; background:#0b0d12; opacity:.85; color:#666; font-size:0.9rem; border-top:1px solid rgba(255,255,255,0.05)}
-
+    footer { padding: 30px; text-align: center; background: #ffffff; color: #718096; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.06); }
     #about, #features, #standards, #services, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
 
-    #toTop{
-      position:fixed; right:18px; bottom:18px; width:50px; height:50px; border-radius:14px;
-      border:none; background:#222; color:#fff; cursor:pointer; display:none; font-size:20px;
-      box-shadow:0 6px 20px rgba(0,0,0,.35); z-index:1000;
+    /* Чередование подложек для светлой темы */
+    #features, #services, #projects, #faq { background: #ffffff !important; border-top: 1px solid rgba(0,0,0,0.02); border-bottom: 1px solid rgba(0,0,0,0.02); }
+    #about, #standards, #bundles, #reviews, #contacts { background: #f4f7fc !important; }
+
+    #toTop {
+      position: fixed; right: 18px; bottom: 18px; width: 50px; height: 50px; border-radius: 14px;
+      border: none; background: var(--brand); color: #fff; cursor: pointer; display: none; font-size: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15); z-index: 1000;
     }
-    #toTop.show{display:block}
+    #toTop.show { display: block; }
   </style>
 </head>
 <body>
@@ -274,7 +263,7 @@
   <section id="about">
     <h2>🔎 О компании</h2>
     <p class="section-desc">
-      <strong>WatchPoint Security</strong> — инжиниринговая company из Ташкента, специализирующаяся на проектировании, поставке и монтаже комплексных систем безопасности. Мы разрабатываем и внедряем отказоустойчивые цифровые решения для защиты промышленных объектов, логистических центров, коммерческих офисов и частного сектора по всей территории Республики Узбекистан.
+      <strong>WatchPoint Security</strong> — инжиниринговая company из Ташкента, специализирующаяся на проектировании, поставке и монтаже комплексных систем безопасности. Мы разрабатываем и внедряем отказоустойчивые цифровые решения для защиты промышленных объектов, логистических центров, коммерческих offices и частного сектора по всей территории Республики Узбекистан.
     </p>
   </section>
 
