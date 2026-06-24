@@ -51,17 +51,17 @@
     nav a:hover { color: var(--brand); }
     nav a.active { color: var(--brand); position: relative; }
     nav a.active::after {
-      content: ""; position: absolute; left: 0; right: 0; bottom:-4px;
+      content: ""; position: absolute; left: 0; right: 0; bottom: -4px;
       height: 3px; background: var(--brand); border-radius: 3px;
     }
 
-    /* 🎬 СЛАЙДЕР НА ГЛАВНОМ ЭКРАНЕ С ТВОИМИ КАРТИНКАМИ */
+    /* 🎬 СЛАЙДЕР НА ГЛАВНОМ ЭКРАНЕ */
     .slider-container {
       position: relative;
       min-height: 85vh;
       width: 100%;
       overflow: hidden;
-      background: #000; 
+      background: #0a0f1e; 
     }
     .slide {
       position: absolute;
@@ -74,9 +74,9 @@
       justify-content: center;
       text-align: center;
       padding: 20px;
-      background-size: cover !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
     .slide.active {
       opacity: 1;
@@ -84,13 +84,13 @@
       min-height: 85vh;
     }
     
-    /* Подключение твоих новых картинок из репозитория */
-    .slide-1 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide1.jpg") !important; }
-    .slide-2 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide2.jpg") !important; }
-    .slide-3 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide3.jpg") !important; }
+    /* Исправлено: Корректное и прямое наложение слоев графики без конфликтов */
+    .slide-1 { background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide1.jpg"); }
+    .slide-2 { background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide2.jpg"); }
+    .slide-3 { background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide3.jpg"); }
 
-    .slide h1 { font-size: 3.2rem; margin-bottom: 15px; letter-spacing: 1px; color: #ffffff !important; text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
-    .slide p { font-size: 1.25rem; opacity: .95; max-width: 750px; line-height: 1.5; margin-bottom: 28px; color: #ffffff !important; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
+    .slide h1 { font-size: 3.2rem; margin-bottom: 15px; letter-spacing: 1px; color: #ffffff; text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
+    .slide p { font-size: 1.25rem; opacity: .95; max-width: 750px; line-height: 1.5; margin-bottom: 28px; color: #ffffff; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
 
     /* Стрелочки */
     .slide-arrow {
@@ -269,8 +269,9 @@
     footer { padding: 30px; text-align: center; background: #ffffff; color: #718096; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.06); }
     #about, #features, #standards, #services, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
 
-    #features, #services, #projects, #faq { background: #ffffff !important; }
-    #about, #standards, #bundles, #reviews, #contacts { background: #f4f7fc !important; }
+    /* Чередование светлых подложек */
+    #features, #services, #projects, #faq { background: #ffffff; }
+    #about, #standards, #bundles, #reviews, #contacts { background: #f4f7fc; }
 
     #toTop {
       position: fixed; right: 18px; bottom: 18px; width: 50px; height: 50px; border-radius: 14px;
@@ -294,12 +295,10 @@
     <a href="#contacts">Контакты</a>
   </nav>
 
-  <!-- 🎬 СЛАЙДЕР С ЖЕСТКО ЗАФИКСИРОВАННЫМИ ТВОИМИ КАРТИНКАМИ -->
   <div class="slider-container" id="home">
     <button class="slide-arrow arrow-left" onclick="prevSlide()">&#10094;</button>
     <button class="slide-arrow arrow-right" onclick="nextSlide()">&#10095;</button>
     
-    <!-- Баннер 1: Главный бренд -->
     <div class="slide slide-1 active">
       <h1>WatchPoint Security</h1>
       <p>Мы видим то, что недоступно другим. Ваша уверенность под надёжным прицелом передовых технологий в Узбекистане.</p>
@@ -309,7 +308,6 @@
       </a>
     </div>
 
-    <!-- Баннер 2: Системы для бизнеса -->
     <div class="slide slide-2">
       <h1>Безопасность Вашего Бизнеса</h1>
       <p>Профессиональный монтаж IP-камер, СКУД-терминалов и умной видеоаналитики для складов, офисов и производств под ключ.</p>
@@ -319,7 +317,6 @@
       </a>
     </div>
 
-    <!-- Баннер 3: Официальная гарантия и замер -->
     <div class="slide slide-3">
       <h1>Официальный Контракт и Гарантия</h1>
       <p>Официальный договор, работа по перечислению с НДС, гарантия 1 год на монтаж и бесплатный выезд инженера на замер по Ташкенту.</p>
@@ -404,7 +401,7 @@
       <div class="card">
         <h3>🚨 Охранные системы</h3>
         <div class="brand-tags">ОХРАННО-ПОЖАРНЫЕ КОМПЛЕКСЫ</div>
-        <p>Монтаж современных датчиков движения, размыкания, разбития стекла и... систем пожарной сигнализации. Мгновенные пуш-уведомления о тревоге на ваш телефон.</p>
+        <p>Монтаж современных датчиков движения, размыкания, разбития стекла и систем пожарной сигнализации. Мгновенные пуш-уведомления о тревоге на ваш телефон.</p>
         <div class="price-tag">от 900 000 сум</div>
       </div>
       <div class="card">
@@ -547,7 +544,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-question">Как рассчитывается глубина архива (время хранения записей камер)?</div>
-        <div class="faq-answer">Глубина архива подбирается индивидуально под требования вашей безопасности (обычно от 14 до 30 дней). Мы рассчитываем точный объем специализированных жестких дисков (HDD) исходя из разрешения камер и записи по датчению движения.</div>
+        <div class="faq-answer">Глубина архива подбирается индивидуально под требования вашей безопасности (обычно от 14 до 30 дней). Мы рассчитываем точный объем специализированных жестких дисков (HDD) исходя из разрешения камер и записи по датчику движения.</div>
       </div>
     </div>
   </section>
@@ -610,7 +607,7 @@
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script>
-    // 🎬 ОКОНЧАТЕЛЬНАЯ ЛОГИКА СЛАЙДЕРА
+    // 🎬 ИСПРАВЛЕННАЯ ЛОГИКА СЛАЙДЕРА
     let currentSlideIdx = 0;
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
