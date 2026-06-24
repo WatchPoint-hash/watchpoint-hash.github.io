@@ -6,7 +6,7 @@
 
   <title>WatchPoint Security — Видеонаблюдение и системы безопасности в Узбекистане</title>
   <meta name="description" content="Монтаж и интеграция систем видеонаблюдения, СКУД и ИТ-инфраструктуры в Ташкенте. Официальный интегратор Hikvision, Tiandy, UniFi, UNV.">
-  <meta name="keywords" content="видеонаблюдение, systems безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security, Hikvision, Tiandy, UniFi, UNV">
+  <meta name="keywords" content="видеонаблюдение, системы безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security, Hikvision, Tiandy, UniFi, UNV">
   <meta name="robots" content="index, follow">
 
   <meta property="og:title" content="WatchPoint Security — Видеонаблюдение и системы безопасности">
@@ -55,7 +55,7 @@
       height: 3px; background: var(--brand); border-radius: 3px;
     }
 
-    /* 🎬 СТИЛИ НОВОГО ЖИВОГО СЛАЙДЕРА НА ГЛАВНОМ ЭКРАНЕ */
+    /* 🎬 СЛАЙДЕР НА ГЛАВНОМ ЭКРАНЕ (ИСПРАВЛЕНО ТЩАТЕЛЬНО) */
     .slider-container {
       position: relative;
       min-height: 85vh;
@@ -64,6 +64,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background: #000; /* Черная подложка, чтобы не было белых вспышек при переключении */
     }
     .slide {
       position: absolute;
@@ -75,31 +76,27 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #fff;
+      color: #fff !important; /* Строго белый текст поверх картинок */
       padding: 20px;
-      z-index: 1;
     }
     .slide.active {
       opacity: 1;
-      z-index: 2;
+      position: relative;
+      min-height: 85vh;
     }
-    /* Разные фоновые картинки для баннеров с затемнением, чтобы текст читался идеально */
-    .slide:nth-child(1) { background: linear-gradient(rgba(10,15,30,0.65), rgba(10,15,30,0.85)), url("bg.jpg") center/cover no-repeat; }
-    .slide:nth-child(2) { background: linear-gradient(rgba(10,15,30,0.65), rgba(10,15,30,0.85)), url("biznes2.jpg") center/cover no-repeat; }
-    .slide:nth-child(3) { background: linear-gradient(rgba(10,15,30,0.65), rgba(10,15,30,0.85)), url("prem3.jpg") center/cover no-repeat; }
+    
+    /* Исправлено: Слайды берут фоновые картинки и центрируются. Добавлено плотное затемнение. */
+    .slide:nth-child(1) { background: linear-gradient(rgba(10,15,30,0.65), rgba(10,15,30,0.85)), url("bg.jpg") center/cover no-repeat !important; }
+    .slide:nth-child(2) { background: linear-gradient(rgba(10,15,30,0.65), rgba(10,15,30,0.85)), url("biznes2.jpg") center/cover no-repeat !important; }
+    .slide:nth-child(3) { background: linear-gradient(rgba(10,15,30,0.65), rgba(10,15,30,0.85)), url("prem3.jpg") center/cover no-repeat !important; }
 
-    .slide img {
-      width: 130px; height: 130px; border-radius: 50%; border: 4px solid #fff;
-      object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      margin-bottom: 15px;
-    }
-    .slide h1 { font-size: 3.2rem; margin-bottom: 10px; letter-spacing: 1px; color: #ffffff; text-shadow: 0 2px 15px rgba(0,0,0,0.5); }
-    .slide p { font-size: 1.25rem; opacity: .95; max-width: 750px; line-height: 1.5; margin-bottom: 28px; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+    .slide h1 { font-size: 3.2rem; margin-bottom: 15px; letter-spacing: 1px; color: #ffffff !important; text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
+    .slide p { font-size: 1.25rem; opacity: .95; max-width: 750px; line-height: 1.5; margin-bottom: 28px; color: #ffffff !important; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
 
-    /* Стрелочки для ручного переключения баннеров */
+    /* Стрелочки переключения баннеров */
     .slide-arrow {
       position: absolute; top: 50%; transform: translateY(-50%);
-      background: rgba(255,255,255,0.15); color: #fff; border: none;
+      background: rgba(255,255,255,0.2); color: #fff; border: none;
       width: 45px; height: 45px; border-radius: 50%; font-size: 1.5rem;
       cursor: pointer; z-index: 10; transition: 0.3s; backdrop-filter: blur(4px);
     }
@@ -107,7 +104,7 @@
     .arrow-left { left: 20px; }
     .arrow-right { right: 20px; }
 
-    /* Точки внизу слайдера */
+    /* Точки слайдера */
     .slider-dots {
       position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
       display: flex; gap: 8px; z-index: 10;
@@ -273,7 +270,8 @@
     footer { padding: 30px; text-align: center; background: #ffffff; color: #718096; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.06); }
     #about, #features, #standards, #services, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
 
-    #features, #services, #projects, #faq { background: #ffffff !important; border-top: 1px solid rgba(0,0,0,0.02); border-bottom: 1px solid rgba(0,0,0,0.02); }
+    /* Переопределение фонов контента, чтобы исключить наложение на слайдер */
+    #features, #services, #projects, #faq { background: #ffffff !important; }
     #about, #standards, #bundles, #reviews, #contacts { background: #f4f7fc !important; }
 
     #toTop {
@@ -298,14 +296,13 @@
     <a href="#contacts">Контакты</a>
   </nav>
 
-  <!-- 🎬 НОВЫЙ ИНТЕРАКТИВНЫЙ СЛАЙДЕР ВМЕСТО СТАТИЧНОЙ ШАПКИ -->
+  <!-- 🎬 ОБНОВЛЕННЫЙ СЛАЙДЕР БЕЗ КРУГЛОГО ЛОГО И С КОРРЕКТНЫМИ ФОНАМИ -->
   <div class="slider-container" id="home">
     <button class="slide-arrow arrow-left" onclick="prevSlide()">&#10094;</button>
     <button class="slide-arrow arrow-right" onclick="nextSlide()">&#10095;</button>
     
     <!-- Баннер 1: Главный бренд -->
     <div class="slide active">
-      <img src="logo.png" alt="WatchPoint Security"/>
       <h1>WatchPoint Security</h1>
       <p>Мы видим то, что недоступно другим. Ваша уверенность под надёжным прицелом передовых технологий в Узбекистане.</p>
       <a href="#bundles" class="contact-button cb-cta">
@@ -316,7 +313,6 @@
 
     <!-- Баннер 2: Системы для бизнеса -->
     <div class="slide">
-      <img src="logo.png" alt="Безопасность бизнеса в Ташкенте"/>
       <h1>Безопасность Вашего Бизнеса</h1>
       <p>Профессиональный монтаж IP-камер, СКУД-терминалов и умной видеоаналитики для складов, офисов и производств под ключ.</p>
       <a href="#services" class="contact-button cb-cta">
@@ -327,7 +323,6 @@
 
     <!-- Баннер 3: Официальная гарантия и замер -->
     <div class="slide">
-      <img src="logo.png" alt="Гарантия WatchPoint"/>
       <h1>Официальный Контракт и Гарантия</h1>
       <p>Официальный договор, работа по перечислению с НДС, гарантия 1 год на монтаж и бесплатный выезд инженера на замер по Ташкенту.</p>
       <a href="#contacts" class="contact-button cb-cta">
@@ -617,11 +612,11 @@
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script>
-    // 🎬 ЛОГИКА АВТОМАТИЧЕСКОГО СЛАЙДЕРА (БАННЕРА)
+    // 🎬 ИСПРАВЛЕННАЯ ЛОГИКА СЛАЙДЕРА
     let currentSlideIdx = 0;
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
-    let slideInterval = setInterval(nextSlide, 5000); // Баннеры меняются сами каждые 5 секунд
+    let slideInterval = setInterval(nextSlide, 5000);
 
     function showSlide(n) {
       slides.forEach(slide => slide.classList.remove('active'));
@@ -641,12 +636,12 @@
     }
 
     function currentSlide(n) {
-      clearInterval(slideInterval); // Сбрасываем таймер, если пользователь кликнул сам
+      clearInterval(slideInterval);
       showSlide(n);
       slideInterval = setInterval(nextSlide, 5000);
     }
 
-    // Подсветка активного меню
+    // Подсветка меню
     const links = document.querySelectorAll('nav a');
     const sections = [...document.querySelectorAll('section, .slider-container')];
     window.addEventListener('scroll', () => {
@@ -667,7 +662,7 @@
     });
     document.getElementById('toTop').addEventListener('click', ()=>window.scrollTo({top:0, behavior:'smooth'}));
 
-    // Логика Аккордеона FAQ
+    // FAQ Аккордеон
     document.querySelectorAll('.faq-item').forEach(item => {
       item.addEventListener('click', () => {
         const isOpen = item.classList.contains('open');
