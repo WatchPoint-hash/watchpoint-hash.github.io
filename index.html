@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WatchPoint Security — Видеонаблюдение и systems безопасности в Узбекистане</title>
+  <title>WatchPoint Security — Видеонаблюдение и системы безопасности в Узбекистане</title>
   <meta name="description" content="Монтаж и интеграция систем видеонаблюдения, СКУД и ИТ-инфраструктуры в Ташкенте. Официальный интегратор Hikvision, Tiandy, UniFi, UNV.">
   <meta name="keywords" content="видеонаблюдение, системы безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security, Hikvision, Tiandy, UniFi, UNV">
   <meta name="robots" content="index, follow">
@@ -13,7 +13,7 @@
   <meta property="og:description" content="Надёжная защита вашего бизнеса и дома в Узбекистане. Реализованные кейсы, готовые комплекты оборудования под ключ и официальный договор.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://watchpoint.uz">
-  <meta property="og:image" content="bg.jpg">
+  <meta property="og:image" content="slide1.jpg">
 
   <link rel="icon" href="logo.png" type="image/png">
 
@@ -51,11 +51,11 @@
     nav a:hover { color: var(--brand); }
     nav a.active { color: var(--brand); position: relative; }
     nav a.active::after {
-      content: ""; position: absolute; left: 0; right: 0; bottom: -4px;
+      content: ""; position: absolute; left: 0; right: 0; bottom:-4px;
       height: 3px; background: var(--brand); border-radius: 3px;
     }
 
-    /* 🎬 СЛАЙДЕР НА ГЛАВНОМ ЭКРАНЕ (ИСПРАВЛЕНО ТЩАТЕЛЬНО) */
+    /* 🎬 СЛАЙДЕР НА ГЛАВНОМ ЭКРАНЕ С ТВОИМИ КАРТИНКАМИ */
     .slider-container {
       position: relative;
       min-height: 85vh;
@@ -84,15 +84,15 @@
       min-height: 85vh;
     }
     
-    /* Исправленный синтаксис наложения картинок и затемнения */
-    .slide-1 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("bg.jpg") !important; }
-    .slide-2 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("biznes2.jpg") !important; }
-    .slide-3 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("prem3.jpg") !important; }
+    /* Подключение твоих новых картинок из репозитория */
+    .slide-1 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide1.jpg") !important; }
+    .slide-2 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide2.jpg") !important; }
+    .slide-3 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide3.jpg") !important; }
 
     .slide h1 { font-size: 3.2rem; margin-bottom: 15px; letter-spacing: 1px; color: #ffffff !important; text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
     .slide p { font-size: 1.25rem; opacity: .95; max-width: 750px; line-height: 1.5; margin-bottom: 28px; color: #ffffff !important; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
 
-    /* Стрелочки переключения баннеров */
+    /* Стрелочки */
     .slide-arrow {
       position: absolute; top: 50%; transform: translateY(-50%);
       background: rgba(255,255,255,0.2); color: #fff; border: none;
@@ -103,7 +103,7 @@
     .arrow-left { left: 20px; }
     .arrow-right { right: 20px; }
 
-    /* Точки слайдера */
+    /* Точки */
     .slider-dots {
       position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
       display: flex; gap: 8px; z-index: 10;
@@ -294,7 +294,7 @@
     <a href="#contacts">Контакты</a>
   </nav>
 
-  <!-- 🎬 ОБНОВЛЕННЫЙ СЛАЙДЕР С ЖЕСТКО ЗАФИКСИРОВАННЫМИ КАРТИНКАМИ -->
+  <!-- 🎬 СЛАЙДЕР С ЖЕСТКО ЗАФИКСИРОВАННЫМИ ТВОИМИ КАРТИНКАМИ -->
   <div class="slider-container" id="home">
     <button class="slide-arrow arrow-left" onclick="prevSlide()">&#10094;</button>
     <button class="slide-arrow arrow-right" onclick="nextSlide()">&#10095;</button>
@@ -404,7 +404,7 @@
       <div class="card">
         <h3>🚨 Охранные системы</h3>
         <div class="brand-tags">ОХРАННО-ПОЖАРНЫЕ КОМПЛЕКСЫ</div>
-        <p>Монтаж современных датчиков движения, размыкания, разбития стекла и систем пожарной сигнализации. Мгновенные пуш-уведомления о тревоге на ваш телефон.</p>
+        <p>Монтаж современных датчиков движения, размыкания, разбития стекла и... систем пожарной сигнализации. Мгновенные пуш-уведомления о тревоге на ваш телефон.</p>
         <div class="price-tag">от 900 000 сум</div>
       </div>
       <div class="card">
@@ -516,7 +516,7 @@
     <p class="section-desc">Нам доверяют безопасность своего бизнеса и имущества.</p>
     <div class="reviews-grid">
       <div class="review-card">
-        <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроорили удалённый доступ на телефонах. Рекомендуем!»</p>
+        <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»</p>
         <div class="review-author">Фарход Ш.</div>
         <div class="review-company">Логистический центр, Ташкент</div>
       </div>
@@ -547,7 +547,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-question">Как рассчитывается глубина архива (время хранения записей камер)?</div>
-        <div class="faq-answer">Глубина архива подбирается индивидуально под требования вашей безопасности (обычно от 14 до 30 дней). Мы рассчитываем точный объем специализированных жестких дисков (HDD) исходя из разрешения камер и записи по датчику движения.</div>
+        <div class="faq-answer">Глубина архива подбирается индивидуально под требования вашей безопасности (обычно от 14 до 30 дней). Мы рассчитываем точный объем специализированных жестких дисков (HDD) исходя из разрешения камер и записи по датчению движения.</div>
       </div>
     </div>
   </section>
@@ -600,7 +600,7 @@
 
     <div class="seo-text-block">
       <h4>Профессиональное проектирование и монтаж систем безопасности в Узбекистане</h4>
-      <p>Инжиниринговая компания <strong>WatchPoint Security</strong> осуществляет комплексную интеграцию слаботочных сетей и цифровых экосистем контроля по всей территории Ташкента, Ташкентской области (включая Чирчик, Алмалык, Ангрен) и других регионов Республики Узбекистан. Мы специализируемся на проектировании высокоточных IP-систем видеонаблюдения, биометрического контроля доступа (СКУД), автоматических турникетов, датчиков охраны периметра и ИТ-инфраструктуры (ЛВС, оптические линии связи, serverные шкафы).</p>
+      <p>Инжиниринговая компания <strong>WatchPoint Security</strong> осуществляет комплексную интеграцию слаботочных сетей и цифровых экосистем контроля по всей территории Ташкента, Ташкентской области (включая Чирчик, Алмалык, Ангрен) и других регионов Республики Узбекистан. Мы специализируемся на проектировании высокоточных IP-систем видеонаблюдения, биометрического контроля доступа (СКУД), автоматических турникетов, датчиков охраны периметра и ИТ-инфраструктуры (ЛВС, оптические линии связи, серверные шкафы).</p>
       <p>Благодаря статусу официального интегратора передового оборудования от брендов мирового уровня — <strong>Hikvision, Tiandy, UNV (Uniview) и UniFi</strong> — мы гарантируем бескомпромиссную отказоустойчивость систем. Обслуживание объектов коммерческой недвижимости, складов, производственных предприятий и частных загородных резиденций производится строго по договору по перечислению (с НДС), с предоставлением полной гарантии 1 год.</p>
     </div>
   </section>
@@ -610,7 +610,7 @@
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script>
-    // 🎬 ПОЛНОСТЬЮ ИСПРАВЛЕННАЯ И ПРОВЕРЕННАЯ ЛОГИКА СЛАЙДЕРА
+    // 🎬 ОКОНЧАТЕЛЬНАЯ ЛОГИКА СЛАЙДЕРА
     let currentSlideIdx = 0;
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
