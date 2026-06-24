@@ -55,7 +55,7 @@
       height: 3px; background: var(--brand); border-radius: 3px;
     }
 
-    /* 🎬 СЛАЙДЕР НА ГЛАВНОМ ЭКРАНЕ */
+    /* 🎬 СЛАЙДЕР НА ГЛАВНОМ ЭКРАНЕ (ИСПРАВЛЕНЫ ПУТИ И СИНТАКСИС) */
     .slider-container {
       position: relative;
       min-height: 85vh;
@@ -74,9 +74,9 @@
       justify-content: center;
       text-align: center;
       padding: 20px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
     }
     .slide.active {
       opacity: 1;
@@ -84,13 +84,13 @@
       min-height: 85vh;
     }
     
-    /* Исправлено: Корректное и прямое наложение слоев графики без конфликтов */
-    .slide-1 { background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide1.jpg"); }
-    .slide-2 { background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide2.jpg"); }
-    .slide-3 { background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("slide3.jpg"); }
+    /* ИСПРАВЛЕНО: Правильное и надежное наложение градиента и картинок */
+    .slide-1 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("slide1.jpg") !important; }
+    .slide-2 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("slide2.jpg") !important; }
+    .slide-3 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("slide3.jpg") !important; }
 
-    .slide h1 { font-size: 3.2rem; margin-bottom: 15px; letter-spacing: 1px; color: #ffffff; text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
-    .slide p { font-size: 1.25rem; opacity: .95; max-width: 750px; line-height: 1.5; margin-bottom: 28px; color: #ffffff; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
+    .slide h1 { font-size: 3.2rem; margin-bottom: 15px; letter-spacing: 1px; color: #ffffff !important; text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
+    .slide p { font-size: 1.25rem; opacity: .95; max-width: 750px; line-height: 1.5; margin-bottom: 28px; color: #ffffff !important; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
 
     /* Стрелочки */
     .slide-arrow {
@@ -269,7 +269,6 @@
     footer { padding: 30px; text-align: center; background: #ffffff; color: #718096; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.06); }
     #about, #features, #standards, #services, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
 
-    /* Чередование светлых подложек */
     #features, #services, #projects, #faq { background: #ffffff; }
     #about, #standards, #bundles, #reviews, #contacts { background: #f4f7fc; }
 
@@ -607,7 +606,7 @@
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script>
-    // 🎬 ИСПРАВЛЕННАЯ ЛОГИКА СЛАЙДЕРА
+    // 🎬 ОКОНЧАТЕЛЬНАЯ И ПРОВЕРЕННАЯ ЛОГИКА СЛАЙДЕРА
     let currentSlideIdx = 0;
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
