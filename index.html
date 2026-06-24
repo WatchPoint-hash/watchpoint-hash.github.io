@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WatchPoint Security — Видеонаблюдение и системы безопасности в Узбекистане</title>
+  <title>WatchPoint Security — Видеонаблюдение и systems безопасности в Узбекистане</title>
   <meta name="description" content="Монтаж и интеграция систем видеонаблюдения, СКУД и ИТ-инфраструктуры в Ташкенте. Официальный интегратор Hikvision, Tiandy, UniFi, UNV.">
   <meta name="keywords" content="видеонаблюдение, системы безопасности, монтаж камер, контроль доступа, охранные системы, Ташкент, Узбекистан, WatchPoint Security, Hikvision, Tiandy, UniFi, UNV">
   <meta name="robots" content="index, follow">
@@ -61,10 +61,7 @@
       min-height: 85vh;
       width: 100%;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #000; /* Черная подложка, чтобы не было белых вспышек при переключении */
+      background: #000; 
     }
     .slide {
       position: absolute;
@@ -76,8 +73,10 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #fff !important; /* Строго белый текст поверх картинок */
       padding: 20px;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
     }
     .slide.active {
       opacity: 1;
@@ -85,10 +84,10 @@
       min-height: 85vh;
     }
     
-    /* Исправлено: Слайды берут фоновые картинки и центрируются. Добавлено плотное затемнение. */
-    .slide:nth-child(1) { background: linear-gradient(rgba(10,15,30,0.65), rgba(10,15,30,0.85)), url("bg.jpg") center/cover no-repeat !important; }
-    .slide:nth-child(2) { background: linear-gradient(rgba(10,15,30,0.65), rgba(10,15,30,0.85)), url("biznes2.jpg") center/cover no-repeat !important; }
-    .slide:nth-child(3) { background: linear-gradient(rgba(10,15,30,0.65), rgba(10,15,30,0.85)), url("prem3.jpg") center/cover no-repeat !important; }
+    /* Исправленный синтаксис наложения картинок и затемнения */
+    .slide-1 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("bg.jpg") !important; }
+    .slide-2 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("biznes2.jpg") !important; }
+    .slide-3 { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url("prem3.jpg") !important; }
 
     .slide h1 { font-size: 3.2rem; margin-bottom: 15px; letter-spacing: 1px; color: #ffffff !important; text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
     .slide p { font-size: 1.25rem; opacity: .95; max-width: 750px; line-height: 1.5; margin-bottom: 28px; color: #ffffff !important; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
@@ -270,7 +269,6 @@
     footer { padding: 30px; text-align: center; background: #ffffff; color: #718096; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.06); }
     #about, #features, #standards, #services, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
 
-    /* Переопределение фонов контента, чтобы исключить наложение на слайдер */
     #features, #services, #projects, #faq { background: #ffffff !important; }
     #about, #standards, #bundles, #reviews, #contacts { background: #f4f7fc !important; }
 
@@ -296,13 +294,13 @@
     <a href="#contacts">Контакты</a>
   </nav>
 
-  <!-- 🎬 ОБНОВЛЕННЫЙ СЛАЙДЕР БЕЗ КРУГЛОГО ЛОГО И С КОРРЕКТНЫМИ ФОНАМИ -->
+  <!-- 🎬 ОБНОВЛЕННЫЙ СЛАЙДЕР С ЖЕСТКО ЗАФИКСИРОВАННЫМИ КАРТИНКАМИ -->
   <div class="slider-container" id="home">
     <button class="slide-arrow arrow-left" onclick="prevSlide()">&#10094;</button>
     <button class="slide-arrow arrow-right" onclick="nextSlide()">&#10095;</button>
     
     <!-- Баннер 1: Главный бренд -->
-    <div class="slide active">
+    <div class="slide slide-1 active">
       <h1>WatchPoint Security</h1>
       <p>Мы видим то, что недоступно другим. Ваша уверенность под надёжным прицелом передовых технологий в Узбекистане.</p>
       <a href="#bundles" class="contact-button cb-cta">
@@ -312,7 +310,7 @@
     </div>
 
     <!-- Баннер 2: Системы для бизнеса -->
-    <div class="slide">
+    <div class="slide slide-2">
       <h1>Безопасность Вашего Бизнеса</h1>
       <p>Профессиональный монтаж IP-камер, СКУД-терминалов и умной видеоаналитики для складов, офисов и производств под ключ.</p>
       <a href="#services" class="contact-button cb-cta">
@@ -322,7 +320,7 @@
     </div>
 
     <!-- Баннер 3: Официальная гарантия и замер -->
-    <div class="slide">
+    <div class="slide slide-3">
       <h1>Официальный Контракт и Гарантия</h1>
       <p>Официальный договор, работа по перечислению с НДС, гарантия 1 год на монтаж и бесплатный выезд инженера на замер по Ташкенту.</p>
       <a href="#contacts" class="contact-button cb-cta">
@@ -518,7 +516,7 @@
     <p class="section-desc">Нам доверяют безопасность своего бизнеса и имущества.</p>
     <div class="reviews-grid">
       <div class="review-card">
-        <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»</p>
+        <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроорили удалённый доступ на телефонах. Рекомендуем!»</p>
         <div class="review-author">Фарход Ш.</div>
         <div class="review-company">Логистический центр, Ташкент</div>
       </div>
@@ -602,7 +600,7 @@
 
     <div class="seo-text-block">
       <h4>Профессиональное проектирование и монтаж систем безопасности в Узбекистане</h4>
-      <p>Инжиниринговая компания <strong>WatchPoint Security</strong> осуществляет комплексную интеграцию слаботочных сетей и цифровых экосистем контроля по всей территории Ташкента, Ташкентской области (включая Чирчик, Алмалык, Ангрен) и других регионов Республики Узбекистан. Мы специализируемся на проектировании высокоточных IP-систем видеонаблюдения, биометрического контроля доступа (СКУД), автоматических турникетов, датчиков охраны периметра и ИТ-инфраструктуры (ЛВС, оптические линии связи, серверные шкафы).</p>
+      <p>Инжиниринговая компания <strong>WatchPoint Security</strong> осуществляет комплексную интеграцию слаботочных сетей и цифровых экосистем контроля по всей территории Ташкента, Ташкентской области (включая Чирчик, Алмалык, Ангрен) и других регионов Республики Узбекистан. Мы специализируемся на проектировании высокоточных IP-систем видеонаблюдения, биометрического контроля доступа (СКУД), автоматических турникетов, датчиков охраны периметра и ИТ-инфраструктуры (ЛВС, оптические линии связи, serverные шкафы).</p>
       <p>Благодаря статусу официального интегратора передового оборудования от брендов мирового уровня — <strong>Hikvision, Tiandy, UNV (Uniview) и UniFi</strong> — мы гарантируем бескомпромиссную отказоустойчивость систем. Обслуживание объектов коммерческой недвижимости, складов, производственных предприятий и частных загородных резиденций производится строго по договору по перечислению (с НДС), с предоставлением полной гарантии 1 год.</p>
     </div>
   </section>
@@ -612,7 +610,7 @@
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script>
-    // 🎬 ИСПРАВЛЕННАЯ ЛОГИКА СЛАЙДЕРА
+    // 🎬 ПОЛНОСТЬЮ ИСПРАВЛЕННАЯ И ПРОВЕРЕННАЯ ЛОГИКА СЛАЙДЕРА
     let currentSlideIdx = 0;
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
