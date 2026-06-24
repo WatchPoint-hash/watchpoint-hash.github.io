@@ -13,7 +13,7 @@
   <meta property="og:description" content="Надёжная защита вашего бизнеса и дома в Узбекистане. Реализованные кейсы, готовые комплекты оборудования под ключ и официальный договор.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://watchpoint.uz">
-  <meta property="og:image" content="slide1.jpg">
+  <meta property="og:image" content="slide1.jpg.png">
 
   <link rel="icon" href="logo.png" type="image/png">
 
@@ -54,7 +54,7 @@
       height: 3px; background: var(--brand); border-radius: 3px;
     }
 
-    /* 🎬 АБСОЛЮТНО ОПТИМИЗИРОВАННЫЙ СЛАЙДЕР С ТЕГАМИ IMG */
+    /* 🎬 ЖЕЛЕЗОБЕТОННЫЙ СЛАЙДЕР НА СВОЙСТВАХ BACKGROUND */
     .slider-container {
       position: relative;
       height: 80vh;
@@ -75,35 +75,14 @@
       justify-content: center;
       text-align: center;
       padding: 20px;
+      background-position: center center !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
     }
     .slide.active {
       opacity: 1;
       visibility: visible;
-      z-index: 2;
-    }
-
-    /* Полноэкранные картинки внутри слайдов */
-    .slide-bg-img {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: 1;
-    }
-    /* Слой плотного затемнения поверх картинок, чтобы текст читался сочно */
-    .slide-overlay {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
-      z-index: 2;
-    }
-    /* Весь контент (текст и кнопки) поднимаем над картинкой */
-    .slide-content {
-      position: relative;
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      z-index: 5;
     }
 
     .slide h1 { font-size: 3.2rem; margin-bottom: 15px; letter-spacing: 1px; color: #ffffff !important; text-shadow: 0 3px 20px rgba(0,0,0,0.85); }
@@ -312,51 +291,39 @@
     <a href="#contacts">Контакты</a>
   </nav>
 
-  <!-- 🎬 ОБНОВЛЕННЫЙ СЛАЙДЕР С ТЕГАМИ IMG И СЛОЕМ OVERLAY -->
+  <!-- ИСПРАВЛЕНО НА КОРРЕКТНЫЕ СКРЫТЫЕ РАСШИРЕНИЯ ФАЙЛОВ .jpg.png -->
   <div class="slider-container" id="home">
     <button class="slide-arrow arrow-left" onclick="prevSlide()">&#10094;</button>
     <button class="slide-arrow arrow-right" onclick="nextSlide()">&#10095;</button>
     
     <!-- Баннер 1 -->
-    <div class="slide active">
-      <img src="slide1.jpg" class="slide-bg-img" alt="Фон 1">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h1>WatchPoint Security</h1>
-        <p>Мы видим то, что недоступно другим. Ваша уверенность под надёжным прицелом передовых технологий в Узбекистане.</p>
-        <a href="#bundles" class="contact-button cb-cta">
-          <svg viewBox="0 0 24 24"><path d="M11 20v-5.5H5.5l5.5 5.5zm2 0l5.5-5.5H13V20zM2 13h9V4H2v9zm11-9v9h9V4h-9z"/></svg>
-          Выбрать готовый комплект
-        </a>
-      </div>
+    <div class="slide active" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide1.jpg.png');">
+      <h1>WatchPoint Security</h1>
+      <p>Мы видим то, что недоступно другим. Ваша уверенность под надёжным прицелом передовых технологий в Узбекистане.</p>
+      <a href="#bundles" class="contact-button cb-cta">
+        <svg viewBox="0 0 24 24"><path d="M11 20v-5.5H5.5l5.5 5.5zm2 0l5.5-5.5H13V20zM2 13h9V4H2v9zm11-9v9h9V4h-9z"/></svg>
+        Выбрать готовый комплект
+      </a>
     </div>
 
     <!-- Баннер 2 -->
-    <div class="slide">
-      <img src="slide2.jpg" class="slide-bg-img" alt="Фон 2">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h1>Безопасность Вашего Бизнеса</h1>
-        <p>Профессиональный монтаж IP-камер, СКУД-терминалов и умной видеоаналитики для складов, офисов и производств под ключ.</p>
-        <a href="#services" class="contact-button cb-cta">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-          Посмотреть наши услуги
-        </a>
-      </div>
+    <div class="slide" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide2.jpg.png');">
+      <h1>Безопасность Вашего Бизнеса</h1>
+      <p>Профессиональный монтаж IP-камер, СКУД-терминалов и умной видеоаналитики для складов, офисов и производств под ключ.</p>
+      <a href="#services" class="contact-button cb-cta">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        Посмотреть наши услуги
+      </a>
     </div>
 
     <!-- Баннер 3 -->
-    <div class="slide">
-      <img src="slide3.jpg" class="slide-bg-img" alt="Фон 3">
-      <div class="slide-overlay"></div>
-      <div class="slide-content">
-        <h1>Официальный Контракт и Гарантия</h1>
-        <p>Официальный договор, работа по перечислению с НДС, гарантия 1 год на монтаж и бесплатный выезд инженера на замер по Ташкенту.</p>
-        <a href="#contacts" class="contact-button cb-cta">
-          <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
-          Заказать бесплатный замер
-        </a>
-      </div>
+    <div class="slide" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide3.jpg.png');">
+      <h1>Официальный Контракт и Гарантия</h1>
+      <p>Официальный договор, работа по перечислению с НДС, гарантия 1 год на монтаж и бесплатный выезд инженера на замер по Ташкенту.</p>
+      <a href="#contacts" class="contact-button cb-cta">
+        <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+        Заказать бесплатный замер
+      </a>
     </div>
 
     <div class="slider-dots">
