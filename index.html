@@ -55,13 +55,13 @@
       height: 3px; background: var(--brand); border-radius: 3px;
     }
 
-    /* 🎬 СЛАЙДЕР НА ГЛАВНОМ ЭКРАНЕ (ИСПРАВЛЕНЫ ПУТИ И СИНТАКСИС) */
+    /* 🎬 СЛАЙДЕР НА ГЛАВНОМ ЭКРАНЕ */
     .slider-container {
       position: relative;
       min-height: 85vh;
       width: 100%;
       overflow: hidden;
-      background: #0a0f1e; 
+      background-color: #000000 !important; 
     }
     .slide {
       position: absolute;
@@ -74,9 +74,6 @@
       justify-content: center;
       text-align: center;
       padding: 20px;
-      background-size: cover !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
     }
     .slide.active {
       opacity: 1;
@@ -84,10 +81,10 @@
       min-height: 85vh;
     }
     
-    /* ИСПРАВЛЕНО: Правильное и надежное наложение градиента и картинок */
-    .slide-1 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("slide1.jpg") !important; }
-    .slide-2 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("slide2.jpg") !important; }
-    .slide-3 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("slide3.jpg") !important; }
+    /* ИСПРАВЛЕНО ЖЕСТКО: Изолированные фоны для слайдов без конфликтов */
+    .slide-1 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("slide1.jpg") center/cover no-repeat !important; }
+    .slide-2 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("slide2.jpg") center/cover no-repeat !important; }
+    .slide-3 { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("slide3.jpg") center/cover no-repeat !important; }
 
     .slide h1 { font-size: 3.2rem; margin-bottom: 15px; letter-spacing: 1px; color: #ffffff !important; text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
     .slide p { font-size: 1.25rem; opacity: .95; max-width: 750px; line-height: 1.5; margin-bottom: 28px; color: #ffffff !important; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
@@ -122,7 +119,7 @@
     /* ADVANTAGES */
     .features-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1100px; margin: 0 auto; }
     .feature-item {
-      flex: 1 1 300px; max-width: 340px; background: var(--panel); padding: 30px 20px;
+      flex: 1 1 300px; max-width: 340px; background: var(--panel) !important; padding: 30px 20px;
       border-radius: 14px; border-top: 4px solid var(--active); box-shadow: 0 10px 25px rgba(0,0,0,0.04);
     }
     .feature-item h3 { font-size: 1.25rem; margin-bottom: 10px; color: #0a0f1e; }
@@ -131,7 +128,7 @@
     /* STANDARDS */
     .standards-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1100px; margin: 0 auto; }
     .standard-item {
-      flex: 1 1 450px; max-width: 520px; background: var(--panel); border-radius: 16px; padding: 30px;
+      flex: 1 1 450px; max-width: 520px; background: var(--panel) !important; border-radius: 16px; padding: 30px;
       text-align: left; box-shadow: 0 10px 25px rgba(0,0,0,0.04); border-left: 4px solid var(--brand);
     }
     .standard-item h3 { font-size: 1.3rem; color: #0a0f1e; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
@@ -140,13 +137,13 @@
     /* SERVICES & PRICES */
     .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; max-width: 1200px; margin: 0 auto; }
     .card {
-      width: 270px; background: var(--panel); border-radius: 16px; padding: 25px 22px;
+      width: 270px; background: var(--panel) !important; border-radius: 16px; padding: 25px 22px;
       text-align: left; box-shadow: 0 10px 25px rgba(0,0,0,0.04);
       transition: transform .25s, box-shadow .25s;
       display: flex; flex-direction: column; justify-content: space-between;
       border: 1px solid rgba(0,0,0,0.03);
     }
-    .card:hover { transform: translateY(-6px); box-shadow: 0 15px 35px rgba(31,124,255,0.12); background: #ffffff; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 15px 35px rgba(31,124,255,0.12); background: #ffffff !important; }
     .card h3 { margin: 8px 0 10px 0; font-size: 1.25rem; color: #0a0f1e; }
     .card p { font-size: 0.95rem; line-height: 1.5; color: var(--muted); margin-bottom: 15px; flex-grow: 1; }
     .brand-tags { font-size: 0.8rem; font-weight: 700; color: var(--brand); margin-bottom: 12px; letter-spacing: 0.5px; }
@@ -155,7 +152,7 @@
     /* BUNDLES */
     .bundles-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 26px; max-width: 1200px; margin: 0 auto; }
     .bundle-card {
-      flex: 1 1 320px; max-width: 360px; background: var(--panel); border-radius: 20px; padding: 0;
+      flex: 1 1 320px; max-width: 360px; background: var(--panel) !important; border-radius: 20px; padding: 0;
       text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.04);
       display: flex; flex-direction: column; position: relative; overflow: hidden;
     }
@@ -177,7 +174,7 @@
     /* PROJECTS */
     .projects-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1100px; margin: 0 auto; }
     .project-card {
-      flex: 1 1 300px; max-width: 340px; background: var(--panel); border-radius: 16px; padding: 28px 22px;
+      flex: 1 1 300px; max-width: 340px; background: var(--panel) !important; border-radius: 16px; padding: 28px 22px;
       text-align: left; border-bottom: 4px solid var(--brand); box-shadow: 0 10px 25px rgba(0,0,0,0.04);
     }
     .project-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: #0a0f1e; }
@@ -188,7 +185,7 @@
     /* REVIEWS */
     .reviews-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1100px; margin: 0 auto; }
     .review-card {
-      flex: 1 1 300px; max-width: 340px; background: var(--panel); padding: 30px 24px;
+      flex: 1 1 300px; max-width: 340px; background: var(--panel) !important; padding: 30px 24px;
       border-radius: 16px; text-align: left; box-shadow: 0 10px 25px rgba(0,0,0,0.04); border-left: 4px solid var(--brand);
     }
     .review-text { font-style: italic; font-size: 0.95rem; line-height: 1.6; color: var(--muted); margin-bottom: 20px; }
@@ -197,8 +194,8 @@
 
     /* FAQ */
     .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
-    .faq-item { background: var(--panel); border-radius: 10px; margin-bottom: 12px; padding: 18px 22px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
-    .faq-item:hover { background: #f8fafc; }
+    .faq-item { background: var(--panel) !important; border-radius: 10px; margin-bottom: 12px; padding: 18px 22px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+    .faq-item:hover { background: #f8fafc !important; }
     .faq-question { font-weight: 600; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; color: #0a0f1e; }
     .faq-question::after { content: '+'; font-size: 1.3rem; color: var(--brand); transition: 0.3s; }
     .faq-item.open .faq-question::after { content: '−'; transform: rotate(90deg); color: var(--active); }
@@ -210,7 +207,7 @@
     .contacts-info { flex: 1 1 350px; max-width: 450px; color: #0a0f1e; }
     .contacts-container { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
     .cta-box-card {
-      flex: 1 1 400px; max-width: 500px; background: var(--panel); border-radius: 20px; padding: 40px 30px;
+      flex: 1 1 400px; max-width: 500px; background: var(--panel) !important; border-radius: 20px; padding: 40px 30px;
       box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 2px dashed rgba(31,124,255,0.3);
       display: flex; flex-direction: column; justify-content: center; text-align: center;
     }
@@ -259,18 +256,19 @@
     /* SEO СЕКЦИЯ */
     .seo-text-block {
       max-width: 1100px; margin: 40px auto 0; padding: 30px;
-      background: rgba(0,0,0,0.02); border-radius: 14px;
+      background: rgba(0,0,0,0.02) !important; border-radius: 14px;
       text-align: left; font-size: 0.9rem; line-height: 1.6; color: #4a5568;
       border-top: 1px solid rgba(0,0,0,0.05);
     }
     .seo-text-block h4 { color: #0a0f1e; font-size: 1.1rem; margin-bottom: 12px; font-weight: 600; }
     .seo-text-block p { margin-bottom: 10px; }
 
-    footer { padding: 30px; text-align: center; background: #ffffff; color: #718096; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.06); }
+    footer { padding: 30px; text-align: center; background: #ffffff !important; color: #718096; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.06); }
     #about, #features, #standards, #services, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
 
-    #features, #services, #projects, #faq { background: #ffffff; }
-    #about, #standards, #bundles, #reviews, #contacts { background: #f4f7fc; }
+    /* Исправлено чередование фонов для контента без влияния на шапку-слайдер */
+    section#features, section#services, section#projects, section#faq { background-color: #ffffff !important; }
+    section#about, section#standards, section#bundles, section#reviews, section#contacts { background-color: #f4f7fc !important; }
 
     #toTop {
       position: fixed; right: 18px; bottom: 18px; width: 50px; height: 50px; border-radius: 14px;
@@ -294,10 +292,12 @@
     <a href="#contacts">Контакты</a>
   </nav>
 
+  <!-- 🎬 СЛАЙДЕР С ЖЕСТКО ЗАФИКСИРОВАННЫМИ ТВОИМИ КАРТИНКАМИ -->
   <div class="slider-container" id="home">
     <button class="slide-arrow arrow-left" onclick="prevSlide()">&#10094;</button>
     <button class="slide-arrow arrow-right" onclick="nextSlide()">&#10095;</button>
     
+    <!-- Баннер 1 -->
     <div class="slide slide-1 active">
       <h1>WatchPoint Security</h1>
       <p>Мы видим то, что недоступно другим. Ваша уверенность под надёжным прицелом передовых технологий в Узбекистане.</p>
@@ -307,6 +307,7 @@
       </a>
     </div>
 
+    <!-- Баннер 2 -->
     <div class="slide slide-2">
       <h1>Безопасность Вашего Бизнеса</h1>
       <p>Профессиональный монтаж IP-камер, СКУД-терминалов и умной видеоаналитики для складов, офисов и производств под ключ.</p>
@@ -316,6 +317,7 @@
       </a>
     </div>
 
+    <!-- Баннер 3 -->
     <div class="slide slide-3">
       <h1>Официальный Контракт и Гарантия</h1>
       <p>Официальный договор, работа по перечислению с НДС, гарантия 1 год на монтаж и бесплатный выезд инженера на замер по Ташкенту.</p>
@@ -606,7 +608,7 @@
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script>
-    // 🎬 ОКОНЧАТЕЛЬНАЯ И ПРОВЕРЕННАЯ ЛОГИКА СЛАЙДЕРА
+    // 🎬 НАДЕЖНАЯ ЛОГИКА СЛАЙДЕРА
     let currentSlideIdx = 0;
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
