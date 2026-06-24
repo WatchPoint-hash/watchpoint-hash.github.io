@@ -13,7 +13,7 @@
   <meta property="og:description" content="Надёжная защита вашего бизнеса и дома в Узбекистане. Реализованные кейсы, готовые комплекты оборудования под ключ и официальный договор.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://watchpoint.uz">
-  <meta property="og:image" content="slide1.jpg.png">
+  <meta property="og:image" content="slide1.png">
 
   <link rel="icon" href="logo.png" type="image/png">
 
@@ -54,7 +54,7 @@
       height: 3px; background: var(--brand); border-radius: 3px;
     }
 
-    /* 🎬 ЖЕЛЕЗОБЕТОННЫЙ СЛАЙДЕР НА СВОЙСТВАХ BACKGROUND */
+    /* 🎬 СЛАЙДЕР С ОБНОВЛЕННЫМИ ССЫЛКАМИ НА НАСТОЯЩИЕ .PNG КАРТИНКИ */
     .slider-container {
       position: relative;
       height: 80vh;
@@ -291,13 +291,11 @@
     <a href="#contacts">Контакты</a>
   </nav>
 
-  <!-- ИСПРАВЛЕНО НА КОРРЕКТНЫЕ СКРЫТЫЕ РАСШИРЕНИЯ ФАЙЛОВ .jpg.png -->
   <div class="slider-container" id="home">
     <button class="slide-arrow arrow-left" onclick="prevSlide()">&#10094;</button>
     <button class="slide-arrow arrow-right" onclick="nextSlide()">&#10095;</button>
     
-    <!-- Баннер 1 -->
-    <div class="slide active" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide1.jpg.png');">
+    <div class="slide active" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide1.png');">
       <h1>WatchPoint Security</h1>
       <p>Мы видим то, что недоступно другим. Ваша уверенность под надёжным прицелом передовых технологий в Узбекистане.</p>
       <a href="#bundles" class="contact-button cb-cta">
@@ -306,8 +304,7 @@
       </a>
     </div>
 
-    <!-- Баннер 2 -->
-    <div class="slide" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide2.jpg.png');">
+    <div class="slide" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide2.png');">
       <h1>Безопасность Вашего Бизнеса</h1>
       <p>Профессиональный монтаж IP-камер, СКУД-терминалов и умной видеоаналитики для складов, офисов и производств под ключ.</p>
       <a href="#services" class="contact-button cb-cta">
@@ -316,8 +313,7 @@
       </a>
     </div>
 
-    <!-- Баннер 3 -->
-    <div class="slide" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide3.jpg.png');">
+    <div class="slide" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide3.png');">
       <h1>Официальный Контракт и Гарантия</h1>
       <p>Официальный договор, работа по перечислению с НДС, гарантия 1 год на монтаж и бесплатный выезд инженера на замер по Ташкенту.</p>
       <a href="#contacts" class="contact-button cb-cta">
@@ -606,8 +602,7 @@
 
   <button id="toTop" aria-label="Наверх">↑</button>
 
-  <script>
-    // 🎬 НАДЕЖНАЯ ЛОГИКА СЛАЙДЕРА
+  <script {id="slider-logic"}>
     let currentSlideIdx = 0;
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
