@@ -34,7 +34,7 @@
       font-family: "Segoe UI", Arial, sans-serif;
       background: var(--bg); color: var(--text);
       scroll-behavior: smooth;
-      padding-top: 64px;
+      padding-top: 80px;
     }
 
     /* ФИРМЕННЫЙ ГРАДИЕНТ ДЛЯ СЛОВА TECH */
@@ -85,23 +85,70 @@
       margin: 0 3px;
     }
 
-    /* NAV */
+    /* НОВАЯ ШАПКА САЙТА (DESKTOP HEADER) */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; height: 64px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(6px);
-      display: flex; align-items: center; justify-content: center; gap: 18px;
+      position: fixed; top: 0; left: 0; right: 0; height: 80px;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: space-between;
       z-index: 1000;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-      flex-wrap: wrap;
-      padding: 0 10px;
+      padding: 0 40px;
     }
-    nav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: .3s; display: inline-flex; align-items: center; }
-    nav a:hover { color: var(--brand); }
-    nav a.active { color: var(--brand); position: relative; }
-    nav a.active::after {
+
+    .nav-brand {
+      display: flex; align-items: center; gap: 12px; text-decoration: none;
+    }
+    .nav-brand img {
+      height: 42px; width: auto; object-fit: contain;
+    }
+    .nav-brand-text {
+      display: flex; flex-direction: column; line-height: 1.15;
+    }
+    .nav-brand-title {
+      font-weight: 800; font-size: 1.1rem; color: #0a0f1e; letter-spacing: 0.5px; text-transform: uppercase;
+    }
+    .nav-brand-subtitle {
+      font-size: 0.65rem; color: var(--muted); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+    }
+
+    .nav-menu {
+      display: flex; align-items: center; gap: 28px; list-style: none;
+    }
+    .nav-menu a {
+      color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: .3s; display: inline-flex; align-items: center;
+    }
+    .nav-menu a:hover { color: var(--brand); }
+    .nav-menu a.active { color: var(--brand); position: relative; }
+    .nav-menu a.active::after {
       content: ""; position: absolute; left: 0; right: 0; bottom: -4px;
       height: 3px; background: var(--brand); border-radius: 3px;
+    }
+
+    .nav-actions {
+      display: flex; align-items: center; gap: 20px;
+    }
+
+    /* ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ */
+    .lang-switcher {
+      display: flex; align-items: center; background: #f0f4f8; border-radius: 30px; padding: 4px; border: 1px solid rgba(0,0,0,0.06);
+    }
+    .lang-btn {
+      background: transparent; border: none; padding: 6px 12px; border-radius: 20px;
+      font-size: 0.8rem; font-weight: 700; color: var(--muted); cursor: pointer; transition: 0.25s;
+    }
+    .lang-btn.active {
+      background: #0a0f1e; color: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    /* КНОПКА ЗАПРОСИТЬ РАСЧЁТ */
+    .nav-cta-btn {
+      background: #0a0f1e; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 0.9rem;
+      padding: 12px 24px; border-radius: 30px; transition: 0.25s; box-shadow: 0 4px 15px rgba(10,15,30,0.15);
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .nav-cta-btn:hover {
+      background: var(--brand); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(31,124,255,0.25);
     }
 
     /* 🎬 СЛАЙДЕР БЕЗ СТРЕЛОК С АВТОПРОКРУТКОЙ */
@@ -239,7 +286,7 @@
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, margin-top 0.3s ease; color: var(--muted); font-size: 0.98rem; line-height: 1.6; }
     .faq-item.open .faq-answer { max-height: 200px; margin-top: 14px; }
 
-    /* CONTACTS & CTA CARD */
+    /* CONTACTС & CTA CARD */
     .contacts-layout { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1100px; margin: 0 auto; text-align: left; }
     .contacts-info { flex: 1 1 350px; max-width: 450px; color: #0a0f1e; }
     .contacts-container { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
@@ -301,7 +348,7 @@
     .seo-text-block p { margin-bottom: 10px; }
 
     footer { padding: 30px; text-align: center; background: #ffffff !important; color: #718096; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.06); }
-    #about, #features, #standards, #services, #jaify-partner, #smart-locks, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
+    #about, #features, #standards, #services, #jaify-partner, #smart-locks, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 90px; }
 
     /* ЧЕРЕДОВАНИЕ ФОНОВ СЕКЦИЙ */
     section#features, section#services, section#smart-locks, section#projects, section#faq { background-color: #ffffff !important; }
@@ -313,22 +360,49 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.15); z-index: 1000;
     }
     #toTop.show { display: block; }
+
+    /* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
+    @media (max-width: 1100px) {
+      nav { padding: 0 15px; justify-content: space-between; height: 70px; }
+      .nav-menu { display: none; } /* Можно развернуть в гамбургер при необходимости */
+      body { padding-top: 70px; }
+      #about, #features, #standards, #services, #jaify-partner, #smart-locks, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- НОВАЯ ШАПКА САЙТА -->
   <nav>
-    <a href="#about">О нас</a>
-    <a href="#features">Преимущества</a>
-    <a href="#standards">Стандарты</a>
-    <a href="#services">Услуги</a>
-    <a href="#jaify-partner"><img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-nav"> 2026</a>
-    <a href="#smart-locks">Смарт-замки</a>
-    <a href="#bundles">Комплекты</a>
-    <a href="#projects">Проекты</a>
-    <a href="#reviews">Отзывы</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contacts">Контакты</a>
+    <a href="#home" class="nav-brand">
+      <img src="logo.png" alt="WatchPoint Logo">
+      <div class="nav-brand-text">
+        <span class="nav-brand-title">WatchPoint</span>
+        <span class="nav-brand-subtitle">Security</span>
+      </div>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#features">Преимущества</a></li>
+      <li><a href="#standards">Стандарты</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#jaify-partner"><img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-nav"> 2026</a></li>
+      <li><a href="#smart-locks">Смарт-замки</a></li>
+      <li><a href="#bundles">Комплекты</a></li>
+      <li><a href="#projects">Проекты</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+        <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+        <button class="lang-btn" onclick="setLang('uz')">UZ</button>
+      </div>
+      <a href="https://t.me/watchpointcctv24" target="_blank" class="nav-cta-btn">Запросить расчёт</a>
+    </div>
   </nav>
 
   <div class="slider-container" id="home">
@@ -808,6 +882,13 @@
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script id="slider-logic">
+    // Интерактив для переключения языков
+    function setLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      // Здесь в будущем можно подключить смену локализации при необходимости
+    }
+
     let currentSlideIdx = 0;
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
@@ -832,7 +913,7 @@
       slideInterval = setInterval(nextSlide, 5000);
     }
 
-    const links = document.querySelectorAll('nav a');
+    const links = document.querySelectorAll('.nav-menu a');
     const sections = [...document.querySelectorAll('section, .slider-container')];
     window.addEventListener('scroll', () => {
       let current = '';
