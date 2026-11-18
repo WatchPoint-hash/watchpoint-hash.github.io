@@ -85,7 +85,7 @@
       margin: 0 3px;
     }
 
-    /* НОВАЯ ШАПКА САЙТА (DESKTOP HEADER) */
+    /* ШАПКА САЙТА (DESKTOP HEADER) */
     nav {
       position: fixed; top: 0; left: 0; right: 0; height: 80px;
       background: rgba(255, 255, 255, 0.98);
@@ -151,7 +151,7 @@
       background: var(--brand); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(31,124,255,0.25);
     }
 
-    /* 🎬 СЛАЙДЕР БЕЗ СТРЕЛОК С АВТОПРОКРУТКОЙ */
+    /* СЛАЙДЕР */
     .slider-container {
       position: relative;
       height: 80vh;
@@ -372,7 +372,7 @@
 </head>
 <body>
 
-  <!-- НОВАЯ ШАПКА САЙТА С ПОДДЕРЖКОЙ ЯЗЫКОВ -->
+  <!-- ШАПКА САЙТА -->
   <nav>
     <a href="#home" class="nav-brand">
       <img src="logo.png" alt="WatchPoint Logo">
@@ -405,30 +405,30 @@
     </div>
   </nav>
 
+  <!-- СЛАЙДЕР -->
   <div class="slider-container" id="home">
-    
     <div class="slide active" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide1.png.png');">
       <h1>WatchPoint Security</h1>
-      <p>Мы видим то, что недоступно другим. Ваша уверенность под надёжным прицелом передовых технологий в Узбекистане.</p>
-      <a href="#bundles" class="contact-button cb-cta">
+      <p data-i18n="slide-1-desc">Мы видим то, что недоступно другим. Ваша уверенность под надёжным прицелом передовых технологий в Узбекистане.</p>
+      <a href="#bundles" class="contact-button cb-cta" data-i18n="slide-1-btn">
         <svg viewBox="0 0 24 24"><path d="M11 20v-5.5H5.5l5.5 5.5zm2 0l5.5-5.5H13V20zM2 13h9V4H2v9zm11-9v9h9V4h-9z"/></svg>
         Выбрать готовый комплект
       </a>
     </div>
 
     <div class="slide" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide3.png.png');">
-      <h1>Безопасность Вашего Бизнеса</h1>
-      <p>Профессиональный монтаж IP-камер, СКУД-терминалов и умной видеоаналитики для складов, офисов и производств под ключ.</p>
-      <a href="#services" class="contact-button cb-cta">
+      <h1 data-i18n="slide-2-title">Безопасность Вашего Бизнеса</h1>
+      <p data-i18n="slide-2-desc">Профессиональный монтаж IP-камер, СКУД-терминалов и умной видеоаналитики для складов, офисов и производств под ключ.</p>
+      <a href="#services" class="contact-button cb-cta" data-i18n="slide-2-btn">
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
         Посмотреть наши услуги
       </a>
     </div>
 
     <div class="slide" style="background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('slide4.png.png');">
-      <h1>Официальный Контракт и Гарантия</h1>
-      <p>Официальный договор, работа по перечислению с НДС, гарантия 1 год на монтаж и бесплатный выезд инженера на замер по Ташкенту.</p>
-      <a href="#contacts" class="contact-button cb-cta">
+      <h1 data-i18n="slide-3-title">Официальный Контракт и Гарантия</h1>
+      <p data-i18n="slide-3-desc">Официальный договор, работа по перечислению с НДС, гарантия 1 год на монтаж и бесплатный выезд инженера на замер по Ташкенту.</p>
+      <a href="#contacts" class="contact-button cb-cta" data-i18n="slide-3-btn">
         <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
         Заказать бесплатный замер
       </a>
@@ -441,221 +441,217 @@
     </div>
   </div>
 
+  <!-- О КОМПАНИИ -->
   <section id="about">
-    <h2>🔎 О компании</h2>
-    <p class="section-desc">
+    <h2 data-i18n="about-title">🔎 О компании</h2>
+    <p class="section-desc" data-i18n="about-desc">
       <strong>WatchPoint Security</strong> — инжиниринговая компания из Ташкента, специализирующаяся на проектировании, поставке и монтаже комплексных систем безопасности. Мы разрабатываем и внедряем отказоустойчивые цифровые решения для защиты промышленных объектов, логистических центров, коммерческих офисов и частного сектора по всей территории Республики Узбекистан. С 2026 года мы начали сотрудничество с международным разработчиком IoT-систем <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline"> <span class="jaify-tech-gradient">Tech</span>, расширяя линейку умных облачных камер и электронных замков.
     </p>
   </section>
 
+  <!-- ПРЕИМУЩЕСТВА -->
   <section id="features">
-    <h2>💎 Почему выбирают нас</h2>
-    <p class="section-desc">Мы создаем технологичные решения, ориентированные на жесткие стандарты B2B-сегмента.</p>
+    <h2 data-i18n="features-title">💎 Почему выбирают нас</h2>
+    <p class="section-desc" data-i18n="features-subtitle">Мы создаем технологичные решения, ориентированные на жесткие стандарты B2B-сегмента.</p>
     <div class="features-grid">
       <div class="feature-item">
-        <h3>🛡️ Гарантия 1 год</h3>
-        <p>Предоставляем полноценную официальную гарантию на всё установленное оборудование и монтажные работы с оперативным выездом технической поддержки.</p>
+        <h3 data-i18n="feat-1-title">🛡️ Гарантия 1 год</h3>
+        <p data-i18n="feat-1-desc">Предоставляем полноценную официальную гарантию на всё установленное оборудование и монтажные работы с оперативным выездом технической поддержки.</p>
       </div>
       <div class="feature-item">
-        <h3>📐 Бесплатный замер</h3>
-        <p>Бесплатный выезд инженера на объект в Ташкенте и Ташобласти для детального анализа углов обзора, слепых зон и составления прозрачной сметы.</p>
+        <h3 data-i18n="feat-2-title">📐 Бесплатный замер</h3>
+        <p data-i18n="feat-2-desc">Бесплатный выезд инженера на объект в Ташкенте и Ташобласти для детального анализа углов обзора, слепых зон и составления прозрачной сметы.</p>
       </div>
       <div class="feature-item">
-        <h3>💡 Сертифицированные бренды</h3>
-        <p>Работаем только с проверенным, лицензированным оборудованием от лидеров рынка. Никаких сбоев прошивок и проблем со стабильностью связи.</p>
+        <h3 data-i18n="feat-3-title">💡 Сертифицированные бренды</h3>
+        <p data-i18n="feat-3-desc">Работаем только с проверенным, лицензированным оборудованием от лидеров рынка. Никаких сбоев прошивок и проблем со стабильностью связи.</p>
       </div>
     </div>
   </section>
 
+  <!-- СТАНДАРТЫ -->
   <section id="standards">
-    <h2>🛠️ Наши стандарты инженерного монтажа</h2>
-    <p class="section-desc">Видеонаблюдение — это не просто камеры, это инженерная трасса. Мы строго следуем регламенту, гарантирующему годы непрерывной работы.</p>
+    <h2 data-i18n="standards-title">🛠️ Наши стандарты инженерного монтажа</h2>
+    <p class="section-desc" data-i18n="standards-subtitle">Видеонаблюдение — это не просто камеры, это инженерная трасса. Мы строго следуем регламенту, гарантирующему годы непрерывной работы.</p>
     <div class="standards-grid">
       <div class="standard-item">
-        <h3>⚡ 100% Медный кабель по ГОСТу</h3>
-        <p>Мы никогда не используем дешёвый биметаллический (алюминиевый) кабель, который окисляется и теряет сигнал через полгода. Только качественная чистая медь (UTP/FTP), обеспечивающая стабильную скорость PoE-питания и видеопотока без зависаний.</p>
+        <h3 data-i18n="std-1-title">⚡ 100% Медный кабель по ГОСТу</h3>
+        <p data-i18n="std-1-desc">Мы никогда не используем дешёвый биметаллический (алюминиевый) кабель, который окисляется и теряет сигнал через полгода. Только качественная чистая медь (UTP/FTP), обеспечивающая стабильную скорость PoE-питания и видеопотока без зависаний.</p>
       </div>
       <div class="standard-item">
-        <h3>🔒 Полная защита кабельных линий</h3>
-        <p>Все линии связи укладываются в специализированные защитные кабельные каналы, ПВХ-гофру или жёсткие трубы. На индустриальных объектах монтируем в металлические лотки. Это защищает сеть от грызунов, ультрафиолета, влаги и механических повреждений.</p>
+        <h3 data-i18n="std-2-title">🔒 Полная защита кабельных линий</h3>
+        <p data-i18n="std-2-desc">Все линии связи укладываются в специализированные защитные кабельные каналы, ПВХ-гофру или жёсткие трубы. На индустриальных объектах монтируем в металлические лотки. Это защищает сеть от грызунов, ультрафиолета, влаги и механических повреждений.</p>
       </div>
       <div class="standard-item">
-        <h3>🌧️ Герметичные коммутационные боксы</h3>
-        <p>Все уличные разъёмы, коннекторы RJ-45 и приёмопередатчики мы надёжно изолируем в распаечных коробках со степенью защиты не ниже IP66. Никакой снег, проливной дождь или пыль Ташкента не вызовут короткого замыкания или окисления контактов.</p>
+        <h3 data-i18n="std-3-title">🌧️ Герметичные коммутационные боксы</h3>
+        <p data-i18n="std-3-desc">Все уличные разъёмы, коннекторы RJ-45 и приёмопередатчики мы надёжно изолируем в распаечных коробках со степенью защиты не ниже IP66. Никакой снег, проливной дождь или пыль Ташкента не вызовут короткого замыкания или окисления контактов.</p>
       </div>
       <div class="standard-item">
-        <h3>🗄️ Маркировка и культура серверных шкафов</h3>
-        <p>Каждый входящий кабель на патч-панели маркируется согласно проектной схеме. Мы аккуратно укладываем провода в органайзеры внутри серверного шкафа. Любой системный администратор компании сможет легко разобраться в сети и провести обслуживание за 5 минут.</p>
+        <h3 data-i18n="std-4-title">🗄️ Маркировка и культура серверных шкафов</h3>
+        <p data-i18n="std-4-desc">Каждый входящий кабель на патч-панели маркируется согласно проектной схеме. Мы аккуратно укладываем провода в органайзеры внутри серверного шкафа. Любой системный администратор компании сможет легко разобраться в сети и провести обслуживание за 5 минут.</p>
       </div>
     </div>
   </section>
 
+  <!-- УСЛУГИ -->
   <section id="services">
-    <h2>⚙️ Наши услуги и цены</h2>
-    <p class="section-desc">Интегрируем передовое оборудование от мировых технологических лидеров под ключ.</p>
+    <h2 data-i18n="services-title">⚙️ Наши услуги и цены</h2>
+    <p class="section-desc" data-i18n="services-subtitle">Интегрируем передовое оборудование от мировых технологических лидеров под ключ.</p>
     <div class="services">
       <div class="card">
         <div class="brand-tags">HIKVISION / TIANDY / UNV / <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-tag"></div>
-        <h3>📹 Видеонаблюдение</h3>
-        <p>Проектирование IP-систем и облачных Wi-Fi/4G камер, установка умных камер (ColorVu, купольные, PTZ, двухобъективные), настройка регистраторов (NVR) и видеоаналитики.</p>
-        <div class="price-tag">от 1 200 000 сум</div>
+        <h3 data-i18n="srv-1-title">📹 Видеонаблюдение</h3>
+        <p data-i18n="srv-1-desc">Проектирование IP-систем и облачных Wi-Fi/4G камер, установка умных камер (ColorVu, купольные, PTZ, двухобъективные), настройка регистраторов (NVR) и видеоаналитики.</p>
+        <div class="price-tag" data-i18n="srv-1-price">от 1 200 000 сум</div>
       </div>
       <div class="card">
         <div class="brand-tags"><img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-tag"> / TUYA / TTLOCK</div>
-        <h3>🔐 Умные смарт-замки</h3>
-        <p>Установка биометрических электронных замков для квартир, коттеджей и офисов. Открытие по Face ID, отпечатку пальца, ПИН-коду и через смартфон.</p>
-        <div class="price-tag">от 1 800 000 сум</div>
+        <h3 data-i18n="srv-2-title">🔐 Умные смарт-замки</h3>
+        <p data-i18n="srv-2-desc">Установка биометрических электронных замков для квартир, коттеджей и офисов. Открытие по Face ID, отпечатку пальца, ПИН-коду и через смартфон.</p>
+        <div class="price-tag" data-i18n="srv-2-price">от 1 800 000 сум</div>
       </div>
       <div class="card">
         <div class="brand-tags">БИОМЕТРИЯ / RFID / ШЛАГБАУМЫ</div>
-        <h3>🚪 Контроль доступа (СКУД)</h3>
-        <p>Установка терминалов распознавания лиц, турникетов, RFID-считывателей и электромагнитных замков. Полная автоматизация учёта рабочего времени.</p>
-        <div class="price-tag">от 1 500 000 сум</div>
+        <h3 data-i18n="srv-3-title">🚪 Контроль доступа (СКУД)</h3>
+        <p data-i18n="srv-3-desc">Установка терминалов распознавания лиц, турникетов, RFID-считывателей и электромагнитных замков. Полная автоматизация учёта рабочего времени.</p>
+        <div class="price-tag" data-i18n="srv-3-price">от 1 500 000 сум</div>
       </div>
       <div class="card">
         <div class="brand-tags">CISCO / UNIFI / МЕДИАКОНВЕРТЕРЫ</div>
-        <h3>💻 IT-инфраструктура</h3>
-        <p>Монтаж структурированных кабельных сетей (СКС), настройка бесшовного Wi-Fi, коммутаторов, SFP-модулей, оптических трасс и сборка серверных шкафов.</p>
-        <div class="price-tag">от 2 000 000 сум</div>
+        <h3 data-i18n="srv-4-title">💻 IT-инфраструктура</h3>
+        <p data-i18n="srv-4-desc">Монтаж структурированных кабельных сетей (СКС), настройка бесшовного Wi-Fi, коммутаторов, SFP-модулей, оптических трасс и сборка серверных шкафов.</p>
+        <div class="price-tag" data-i18n="srv-4-price">от 2 000 000 сум</div>
       </div>
     </div>
   </section>
 
-  <!-- СЕКЦИЯ ПАРТНЕРСТВА С JAIFY TECH (С 2026 ГОДА) -->
+  <!-- СЕКЦИЯ ПАРТНЕРСТВА С JAIFY TECH -->
   <section id="jaify-partner">
     <div style="max-width: 1100px; margin: 0 auto; text-align: left;">
-      
       <div style="text-align: center; margin-bottom: 45px;">
-        <span style="background: rgba(0,184,135,0.12); color: var(--active); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Новое направление • С 2026 года</span>
-        <h2 style="margin-top: 12px;">Сотрудничество с <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-h2"> <span class="jaify-tech-gradient">Tech</span></h2>
-        <p class="section-desc" style="margin-bottom: 0;">
+        <span style="background: rgba(0,184,135,0.12); color: var(--active); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;" data-i18n="jaify-badge">Новое направление • С 2026 года</span>
+        <h2 style="margin-top: 12px;"><span data-i18n="jaify-h2-part1">Сотрудничество с</span> <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-h2"> <span class="jaify-tech-gradient">Tech</span></h2>
+        <p class="section-desc" style="margin-bottom: 0;" data-i18n="jaify-desc">
           С 2026 года <strong>WatchPoint Security</strong> начала сотрудничество с международным разработчиком умных систем безопасности <strong>Zhejiang JAIFY Co., Ltd.</strong> Теперь в наших проектах доступны современные облачные камеры и умные замки этого бренда.
         </p>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 40px;">
-        
         <div style="background: var(--panel); padding: 30px; border-radius: 16px; border-top: 4px solid var(--brand); box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
-          <h3 style="font-size: 1.25rem; color: #0a0f1e; margin-bottom: 12px;">☁️ Надежная облачная платформа</h3>
-          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
+          <h3 style="font-size: 1.25rem; color: #0a0f1e; margin-bottom: 12px;" data-i18n="jaify-box1-title">☁️ Надежная облачная платформа</h3>
+          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;" data-i18n="jaify-box1-desc">
             <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline"> развивает собственную R&D-базу (3 научно-исследовательских центра) и использует глобальные облачные серверы (AWS, Google Cloud), обеспечивая стабильную работу более чем для 100 млн зарегистрированных пользователей по всему миру.
           </p>
           <ul style="list-style: none; padding: 0; color: var(--muted); font-size: 0.92rem;">
-            <li style="margin-bottom: 8px;">✔ Стабильный удаленный доступ без зависаний из любой точки мира</li>
-            <li style="margin-bottom: 8px;">✔ Защищенное хранение видеоархива в облаке и на карте TF до 256 Гб</li>
-            <li>✔ Мгновенные тревожные пуш-уведомления на смартфон (iOS / Android)</li>
+            <li style="margin-bottom: 8px;" data-i18n="jaify-box1-li1">✔ Стабильный удаленный доступ без зависаний из любой точки мира</li>
+            <li style="margin-bottom: 8px;" data-i18n="jaify-box1-li2">✔ Защищенное хранение видеоархива в облаке и на карте TF до 256 Гб</li>
+            <li data-i18n="jaify-box1-li3">✔ Мгновенные тревожные пуш-уведомления на смартфон (iOS / Android)</li>
           </ul>
         </div>
 
         <div style="background: var(--panel); padding: 30px; border-radius: 16px; border-top: 4px solid var(--active); box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
-          <h3 style="font-size: 1.25rem; color: #0a0f1e; margin-bottom: 12px;">🧠 Умное зрение и Сценарный ИИ</h3>
-          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
+          <h3 style="font-size: 1.25rem; color: #0a0f1e; margin-bottom: 12px;" data-i18n="jaify-box2-title">🧠 Умное зрение и Сценарный ИИ</h3>
+          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;" data-i18n="jaify-box2-desc">
             Оборудование оснащено встроенными алгоритмами искусственного интеллекта под конкретные задачи охраны дома, семьи и бизнеса:
           </p>
           <ul style="list-style: none; padding: 0; color: var(--muted); font-size: 0.92rem;">
-            <li style="margin-bottom: 8px;">✔ <strong>Контроль периметра (Outdoor):</strong> распознавание людей, машин, животных и раннее обнаружение огня</li>
-            <li style="margin-bottom: 8px;">✔ <strong>Забота о близких (Elderly/Child Care):</strong> детекция падений пожилых людей и контроль опасных зон для детей</li>
-            <li style="margin-bottom: 8px;">✔ <strong>Контроль персонала (Job Inspection):</strong> фиксация присутствия на рабочем месте</li>
-            <li>✔ <strong>Технология AOV и 2 объектива:</strong> непрерывная запись 24/7 без слепых зон с кодеком H.265</li>
+            <li style="margin-bottom: 8px;">✔ <strong data-i18n="jaify-box2-li1-strong">Контроль периметра (Outdoor):</strong> <span data-i18n="jaify-box2-li1-text">распознавание людей, машин, животных и раннее обнаружение огня</span></li>
+            <li style="margin-bottom: 8px;">✔ <strong data-i18n="jaify-box2-li2-strong">Забота о близких (Elderly/Child Care):</strong> <span data-i18n="jaify-box2-li2-text">детекция падений пожилых людей и контроль опасных зон для детей</span></li>
+            <li style="margin-bottom: 8px;">✔ <strong data-i18n="jaify-box2-li3-strong">Контроль персонала (Job Inspection):</strong> <span data-i18n="jaify-box2-li3-text">фиксация присутствия на рабочем месте</span></li>
+            <li>✔ <strong data-i18n="jaify-box2-li4-strong">Технология AOV и 2 объектива:</strong> <span data-i18n="jaify-box2-li4-text">непрерывная запись 24/7 без слепых зон с кодеком H.265</span></li>
           </ul>
         </div>
-
       </div>
 
       <div style="background: #0a0f1e; color: #ffffff; padding: 40px 30px; border-radius: 20px; text-align: center; box-shadow: 0 15px 35px rgba(10,15,30,0.15);">
-        <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Камеры и смарт-замки <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-dark"> для ваших задач</h3>
-        <p style="color: #cbd5e0; font-size: 1rem; max-width: 720px; margin: 0 auto 25px; line-height: 1.6;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 12px;" data-i18n="jaify-bottom-title">Камеры и смарт-замки <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-dark"> для ваших задач</h3>
+        <p style="color: #cbd5e0; font-size: 1rem; max-width: 720px; margin: 0 auto 25px; line-height: 1.6;" data-i18n="jaify-bottom-desc">
           Подберем и установим внутренние поворотные (Pan&Tilt) камеры с двусторонней аудиосвязью, уличные Wi-Fi и 4G камеры с защитой от погоды IP66/IP67, а также современные электронные замки <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-dark"> с управлением со смартфона.
         </p>
         <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-          <a href="https://t.me/watchpointcctv24" target="_blank" class="contact-button cb-cta" style="max-width: 260px !important;">Подобрать камеры <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-dark"></a>
-          <a href="#smart-locks" class="contact-button cb-phone" style="max-width: 260px !important;">Умные замки</a>
+          <a href="https://t.me/watchpointcctv24" target="_blank" class="contact-button cb-cta" style="max-width: 260px !important;" data-i18n="jaify-btn1">Подобрать камеры <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-dark"></a>
+          <a href="#smart-locks" class="contact-button cb-phone" style="max-width: 260px !important;" data-i18n="jaify-btn2">Умные замки</a>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- SECTION: SMART LOCKS WITH ALL 6 PHOTOS AND SPECIFICATIONS -->
+  <!-- СМАРТ-ЗАМКИ -->
   <section id="smart-locks">
-    <h2>🔐 Умные замки <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-h2"> — Безопасность без ключей</h2>
-    <p class="section-desc">
+    <h2 data-i18n="locks-title">🔐 Умные замки <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-h2"> — Безопасность без ключей</h2>
+    <p class="section-desc" data-i18n="locks-subtitle">
       Интегрируем в наши проекты интеллектуальные электронные замки от <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline"> <span class="jaify-tech-gradient">Tech</span>. Надежная защита и современный дизайн для вашего дома и бизнеса.
     </p>
 
-    <!-- GALLERY OF 6 LOCKS -->
     <div style="margin: 20px auto 35px; max-width: 1100px;">
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px;">
-        
         <div style="flex: 1 1 300px; max-width: 340px; background: var(--panel); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.06); text-align: left;">
           <img src="jaify-lock1.jpg.jpg" alt="Смарт-замок Jaify 1" style="width: 100%; height: 260px; object-fit: cover; display: block;">
           <div style="padding: 20px;">
-            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;">Базовая модель замка</h4>
-            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;">Несколько способов открытия, безопасная ручка, разблокировка отпечатком, электронный звонок, питание 4*AA.</p>
-            <span style="font-size: 0.8rem; background: rgba(31,124,255,0.08); color: var(--brand); padding: 4px 8px; border-radius: 6px; font-weight: 600;">Базовый комплект</span>
+            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;" data-i18n="lock1-name">Базовая модель замка</h4>
+            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;" data-i18n="lock1-desc">Несколько способов открытия, безопасная ручка, разблокировка отпечатком, электронный звонок, питание 4*AA.</p>
+            <span style="font-size: 0.8rem; background: rgba(31,124,255,0.08); color: var(--brand); padding: 4px 8px; border-radius: 6px; font-weight: 600;" data-i18n="lock1-badge">Базовый комплект</span>
           </div>
         </div>
 
         <div style="flex: 1 1 300px; max-width: 340px; background: var(--panel); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.06); text-align: left;">
           <img src="jaify-lock2.jpg.jpg" alt="Смарт-замок Jaify 2" style="width: 100%; height: 260px; object-fit: cover; display: block;">
           <div style="padding: 20px;">
-            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;">Премиальный черный дизайн</h4>
-            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;">Управление пользователями, настройка голосовой навигации и Bluetooth-сети.</p>
-            <span style="font-size: 0.8rem; background: rgba(31,124,255,0.08); color: var(--brand); padding: 4px 8px; border-radius: 6px; font-weight: 600;">Стиль и комфорт</span>
+            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;" data-i18n="lock2-name">Премиальный черный дизайн</h4>
+            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;" data-i18n="lock2-desc">Управление пользователями, настройка голосовой навигации и Bluetooth-сети.</p>
+            <span style="font-size: 0.8rem; background: rgba(31,124,255,0.08); color: var(--brand); padding: 4px 8px; border-radius: 6px; font-weight: 600;" data-i18n="lock2-badge">Стиль и комфорт</span>
           </div>
         </div>
 
         <div style="flex: 1 1 300px; max-width: 340px; background: var(--panel); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.06); text-align: left;">
           <img src="jaify-lock3.jpg.jpg" alt="Смарт-замок Jaify 3" style="width: 100%; height: 260px; object-fit: cover; display: block;">
           <div style="padding: 20px;">
-            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;">Замок с видеоглазком</h4>
-            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;">Интеграция с приложением Jaify, двусторонний домофон и облачное хранилище.</p>
-            <span style="font-size: 0.8rem; background: rgba(31,124,255,0.08); color: var(--brand); padding: 4px 8px; border-radius: 6px; font-weight: 600;">Безопасность</span>
+            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;" data-i18n="lock3-name">Замок с видеоглазком</h4>
+            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;" data-i18n="lock3-desc">Интеграция с приложением Jaify, двусторонний домофон и облачное хранилище.</p>
+            <span style="font-size: 0.8rem; background: rgba(31,124,255,0.08); color: var(--brand); padding: 4px 8px; border-radius: 6px; font-weight: 600;" data-i18n="lock3-badge">Безопасность</span>
           </div>
         </div>
 
         <div style="flex: 1 1 300px; max-width: 340px; background: var(--panel); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.06); text-align: left;">
           <img src="jaify-lock4.jpg.jpg" alt="Смарт-замок Jaify 4" style="width: 100%; height: 260px; object-fit: cover; display: block;">
           <div style="padding: 20px;">
-            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;">Усиленный ригельный механизм</h4>
-            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;">Уведомления о тревоге, контроль доступа и совместное использование разрешений.</p>
-            <span style="font-size: 0.8rem; background: rgba(31,124,255,0.08); color: var(--brand); padding: 4px 8px; border-radius: 6px; font-weight: 600;">Защита</span>
+            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;" data-i18n="lock4-name">Усиленный ригельный механизм</h4>
+            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;" data-i18n="lock4-desc">Уведомления о тревоге, контроль доступа и совместное использование разрешений.</p>
+            <span style="font-size: 0.8rem; background: rgba(31,124,255,0.08); color: var(--brand); padding: 4px 8px; border-radius: 6px; font-weight: 600;" data-i18n="lock4-badge">Защита</span>
           </div>
         </div>
 
         <div style="flex: 1 1 300px; max-width: 340px; background: var(--panel); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.06); text-align: left;">
           <img src="jaify-lock5.jpg.jpg" alt="Смарт-замок Jaify 5" style="width: 100%; height: 260px; object-fit: cover; display: block;">
           <div style="padding: 20px;">
-            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;">Модель с литиевой батареей</h4>
-            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;">Автономное питание от емкого аккумулятора с поддержкой Wi-Fi и удаленного контроля.</p>
-            <span style="font-size: 0.8rem; background: rgba(31,124,255,0.08); color: var(--brand); padding: 4px 8px; border-radius: 6px; font-weight: 600;">Энергоэффективность</span>
+            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;" data-i18n="lock5-name">Модель с литиевой батареей</h4>
+            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;" data-i18n="lock5-desc">Автономное питание от емкого аккумулятора с поддержкой Wi-Fi и удаленного контроля.</p>
+            <span style="font-size: 0.8rem; background: rgba(31,124,255,0.08); color: var(--brand); padding: 4px 8px; border-radius: 6px; font-weight: 600;" data-i18n="lock5-badge">Энергоэффективность</span>
           </div>
         </div>
 
         <div style="flex: 1 1 300px; max-width: 340px; background: var(--panel); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.06); text-align: left;">
           <img src="jaify-lock6.jpg.jpg" alt="Смарт-замок Jaify 6" style="width: 100%; height: 260px; object-fit: cover; display: block;">
           <div style="padding: 20px;">
-            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;">Флагман с 3D распознаванием лиц</h4>
-            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;">Большой OLED-экран 4,5 дюйма, доступ без рук, видеозвонок по приложению Jaify.</p>
-            <span style="font-size: 0.8rem; background: rgba(0,184,135,0.12); color: var(--active); padding: 4px 8px; border-radius: 6px; font-weight: 700;">Флагман 2026</span>
+            <h4 style="font-size: 1.1rem; color: #0a0f1e; margin-bottom: 6px;" data-i18n="lock6-name">Флагман с 3D распознаванием лиц</h4>
+            <p style="font-size: 0.88rem; color: var(--muted); margin: 0 0 12px; line-height: 1.5;" data-i18n="lock6-desc">Большой OLED-экран 4,5 дюйма, доступ без рук, видеозвонок по приложению Jaify.</p>
+            <span style="font-size: 0.8rem; background: rgba(0,184,135,0.12); color: var(--active); padding: 4px 8px; border-radius: 6px; font-weight: 700;" data-i18n="lock6-badge">Флагман 2026</span>
           </div>
         </div>
-
       </div>
     </div>
 
-    <!-- ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ -->
+    <!-- ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ ЗАМКОВ -->
     <div style="max-width: 1100px; margin: 40px auto 0; background: #0a0f1e; color: #ffffff; padding: 40px 30px; border-radius: 20px; text-align: left; box-shadow: 0 15px 35px rgba(10,15,30,0.15);">
-      <h3 style="font-size: 1.5rem; margin-bottom: 20px; text-align: center; color: #ffffff;">⚙️ Технические спецификации линеек <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-dark"></h3>
-      <p style="color: #cbd5e0; font-size: 1rem; text-align: center; max-width: 750px; margin: 0 auto 35px; line-height: 1.6;">
+      <h3 style="font-size: 1.5rem; margin-bottom: 20px; text-align: center; color: #ffffff;" data-i18n="locks-specs-title">⚙️ Технические спецификации линеек <img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-dark"></h3>
+      <p style="color: #cbd5e0; font-size: 1rem; text-align: center; max-width: 750px; margin: 0 auto 35px; line-height: 1.6;" data-i18n="locks-specs-subtitle">
         Подробные характеристики базовых и флагманских моделей умных замков для вашего объекта.
       </p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-        
         <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 14px; border-left: 4px solid var(--brand);">
-          <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: #ffffff;">🔒 Базовая серия</h4>
-          <p style="color: #a0aec0; font-size: 0.92rem; line-height: 1.7; margin: 0;">
+          <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: #ffffff;" data-i18n="locks-base-title">🔒 Базовая серия</h4>
+          <p style="color: #a0aec0; font-size: 0.92rem; line-height: 1.7; margin: 0;" data-i18n="locks-base-text">
             • Несколько способов открытия дверей<br>
             • Разблокировка отпечатков пальцев<br>
             • Безопасная ручка и электронный звонок<br>
@@ -666,8 +662,8 @@
         </div>
 
         <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 14px; border-left: 4px solid var(--active);">
-          <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: #ffffff;">👑 Флагманская серия</h4>
-          <p style="color: #a0aec0; font-size: 0.92rem; line-height: 1.7; margin: 0;">
+          <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: #ffffff;" data-i18n="locks-flag-title">👑 Флагманская серия</h4>
+          <p style="color: #a0aec0; font-size: 0.92rem; line-height: 1.7; margin: 0;" data-i18n="locks-flag-text">
             • 3D-распознавание лиц и доступ без рук<br>
             • OLED-экран 4,5 дюйма<br>
             • Видеозвонок по приложению Jaify<br>
@@ -676,61 +672,60 @@
             • Уведомления о тревоге и совместное использование разрешений
           </p>
         </div>
-
       </div>
     </div>
 
     <div style="display:flex; justify-content:center; margin-top: 35px;">
-      <a href="https://t.me/watchpointcctv24" target="_blank" class="contact-button cb-cta" style="font-weight:700; max-width: 320px !important;">
+      <a href="https://t.me/watchpointcctv24" target="_blank" class="contact-button cb-cta" style="font-weight:700; max-width: 320px !important;" data-i18n="locks-btn">
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
         Подобрать смарт-замок под вашу дверь
       </a>
     </div>
   </section>
 
+  <!-- КОМПЛЕКТЫ -->
   <section id="bundles">
-    <h2>📦 Готовые комплекты оборудования «Под Ключ»</h2>
-    <p class="section-desc">Всё необходимое оборудование, расходные материалы и профессиональный монтаж уже включены в стоимость.</p>
+    <h2 data-i18n="bundles-title">📦 Готовые комплекты оборудования «Под Ключ»</h2>
+    <p class="section-desc" data-i18n="bundles-subtitle">Всё необходимое оборудование, расходные материалы и профессиональный монтаж уже включены в стоимость.</p>
     <div class="bundles-grid">
-      
       <div class="bundle-card">
         <img class="bundle-img" src="start1.jpg" alt="Комплект Старт"/>
         <div class="bundle-content">
-          <h3>Комплект «Старт»</h3>
-          <div class="bundle-subtitle">Для небольшого офиса / магазина</div>
+          <h3 data-i18n="b1-title">Комплект «Старт»</h3>
+          <div class="bundle-subtitle" data-i18n="b1-sub">Для небольшого офиса / магазина</div>
           <ul class="bundle-includes">
-            <li>4× IP-камеры купольные (2 Мп, ИК-подсветка до 30м)</li>
-            <li>1× Сетевой видеорегистратор NVR (4 канала)</li>
-            <li>1× Жесткий диск HDD 1 Тб (До 2 недель архива)</li>
-            <li>1× PoE-коммутатор (Питание и сеть по одному кабелю)</li>
-            <li>Расходные материалы (Кабель UTP, разъемы, коробки)</li>
-            <li>Монтаж, юстировка и бесплатная настройка телефона</li>
+            <li data-i18n="b1-li1">4× IP-камеры купольные (2 Мп, ИК-подсветка до 30м)</li>
+            <li data-i18n="b1-li2">1× Сетевой видеорегистратор NVR (4 канала)</li>
+            <li data-i18n="b1-li3">1× Жесткий диск HDD 1 Тб (До 2 недель архива)</li>
+            <li data-i18n="b1-li4">1× PoE-коммутатор (Питание и сеть по одному кабелю)</li>
+            <li data-i18n="b1-li5">Расходные материалы (Кабель UTP, разъемы, коробки)</li>
+            <li data-i18n="b1-li6">Монтаж, юстировка и бесплатная настройка телефона</li>
           </ul>
           <div class="bundle-price">
             4 800 000 сум
-            <span>Оборудование + Работа под ключ</span>
+            <span data-i18n="bundle-price-text">Оборудование + Работа под ключ</span>
           </div>
         </div>
       </div>
 
       <div class="bundle-card hit">
-        <div class="bundle-badge">ХИТ</div>
+        <div class="bundle-badge" data-i18n="b-hit">ХИТ</div>
         <img class="bundle-img" src="biznes2.jpg" alt="Комплект Бизнес"/>
         <div class="bundle-content">
-          <h3>Комплект «Бизнес»</h3>
-          <div class="bundle-subtitle">Для складов, ритейла и ресторанов</div>
+          <h3 data-i18n="b2-title">Комплект «Бизнес»</h3>
+          <div class="bundle-subtitle" data-i18n="b2-sub">Для складов, ритейла и ресторанов</div>
           <ul class="bundle-includes">
-            <li>8× IP-камер уличных/купольных (4 Мп, <strong>Встроенный микрофон</strong>)</li>
-            <li>Технология <strong>ColorVu / ColorMaker</strong> (Цветная съемка ночью)</li>
-            <li>1× Видеорегистратор NVR (8 каналов)</li>
-            <li>1× Жесткий диск HDD 2 Тб (Спец. серия для видеонаблюдения)</li>
-            <li>1× PoE-коммутатор (9 портов)</li>
-            <li>Все необходимые расходники и защитные трассы</li>
-            <li>Монтаж, пусконаладка и подключение удаленного доступа</li>
+            <li data-i18n="b2-li1">8× IP-камер уличных/купольных (4 Мп, Встроенный микрофон)</li>
+            <li data-i18n="b2-li2">Технология ColorVu / ColorMaker (Цветная съемка ночью)</li>
+            <li data-i18n="b2-li3">1× Видеорегистратор NVR (8 каналов)</li>
+            <li data-i18n="b2-li4">1× Жесткий диск HDD 2 Тб (Спец. серия для видеонаблюдения)</li>
+            <li data-i18n="b2-li5">1× PoE-коммутатор (9 портов)</li>
+            <li data-i18n="b2-li6">Все необходимые расходники и защитные трассы</li>
+            <li data-i18n="b2-li7">Монтаж, пусконаладка и подключение удаленного доступа</li>
           </ul>
           <div class="bundle-price">
             9 600 000 сум
-            <span>Оборудование + Работа под ключ</span>
+            <span data-i18n="bundle-price-text">Оборудование + Работа под ключ</span>
           </div>
         </div>
       </div>
@@ -738,120 +733,123 @@
       <div class="bundle-card">
         <img class="bundle-img" src="prem3.jpg" alt="Комплект Премиум"/>
         <div class="bundle-content">
-          <h3>Комплект «Премиум»</h3>
-          <div class="bundle-subtitle">Максимальная защита объекта</div>
+          <h3 data-i18n="b3-title">Комплект «Премиум»</h3>
+          <div class="bundle-subtitle" data-i18n="b3-sub">Максимальная защита объекта</div>
           <ul class="bundle-includes">
-            <li>4× IP-камеры премиум (4 Мп, Smart-аналитика ИИ)</li>
-            <li>1× Скоростная поворотная <strong>PTZ-камера</strong> (25х зум, автотрекинг)</li>
-            <li>Система распознавания лиц и детекции людей/транспорта</li>
-            <li>1× Видеорегистратор NVR (16 каналов) + HDD 4 Тб</li>
-            <li>1× Бесшовная Wi-Fi точка доступа <strong>UniFi</strong> для объекта</li>
-            <li>Комплексный высокотехнологичный монтаж под ключ</li>
+            <li data-i18n="b3-li1">4× IP-камеры премиум (4 Мп, Smart-аналитика ИИ)</li>
+            <li data-i18n="b3-li2">1× Скоростная поворотная PTZ-камера (25х зум, автотрекинг)</li>
+            <li data-i18n="b3-li3">Система распознавания лиц и детекции людей/транспорта</li>
+            <li data-i18n="b3-li4">1× Видеорегистратор NVR (16 каналов) + HDD 4 Тб</li>
+            <li data-i18n="b3-li5">1× Бесшовная Wi-Fi точка доступа UniFi для объекта</li>
+            <li data-i18n="b3-li6">Комплексный высокотехнологичный монтаж под ключ</li>
           </ul>
           <div class="bundle-price">
             16 500 000 сум
-            <span>Оборудование + Работа под ключ</span>
+            <span data-i18n="bundle-price-text">Оборудование + Работа под ключ</span>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
+  <!-- ПРОЕКТЫ -->
   <section id="projects">
-    <h2>💼 Выполненные проекты</h2>
-    <p class="section-desc">Реальные примеры того, как мы решаем технические задачи наших клиентов.</p>
+    <h2 data-i18n="projects-title">💼 Выполненные проекты</h2>
+    <p class="section-desc" data-i18n="projects-subtitle">Реальные примеры того, как мы решаем технические задачи наших клиентов.</p>
     <div class="projects-grid">
       <div class="project-card">
-        <div class="project-badge">Логистика</div>
-        <h3>Распределительный склад</h3>
-        <p class="project-meta"><strong>Задача:</strong> Перекрыть слепые зоны на погрузочной рампе и по периметру территории склада (Ташкент).</p>
-        <p class="project-meta"><strong>Решение:</strong> Установлено 32 IP-камеры Tiandy 4Мп с аналитикой пересечения линий, протянута сеть, настроен пост охраны.</p>
+        <div class="project-badge" data-i18n="p1-badge">Логистика</div>
+        <h3 data-i18n="p1-title">Распределительный склад</h3>
+        <p class="project-meta"><strong data-i18n="proj-task">Задача:</strong> <span data-i18n="p1-task">Перекрыть слепые зоны на погрузочной рампе и по периметру территории склада (Ташкент).</span></p>
+        <p class="project-meta"><strong data-i18n="proj-sol">Решение:</strong> <span data-i18n="p1-sol">Установлено 32 IP-камеры Tiandy 4Мп с аналитикой пересечения линий, протянута сеть, настроен пост охраны.</span></p>
       </div>
       <div class="project-card">
-        <div class="project-badge">Бизнес-центры</div>
-        <h3>Современный офис компании</h3>
-        <p class="project-meta"><strong>Задача:</strong> Ограничить доступ посторонних в серверную и автоматизировать учет рабочего времени для 120 сотрудников.</p>
-        <p class="project-meta"><strong>Решение:</strong> Интегрирована СКУД-система Hikvision с распознаванием лиц и термографией, настроены графики отчетов для HR.</p>
+        <div class="project-badge" data-i18n="p2-badge">Бизнес-центры</div>
+        <h3 data-i18n="p2-title">Современный офис компании</h3>
+        <p class="project-meta"><strong data-i18n="proj-task">Задача:</strong> <span data-i18n="p2-task">Ограничить доступ посторонних в серверную и автоматизировать учет рабочего времени для 120 сотрудников.</span></p>
+        <p class="project-meta"><strong data-i18n="proj-sol">Решение:</strong> <span data-i18n="p2-sol">Интегрирована СКУД-система Hikvision с распознаванием лиц и термографией, настроены графики отчетов для HR.</span></p>
       </div>
       <div class="project-card">
-        <div class="project-badge">Инфраструктура</div>
-        <h3>Производственный цех</h3>
-        <p class="project-meta"><strong>Задача:</strong> Объединить два цеха на расстоянии 800 метров в единую локальную сеть и систему видеонаблюдения.</p>
-        <p class="project-meta"><strong>Решение:</strong> Проложена оптическая линия, установлены медиаконвертеры, SFP-модули и мощные коммутаторы UniFi.</p>
+        <div class="project-badge" data-i18n="p3-badge">Инфраструктура</div>
+        <h3 data-i18n="p3-title">Производственный цех</h3>
+        <p class="project-meta"><strong data-i18n="proj-task">Задача:</strong> <span data-i18n="p3-task">Объединить два цеха на расстоянии 800 метров в единую локальную сеть и систему видеонаблюдения.</span></p>
+        <p class="project-meta"><strong data-i18n="proj-sol">Решение:</strong> <span data-i18n="p3-sol">Проложена оптическая линия, установлены медиаконвертеры, SFP-модули и мощные коммутаторы UniFi.</span></p>
       </div>
     </div>
   </section>
 
+  <!-- ОТЗЫВЫ -->
   <section id="reviews">
-    <h2>💬 Отзывы наших клиентов</h2>
-    <p class="section-desc">Нам доверяют безопасность своего бизнеса и имущества.</p>
+    <h2 data-i18n="reviews-title">💬 Отзывы наших клиентов</h2>
+    <p class="section-desc" data-i18n="reviews-subtitle">Нам доверяют безопасность своего бизнеса и имущества.</p>
     <div class="reviews-grid">
       <div class="review-card">
-        <p class="review-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»</p>
-        <div class="review-author">Фарход Ш.</div>
-        <div class="review-company">Логистический центр, Ташкент</div>
+        <p class="review-text" data-i18n="rev-1-text">«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»</p>
+        <div class="review-author" data-i18n="rev-1-author">Фарход Ш.</div>
+        <div class="review-company" data-i18n="rev-1-comp">Логистический центр, Ташкент</div>
       </div>
       <div class="review-card">
-        <p class="review-text">«Обратились для модернизации IT-сети и установки биометрического контроля доступа. Задача учета рабочего времени сотрудников решена полностью. Терминалы Hikvision распознают лица мгновенно. Спасибо инженерам за работу.»</p>
-        <div class="review-author">Елена В.</div>
-        <div class="review-company">IT-компания / Офисный центр</div>
+        <p class="review-text" data-i18n="rev-2-text">«Обратились для модернизации IT-сети и установки биометрического контроля доступа. Задача учета рабочего времени сотрудников решена полностью. Терминалы Hikvision распознают лица мгновенно. Спасибо инженерам за работу.»</p>
+        <div class="review-author" data-i18n="rev-2-author">Елена В.</div>
+        <div class="review-company" data-i18n="rev-2-comp">IT-компания / Офисный центр</div>
       </div>
       <div class="review-card">
-        <p class="review-text">«Отличный сервис и честный подход. Установили охранную сигнализацию и периметральное видеонаблюдение для загородного дома. Всё работает без ложных срабатываний, поддержка всегда на связи. Гарантия реальная.»</p>
-        <div class="review-author">Анвар ака</div>
-        <div class="review-company">Частный сектор, Ташобласть</div>
+        <p class="review-text" data-i18n="rev-3-text">«Отличный сервис и честный подход. Установили охранную сигнализацию и периметральное видеонаблюдение для загородного дома. Всё работает без ложных срабатываний, поддержка всегда на связи. Гарантия реальная.»</p>
+        <div class="review-author" data-i18n="rev-3-author">Анвар ака</div>
+        <div class="review-company" data-i18n="rev-3-comp">Частный сектор, Ташобласть</div>
       </div>
     </div>
   </section>
 
+  <!-- FAQ -->
   <section id="faq">
-    <h2>❓ Часто задаваемые вопросы</h2>
-    <p class="section-desc">Отвечаем на ключевые вопросы перед началом совместной работы.</p>
+    <h2 data-i18n="faq-title">❓ Часто задаваемые вопросы</h2>
+    <p class="section-desc" data-i18n="faq-subtitle">Отвечаем на ключевые вопросы перед началом совместной работы.</p>
     <div class="faq-container">
       <div class="faq-item">
-        <div class="faq-question">Вы работаете по официальному договору и перечислению (с НДС)?</div>
-        <div class="faq-answer">Да, мы являемся юридическим лицом. Заключаем официальный договор, предоставляем полный пакет закрывающих документов, сметы и работаем по перечислению. Все процессы прозрачны.</div>
+        <div class="faq-question" data-i18n="faq-q1">Вы работаете по официальному договору и перечислению (с НДС)?</div>
+        <div class="faq-answer" data-i18n="faq-a1">Да, мы являемся юридическим лицом. Заключаем официальный договор, предоставляем полный пакет закрывающих документов, сметы и работаем по перечислению. Все процессы прозрачны.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-question">Входит ли настройка удаленного просмотра на телефонах в общую стоимость?</div>
-        <div class="faq-answer">Да, при сдаче объекта наши инженеры полностью бесплатно устанавливают официальные приложения и настраивают удаленный доступ со смартфонов, планшетов или компьютеров для всех ответственных лиц.</div>
+        <div class="faq-question" data-i18n="faq-q2">Входит ли настройка удаленного просмотра на телефонах в общую стоимость?</div>
+        <div class="faq-answer" data-i18n="faq-a2">Да, при сдаче объекта наши инженеры полностью бесплатно устанавливают официальные приложения и настраивают удаленный доступ со смартфонов, планшетов или компьютеров для всех ответственных лиц.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-question">Как рассчитывается глубина архива (время хранения записей камер)?</div>
-        <div class="faq-answer">Глубина архива подбирается индивидуально под требования вашей безопасности (обычно от 14 до 30 дней). Мы рассчитываем точный объем специализированных жестких дисков (HDD) исходя из разрешения камер и записи по датчику движения.</div>
+        <div class="faq-question" data-i18n="faq-q3">Как рассчитывается глубина архива (время хранения записей камер)?</div>
+        <div class="faq-answer" data-i18n="faq-a3">Глубина архива подбирается индивидуально под требования вашей безопасности (обычно от 14 до 30 дней). Мы рассчитываем точный объем специализированных жестких дисков (HDD) исходя из разрешения камер и записи по датчику движения.</div>
       </div>
     </div>
   </section>
 
+  <!-- КОНТАКТЫ -->
   <section id="contacts">
-    <h2>📞 Контакты и локация</h2>
-    <p class="section-desc">Свяжитесь с нами для детального обсуждения вашего технического задания или заказа бесплатного выезда на замер.</p>
+    <h2 data-i18n="contacts-title">📞 Контакты и локация</h2>
+    <p class="section-desc" data-i18n="contacts-subtitle">Свяжитесь с нами для детального обсуждения вашего технического задания или заказа бесплатного выезда на замер.</p>
     
     <div class="contacts-layout">
       <div class="contacts-info">
-        <p>📍 <strong>Инженерный центр WatchPoint:</strong> Ташкент, Узбекистан.</p>
-        <p style="color:var(--brand); margin-top:4px; font-weight:600;">🚀 Работаем оперативно с выездом по всей республике!</p>
+        <p>📍 <strong data-i18n="contact-center">Инженерный центр WatchPoint:</strong> Ташкент, Узбекистан.</p>
+        <p style="color:var(--brand); margin-top:4px; font-weight:600;" data-i18n="contact-slogan">🚀 Работаем оперативно с выездом по всей республике!</p>
         <br>
-        <p>⏱️ <strong>Режим работы:</strong> Понедельник — Суббота, с 09:00 до 18:00.</p>
+        <p>⏱️ <strong data-i18n="contact-hours-title">Режим работы:</strong> <span data-i18n="contact-hours-text">Понедельник — Суббота, с 09:00 до 18:00.</span></p>
         <br>
         <div class="contacts-container">
-          <a href="tel:+998886362545" class="contact-button cb-phone">
+          <a href="tel:+998886362545" class="contact-button cb-phone" data-i18n="btn-call">
             <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             Позвонить инженеру
           </a>
           
-          <a href="https://t.me/watchpointcctv24" target="_blank" class="contact-button cb-telegram">
+          <a href="https://t.me/watchpointcctv24" target="_blank" class="contact-button cb-telegram" data-i18n="btn-tg">
             <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.28 7.68-6.92c.34-.31-.07-.48-.52-.19L7.74 12.54l-4.15-1.3c-.9-.28-.92-.9.19-1.33L19.88 3.5c.74-.28 1.38.17 1.14 1.2l-2.74 12.89c-.2 1-.8 1.25-1.63.78l-4.17-3.07-2 1.93c-.23.23-.42.42-.85.42z"/></svg>
             Связаться в Telegram
           </a>
           
-          <a href="https://wa.me/998886362545" target="_blank" class="contact-button cb-whatsapp">
+          <a href="https://wa.me/998886362545" target="_blank" class="contact-button cb-whatsapp" data-i18n="btn-wa">
             <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 13.56c-.24.67-1.39 1.28-1.9 1.34-.51.06-1 .24-3.17-.65-2.61-1.07-4.26-3.74-4.39-3.92-.13-.18-1.07-1.42-1.07-2.71 0-1.29.67-1.93.91-2.19.24-.26.54-.32.72-.32.18 0 .36.01.52.02.17.01.39-.06.61.47.23.54.78 1.91.85 2.04.07.13.11.29.02.47-.09.18-.14.29-.29.46-.14.17-.3.38-.43.51-.15.14-.3.29-.13.58.17.29.75 1.24 1.62 2.01.12.11.23.22.35.32.77.68 1.35.88 1.54.97.19.09.3.07.41-.05.11-.12.47-.55.6-.74.12-.19.25-.16.41-.1.17.06 1.06.5 1.24.59.18.09.3.14.34.22.05.08.05.47-.19 1.14z"/></svg>
             Написать в WhatsApp
           </a>
           
-          <a href="mailto:WatchPoint.intellegent.vision@outlook.com?subject=Запрос%20на%20расчет%20системы" class="contact-button cb-email">
+          <a href="mailto:WatchPoint.intellegent.vision@outlook.com?subject=Запрос%20на%20расчет%20системы" class="contact-button cb-email" data-i18n="btn-email">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             Отправить ТЗ на Email
           </a>
@@ -859,10 +857,10 @@
       </div>
       
       <div class="cta-box-card">
-        <h3>Заказать бесплатный замер 📐</h3>
-        <p>Наш ведущий инженер приедет на ваш объект, рассчитает углы обзора камер, подберет спецификацию оборудования и составит точную смету <span class="highlight">абсолютно бесплатно</span>.</p>
+        <h3 data-i18n="cta-box-title">Заказать бесплатный замер 📐</h3>
+        <p data-i18n="cta-box-desc">Наш ведущий инженер приедет на ваш объект, рассчитает углы обзора камер, подберет спецификацию оборудования и составит точную смету <span class="highlight">абсолютно бесплатно</span>.</p>
         <div style="display:flex; justify-content:center;">
-           <a href="https://t.me/watchpointcctv24" target="_blank" class="contact-button cb-cta" style="font-weight:700;">
+           <a href="https://t.me/watchpointcctv24" target="_blank" class="contact-button cb-cta" style="font-weight:700;" data-i18n="cta-box-btn">
              <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.28 7.68-6.92c.34-.31-.07-.48-.52-.19L7.74 12.54l-4.15-1.3c-.9-.28-.92-.9.19-1.33L19.88 3.5c.74-.28 1.38.17 1.14 1.2l-2.74 12.89c-.2 1-.8 1.25-1.63.78l-4.17-3.07-2 1.93c-.23.23-.42.42-.85.42z"/></svg>
              Получить расчет проекта
            </a>
@@ -871,18 +869,18 @@
     </div>
 
     <div class="seo-text-block">
-      <h4>Профессиональное проектирование и монтаж систем безопасности в Узбекистане</h4>
-      <p>Инжиниринговая компания <strong>WatchPoint Security</strong> осуществляет комплексную интеграцию слаботочных сетей и цифровых экосистем контроля по всей территории Ташкента, Ташкентской области (включая Чирчик, Алмалык, Ангрен) и других регионов Республики Узбекистан. Мы специализируемся на проектировании высокоточных IP-систем видеонаблюдения, облачных Wi-Fi/4G камер, умных электронных смарт-замков, биометрического контроля доступа (СКУД), автоматических турникетов, датчиков охраны периметра и ИТ-инфраструктуры (ЛВС, оптические линии связи, серверные шкафы).</p>
-      <p>Проектирование и монтаж систем безопасности под ключ с гарантией 1 год.</p>
+      <h4 data-i18n="seo-h4">Профессиональное проектирование и монтаж систем безопасности в Узбекистане</h4>
+      <p data-i18n="seo-p1">Инжиниринговая компания <strong>WatchPoint Security</strong> осуществляет комплексную интеграцию слаботочных сетей и цифровых экосистем контроля по всей территории Ташкента, Ташкентской области (включая Чирчик, Алмалык, Ангрен) и других регионов Республики Узбекистан. Мы специализируемся на проектировании высокоточных IP-систем видеонаблюдения, облачных Wi-Fi/4G камер, умных электронных смарт-замков, биометрического контроля доступа (СКУД), автоматических турникетов, датчиков охраны периметра и ИТ-инфраструктуры (ЛВС, оптические линии связи, серверные шкафы).</p>
+      <p data-i18n="seo-p2">Проектирование и монтаж систем безопасности под ключ с гарантией 1 год.</p>
     </div>
   </section>
 
-  <footer>© 2026 WatchPoint Security. Все права защищены.</footer>
+  <footer data-i18n="footer-text">© 2026 WatchPoint Security. Все права защищены.</footer>
 
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script id="slider-logic">
-    // Словарь переводов для меню и кнопки
+    // Полный словарь переводов для сайта
     const translations = {
       ru: {
         "nav-about": "О нас",
@@ -894,7 +892,193 @@
         "nav-projects": "Проекты",
         "nav-faq": "FAQ",
         "nav-contacts": "Контакты",
-        "cta-btn": "Запросить расчёт"
+        "cta-btn": "Запросить расчёт",
+        
+        "slide-1-desc": "Мы видим то, что недоступно другим. Ваша уверенность под надёжным прицелом передовых технологий в Узбекистане.",
+        "slide-1-btn": "Выбрать готовый комплект",
+        "slide-2-title": "Безопасность Вашего Бизнеса",
+        "slide-2-desc": "Профессиональный монтаж IP-камер, СКУД-терминалов и умной видеоаналитики для складов, офисов и производств под ключ.",
+        "slide-2-btn": "Посмотреть наши услуги",
+        "slide-3-title": "Официальный Контракт и Гарантия",
+        "slide-3-desc": "Официальный договор, работа по перечислению с НДС, гарантия 1 год на монтаж и бесплатный выезд инженера на замер по Ташкенту.",
+        "slide-3-btn": "Заказать бесплатный замер",
+
+        "about-title": "🔎 О компании",
+        "about-desc": "WatchPoint Security — инжиниринговая компания из Ташкента, специализирующаяся на проектировании, поставке и монтаже комплексных систем безопасности. Мы разрабатываем и внедряем отказоустойчивые цифровые решения для защиты промышленных объектов, логистических центров, коммерческих офисов и частного сектора по всей территории Республики Узбекистан. С 2026 года мы начали сотрудничество с международным разработчиком IoT-систем Tech, расширяя линейку умных облачных камер и электронных замков.",
+
+        "features-title": "💎 Почему выбирают нас",
+        "features-subtitle": "Мы создаем технологичные решения, ориентированные на жесткие стандарты B2B-сегмента.",
+        "feat-1-title": "🛡️ Гарантия 1 год",
+        "feat-1-desc": "Предоставляем полноценную официальную гарантию на всё установленное оборудование и монтажные работы с оперативным выездом технической поддержки.",
+        "feat-2-title": "📐 Бесплатный замер",
+        "feat-2-desc": "Бесплатный выезд инженера на объект в Ташкенте и Ташобласти для детального анализа углов обзора, слепых зон и составления прозрачной сметы.",
+        "feat-3-title": "💡 Сертифицированные бренды",
+        "feat-3-desc": "Работаем только с проверенным, лицензированным оборудованием от лидеров рынка. Никаких сбоев прошивок и проблем со стабильностью связи.",
+
+        "standards-title": "🛠️ Наши стандарты инженерного монтажа",
+        "standards-subtitle": "Видеонаблюдение — это не просто камеры, это инженерная трасса. Мы строго следуем регламенту, гарантирующему годы непрерывной работы.",
+        "std-1-title": "⚡ 100% Медный кабель по ГОСТу",
+        "std-1-desc": "Мы никогда не используем дешёвый биметаллический (алюминиевый) кабель, который окисляется и теряет сигнал через полгода. Только качественная чистая медь (UTP/FTP), обеспечивающая стабильную скорость PoE-питания и видеопотока без зависаний.",
+        "std-2-title": "🔒 Полная защита кабельных линий",
+        "std-2-desc": "Все линии связи укладываются в специализированные защитные кабельные каналы, ПВХ-гофру или жёсткие трубы. На индустриальных объектах монтируем в металлические лотки. Это защищает сеть от грызунов, ультрафиолета, влаги и механических повреждений.",
+        "std-3-title": "🌧️ Герметичные коммутационные боксы",
+        "std-3-desc": "Все уличные разъёмы, коннекторы RJ-45 и приёмопередатчики мы надёжно изолируем в распаечных коробках со степенью защиты не ниже IP66. Никакой снег, проливной дождь или пыль Ташкента не вызовут короткого замыкания или окисления контактов.",
+        "std-4-title": "🗄️ Маркировка и культура серверных шкафов",
+        "std-4-desc": "Каждый входящий кабель на патч-панели маркируется согласно проектной схеме. Мы аккуратно укладываем провода в органайзеры внутри серверного шкафа. Любой системный администратор компании сможет легко разобраться в сети и провести обслуживание за 5 минут.",
+
+        "services-title": "⚙️ Наши услуги и цены",
+        "services-subtitle": "Интегрируем передовое оборудование от мировых технологических лидеров под ключ.",
+        "srv-1-title": "📹 Видеонаблюдение",
+        "srv-1-desc": "Проектирование IP-систем и облачных Wi-Fi/4G камер, установка умных камер (ColorVu, купольные, PTZ, двухобъективные), настройка регистраторов (NVR) и видеоаналитики.",
+        "srv-1-price": "от 1 200 000 сум",
+        "srv-2-title": "🔐 Умные смарт-замки",
+        "srv-2-desc": "Установка биометрических электронных замков для квартир, коттеджей и офисов. Открытие по Face ID, отпечатку пальца, ПИН-коду и через смартфон.",
+        "srv-2-price": "от 1 800 000 сум",
+        "srv-3-title": "🚪 Контроль доступа (СКУД)",
+        "srv-3-desc": "Установка терминалов распознавания лиц, турникетов, RFID-считывателей и электромагнитных замков. Полная автоматизация учёта рабочего времени.",
+        "srv-3-price": "от 1 500 000 сум",
+        "srv-4-title": "💻 IT-инфраструктура",
+        "srv-4-desc": "Монтаж структурированных кабельных сетей (СКС), настройка бесшовного Wi-Fi, коммутаторов, SFP-модулей, оптических трасс и сборка серверных шкафов.",
+        "srv-4-price": "от 2 000 000 сум",
+
+        "jaify-badge": "Новое направление • С 2026 года",
+        "jaify-h2-part1": "Сотрудничество с",
+        "jaify-desc": "С 2026 года WatchPoint Security начала сотрудничество с международным разработчиком умных систем безопасности Zhejiang JAIFY Co., Ltd. Теперь в наших проектах доступны современные облачные камеры и умные замки этого бренда.",
+        "jaify-box1-title": "☁️ Надежная облачная платформа",
+        "jaify-box1-desc": "Jaify развивает собственную R&D-базу (3 научно-исследовательских центра) и использует глобальные облачные серверы (AWS, Google Cloud), обеспечивая стабильную работу более чем для 100 млн зарегистрированных пользователей по всему миру.",
+        "jaify-box1-li1": "✔ Стабильный удаленный доступ без зависаний из любой точки мира",
+        "jaify-box1-li2": "✔ Защищенное хранение видеоархива в облаке и на карте TF до 256 Гб",
+        "jaify-box1-li3": "✔ Мгновенные тревожные пуш-уведомления на смартфон (iOS / Android)",
+        "jaify-box2-title": "🧠 Умное зрение и Сценарный ИИ",
+        "jaify-box2-desc": "Оборудование оснащено встроенными алгоритмами искусственного интеллекта под конкретные задачи охраны дома, семьи и бизнеса:",
+        "jaify-box2-li1-strong": "Контроль периметра (Outdoor):",
+        "jaify-box2-li1-text": "распознавание людей, машин, животных и раннее обнаружение огня",
+        "jaify-box2-li2-strong": "Забота о близких (Elderly/Child Care):",
+        "jaify-box2-li2-text": "детекция падений пожилых людей и контроль опасных зон для детей",
+        "jaify-box2-li3-strong": "Контроль персонала (Job Inspection):",
+        "jaify-box2-li3-text": "фиксация присутствия на рабочем месте",
+        "jaify-box2-li4-strong": "Технология AOV и 2 объектива:",
+        "jaify-box2-li4-text": "непрерывная запись 24/7 без слепых зон с кодеком H.265",
+        "jaify-bottom-title": "Камеры и смарт-замки для ваших задач",
+        "jaify-bottom-desc": "Подберем и установим внутренние поворотные (Pan&Tilt) камеры с двусторонней аудиосвязью, уличные Wi-Fi и 4G камеры с защитой от погоды IP66/IP67, а также современные электронные замки с управлением со смартфона.",
+        "jaify-btn1": "Подобрать камеры",
+        "jaify-btn2": "Умные замки",
+
+        "locks-title": "🔐 Умные замки — Безопасность без ключей",
+        "locks-subtitle": "Интегрируем в наши проекты интеллектуальные электронные замки от Tech. Надежная защита и современный дизайн для вашего дома и бизнеса.",
+        "lock1-name": "Базовая модель замка",
+        "lock1-desc": "Несколько способов открытия, безопасная ручка, разблокировка отпечатком, электронный звонок, питание 4*AA.",
+        "lock1-badge": "Базовый комплект",
+        "lock2-name": "Премиальный черный дизайн",
+        "lock2-desc": "Управление пользователями, настройка голосовой навигации и Bluetooth-сети.",
+        "lock2-badge": "Стиль и комфорт",
+        "lock3-name": "Замок с видеоглазком",
+        "lock3-desc": "Интеграция с приложением Jaify, двусторонний домофон и облачное хранилище.",
+        "lock3-badge": "Безопасность",
+        "lock4-name": "Усиленный ригельный механизм",
+        "lock4-desc": "Уведомления о тревоге, контроль доступа и совместное использование разрешений.",
+        "lock4-badge": "Защита",
+        "lock5-name": "Модель с литиевой батареей",
+        "lock5-desc": "Автономное питание от емкого аккумулятора с поддержкой Wi-Fi и удаленного контроля.",
+        "lock5-badge": "Энергоэффективность",
+        "lock6-name": "Флагман с 3D распознаванием лиц",
+        "lock6-desc": "Большой OLED-экран 4,5 дюйма, доступ без рук, видеозвонок по приложению Jaify.",
+        "lock6-badge": "Флагман 2026",
+        "locks-specs-title": "⚙️ Технические спецификации линеек",
+        "locks-specs-subtitle": "Подробные характеристики базовых и флагманских моделей умных замков для вашего объекта.",
+        "locks-base-title": "🔒 Базовая серия",
+        "locks-base-text": "• Несколько способов открытия дверей<br>• Разблокировка отпечатков пальцев<br>• Безопасная ручка и электронный звонок<br>• Управление пользователями<br>• Настройка Bluetooth-сети и голосовой навигации<br>• Автономное питание: батарейки 4*AA",
+        "locks-flag-title": "👑 Флагманская серия",
+        "locks-flag-text": "• 3D-распознавание лиц и доступ без рук<br>• OLED-экран 4,5 дюйма<br>• Видеозвонок по приложению Jaify<br>• Двусторонний домофон + Облачное хранилище<br>• Wi-Fi модуль и литиевая батарея с зарядкой<br>• Уведомления о тревоге и совместное использование разрешений",
+        "locks-btn": "Подобрать смарт-замок под вашу дверь",
+
+        "bundles-title": "📦 Готовые комплекты оборудования «Под Ключ»",
+        "bundles-subtitle": "Всё необходимое оборудование, расходные материалы и профессиональный монтаж уже включены в стоимость.",
+        "b1-title": "Комплект «Старт»",
+        "b1-sub": "Для небольшого офиса / магазина",
+        "b1-li1": "4× IP-камеры купольные (2 Мп, ИК-подсветка до 30м)",
+        "b1-li2": "1× Сетевой видеорегистратор NVR (4 канала)",
+        "b1-li3": "1× Жесткий диск HDD 1 Тб (До 2 недель архива)",
+        "b1-li4": "1× PoE-коммутатор (Питание и сеть по одному кабелю)",
+        "b1-li5": "Расходные материалы (Кабель UTP, разъемы, коробки)",
+        "b1-li6": "Монтаж, юстировка и бесплатная настройка телефона",
+        "bundle-price-text": "Оборудование + Работа под ключ",
+        "b-hit": "ХИТ",
+        "b2-title": "Комплект «Бизнес»",
+        "b2-sub": "Для складов, ритейла и ресторанов",
+        "b2-li1": "8× IP-камер уличных/купольных (4 Мп, Встроенный микрофон)",
+        "b2-li2": "Технология ColorVu / ColorMaker (Цветная съемка ночью)",
+        "b2-li3": "1× Видеорегистратор NVR (8 каналов)",
+        "b2-li4": "1× Жесткий диск HDD 2 Тб (Спец. серия для видеонаблюдения)",
+        "b2-li5": "1× PoE-коммутатор (9 портов)",
+        "b2-li6": "Все необходимые расходники и защитные трассы",
+        "b2-li7": "Монтаж, пусконаладка и подключение удаленного доступа",
+        "b3-title": "Комплект «Премиум»",
+        "b3-sub": "Максимальная защита объекта",
+        "b3-li1": "4× IP-камеры премиум (4 Мп, Smart-аналитика ИИ)",
+        "b3-li2": "1× Скоростная поворотная PTZ-камера (25х зум, автотрекинг)",
+        "b3-li3": "Система распознавания лиц и детекции людей/транспорта",
+        "b3-li4": "1× Видеорегистратор NVR (16 каналов) + HDD 4 Тб",
+        "b3-li5": "1× Бесшовная Wi-Fi точка доступа UniFi для объекта",
+        "b3-li6": "Комплексный высокотехнологичный монтаж под ключ",
+
+        "projects-title": "💼 Выполненные проекты",
+        "projects-subtitle": "Реальные примеры того, как мы решаем технические задачи наших клиентов.",
+        "p1-badge": "Логистика",
+        "p1-title": "Распределительный склад",
+        "proj-task": "Задача:",
+        "proj-sol": "Решение:",
+        "p1-task": "Перекрыть слепые зоны на погрузочной рампе и по периметру территории склада (Ташкент).",
+        "p1-sol": "Установлено 32 IP-камеры Tiandy 4Мп с аналитикой пересечения линий, протянута сеть, настроен пост охраны.",
+        "p2-badge": "Бизнес-центры",
+        "p2-title": "Современный офис компании",
+        "p2-task": "Ограничить доступ посторонних в серверную и автоматизировать учет рабочего времени для 120 сотрудников.",
+        "p2-sol": "Интегрирована СКУД-система Hikvision с распознаванием лиц и термографией, настроены графики отчетов для HR.",
+        "p3-badge": "Инфраструктура",
+        "p3-title": "Производственный цех",
+        "p3-task": "Объединить два цеха на расстоянии 800 метров в единую локальную сеть и систему видеонаблюдения.",
+        "p3-sol": "Проложена оптическая линия, установлены медиаконвертеры, SFP-модули и мощные коммутаторы UniFi.",
+
+        "reviews-title": "💬 Отзывы наших клиентов",
+        "reviews-subtitle": "Нам доверяют безопасность своего бизнеса и имущества.",
+        "rev-1-text": "«Заказывали у WatchPoint установку IP-видеонаблюдения на наш складской комплекс. Ребята приехали на замер в тот же день, подобрали отличные камеры. Монтаж сделали аккуратно, настроили удалённый доступ на телефонах. Рекомендуем!»",
+        "rev-1-author": "Фарход Ш.",
+        "rev-1-comp": "Логистический центр, Ташкент",
+        "rev-2-text": "«Обратились для модернизации IT-сети и установки биометрического контроля доступа. Задача учета рабочего времени сотрудников решена полностью. Терминалы Hikvision распознают лица мгновенно. Спасибо инженерам за работу.»",
+        "rev-2-author": "Елена В.",
+        "rev-2-comp": "IT-компания / Офисный центр",
+        "rev-3-text": "«Отличный сервис и честный подход. Установили охранную сигнализацию и периметральное видеонаблюдение для загородного дома. Всё работает без ложных срабатываний, поддержка всегда на связи. Гарантия реальная.»",
+        "rev-3-author": "Анвар ака",
+        "rev-3-comp": "Частный сектор, Ташобласть",
+
+        "faq-title": "❓ Часто задаваемые вопросы",
+        "faq-subtitle": "Отвечаем на ключевые вопросы перед началом совместной работы.",
+        "faq-q1": "Вы работаете по официальному договору и перечислению (с НДС)?",
+        "faq-a1": "Да, мы являемся юридическим лицом. Заключаем официальный договор, предоставляем полный пакет закрывающих документов, сметы и работаем по перечислению. Все процессы прозрачны.",
+        "faq-q2": "Входит ли настройка удаленного просмотра на телефонах в общую стоимость?",
+        "faq-a2": "Да, при сдаче объекта наши инженеры полностью бесплатно устанавливают официальные приложения и настраивают удаленный доступ со смартфонов, планшетов или компьютеров для всех ответственных лиц.",
+        "faq-q3": "Как рассчитывается глубина архива (время хранения записей камер)?",
+        "faq-a3": "Глубина архива подбирается индивидуально под требования вашей безопасности (обычно от 14 до 30 дней). Мы рассчитываем точный объем специализированных жестких дисков (HDD) исходя из разрешения камер и записи по датчику движения.",
+
+        "contacts-title": "📞 Контакты и локация",
+        "contacts-subtitle": "Свяжитесь с нами для детального обсуждения вашего технического задания или заказа бесплатного выезда на замер.",
+        "contact-center": "Инженерный центр WatchPoint:",
+        "contact-slogan": "🚀 Работаем оперативно с выездом по всей республике!",
+        "contact-hours-title": "Режим работы:",
+        "contact-hours-text": "Понедельник — Суббота, с 09:00 до 18:00.",
+        "btn-call": "Позвонить инженеру",
+        "btn-tg": "Связаться в Telegram",
+        "btn-wa": "Написать в WhatsApp",
+        "btn-email": "Отправить ТЗ на Email",
+
+        "cta-box-title": "Заказать бесплатный замер 📐",
+        "cta-box-desc": "Наш ведущий инженер приедет на ваш объект, рассчитает углы обзора камер, подберет спецификацию оборудования и составит точную смету абсолютно бесплатно.",
+        "cta-box-btn": "Получить расчет проекта",
+
+        "seo-h4": "Профессиональное проектирование и монтаж систем безопасности в Узбекистане",
+        "seo-p1": "Инжиниринговая компания WatchPoint Security осуществляет комплексную интеграцию слаботочных сетей и цифровых экосистем контроля по всей территории Ташкента, Ташкентской области (включая Чирчик, Алмалык, Ангрен) и других регионов Республики Узбекистан. Мы специализируемся на проектировании высокоточных IP-систем видеонаблюдения, облачных Wi-Fi/4G камер, умных электронных смарт-замков, биометрического контроля доступа (СКУД), автоматических турникетов, датчиков охраны периметра и ИТ-инфраструктуры (ЛВС, оптические линии связи, серверные шкафы).",
+        "seo-p2": "Проектирование и монтаж систем безопасности под ключ с гарантией 1 год.",
+        "footer-text": "© 2026 WatchPoint Security. Все права защищены."
       },
       en: {
         "nav-about": "About Us",
@@ -906,7 +1090,193 @@
         "nav-projects": "Projects",
         "nav-faq": "FAQ",
         "nav-contacts": "Contacts",
-        "cta-btn": "Request Quote"
+        "cta-btn": "Request Quote",
+
+        "slide-1-desc": "We see what others miss. Your security under reliable advanced technology in Uzbekistan.",
+        "slide-1-btn": "Choose Ready Bundle",
+        "slide-2-title": "Security for Your Business",
+        "slide-2-desc": "Turnkey professional installation of IP cameras, access control terminals, and smart video analytics for warehouses, offices, and plants.",
+        "slide-2-btn": "View Our Services",
+        "slide-3-title": "Official Contract & Warranty",
+        "slide-3-desc": "Official agreement, bank transfer with VAT, 1-year installation warranty, and free engineer site survey in Tashkent.",
+        "slide-3-btn": "Book Free Survey",
+
+        "about-title": "🔎 About Company",
+        "about-desc": "WatchPoint Security is an engineering company from Tashkent specializing in the design, supply, and installation of integrated security systems. We develop and implement fault-tolerant digital solutions for industrial facilities, logistics centers, commercial offices, and private sectors across the Republic of Uzbekistan. Starting in 2026, we partnered with international IoT system developer Tech to expand our lineup of smart cloud cameras and electronic locks.",
+
+        "features-title": "💎 Why Choose Us",
+        "features-subtitle": "We create technological solutions tailored to strict B2B standards.",
+        "feat-1-title": "🛡️ 1 Year Warranty",
+        "feat-1-desc": "We provide a full official warranty for all installed equipment and installation work with prompt technical support dispatch.",
+        "feat-2-title": "📐 Free Survey",
+        "feat-2-desc": "Free engineer visit to your site in Tashkent and region for a detailed analysis of viewing angles, blind spots, and a transparent estimate.",
+        "feat-3-title": "💡 Certified Brands",
+        "feat-3-desc": "We work only with proven, licensed equipment from market leaders. No firmware glitches or connection stability issues.",
+
+        "standards-title": "🛠️ Engineering Installation Standards",
+        "standards-subtitle": "Video surveillance is not just cameras, it's an engineering route. We strictly follow regulations ensuring years of uninterrupted operation.",
+        "std-1-title": "⚡ 100% Copper Cable per GOST",
+        "std-1-desc": "We never use cheap bimetallic (aluminum) cable that oxidizes and loses signal in half a year. Only high-quality pure copper (UTP/FTP) ensuring stable PoE power and video stream speed without freezes.",
+        "std-2-title": "🔒 Complete Cable Protection",
+        "std-2-desc": "All communication lines are laid in specialized protective cable channels, PVC corrugated pipes, or rigid conduits. Industrial objects use metal trays to protect against rodents, UV, moisture, and mechanical damage.",
+        "std-3-title": "🌧️ Sealed Junction Boxes",
+        "std-3-desc": "All outdoor connectors, RJ-45 plugs, and transceivers are securely isolated in junction boxes with IP66 or higher protection. No snow, heavy rain, or Tashkent dust will cause short circuits or contact oxidation.",
+        "std-4-title": "🗄️ Rack Labeling & Organization",
+        "std-4-desc": "Each incoming cable on the patch panel is labeled according to the design scheme. We neatly route wires into organizers inside the server rack. Any system administrator can easily understand the network and service it in 5 minutes.",
+
+        "services-title": "⚙️ Services & Pricing",
+        "services-subtitle": "Turnkey integration of cutting-edge equipment from world technology leaders.",
+        "srv-1-title": "📹 Video Surveillance",
+        "srv-1-desc": "Design of IP systems and cloud Wi-Fi/4G cameras, smart cameras setup (ColorVu, dome, PTZ, dual-lens), NVR configuration, and video analytics.",
+        "srv-1-price": "from 1,200,000 UZS",
+        "srv-2-title": "🔐 Smart Locks",
+        "srv-2-desc": "Installation of biometric electronic locks for apartments, cottages, and offices. Open via Face ID, fingerprint, PIN code, and smartphone.",
+        "srv-2-price": "from 1,800,000 UZS",
+        "srv-3-title": "🚪 Access Control (ACS)",
+        "srv-3-desc": "Installation of face recognition terminals, turnstiles, RFID readers, and electromagnetic locks. Full automation of working time tracking.",
+        "srv-3-price": "from 1,500,000 UZS",
+        "srv-4-title": "💻 IT Infrastructure",
+        "srv-4-desc": "Structured cabling systems (SCS) installation, seamless Wi-Fi setup, switches, SFP modules, optical lines, and server rack assembly.",
+        "srv-4-price": "from 2,000,000 UZS",
+
+        "jaify-badge": "New Direction • Starting 2026",
+        "jaify-h2-part1": "Partnership with",
+        "jaify-desc": "Starting 2026, WatchPoint Security partnered with international smart security system developer Zhejiang JAIFY Co., Ltd. Modern cloud cameras and smart locks of this brand are now available in our projects.",
+        "jaify-box1-title": "☁️ Reliable Cloud Platform",
+        "jaify-box1-desc": "Jaify develops its own R&D base (3 research centers) and uses global cloud servers (AWS, Google Cloud), ensuring stable operation for over 100 million registered users worldwide.",
+        "jaify-box1-li1": "✔ Stable remote access without freezes from anywhere in the world",
+        "jaify-box1-li2": "✔ Secure video archive storage in the cloud and TF card up to 256GB",
+        "jaify-box1-li3": "✔ Instant alarm push notifications to smartphone (iOS / Android)",
+        "jaify-box2-title": "🧠 Smart Vision & Scenario AI",
+        "jaify-box2-desc": "Equipment is equipped with embedded AI algorithms for specific home, family, and business security tasks:",
+        "jaify-box2-li1-strong": "Perimeter Control (Outdoor):",
+        "jaify-box2-li1-text": "recognition of people, cars, animals, and early fire detection",
+        "jaify-box2-li2-strong": "Elderly / Child Care:",
+        "jaify-box2-li2-text": "detection of elderly falls and monitoring dangerous areas for children",
+        "jaify-box2-li3-strong": "Job Inspection:",
+        "jaify-box2-li3-text": "verification of presence at the workplace",
+        "jaify-box2-li4-strong": "AOV & Dual-Lens Tech:",
+        "jaify-box2-li4-text": "continuous 24/7 recording without blind spots using H.265 codec",
+        "jaify-bottom-title": "Cameras and Smart Locks for Your Tasks",
+        "jaify-bottom-desc": "We will select and install indoor Pan&Tilt cameras with two-way audio, outdoor Wi-Fi and 4G cameras with IP66/IP67 weather protection, as well as modern electronic smartphone-controlled locks.",
+        "jaify-btn1": "Choose Cameras",
+        "jaify-btn2": "Smart Locks",
+
+        "locks-title": "🔐 Smart Locks — Keyless Security",
+        "locks-subtitle": "We integrate intelligent electronic locks from Tech into our projects. Reliable protection and modern design for your home and business.",
+        "lock1-name": "Basic Lock Model",
+        "lock1-desc": "Multiple unlock methods, safe handle, fingerprint unlock, electronic doorbell, 4*AA battery power.",
+        "lock1-badge": "Basic Kit",
+        "lock2-name": "Premium Black Design",
+        "lock2-desc": "User management, voice navigation settings, and Bluetooth network configuration.",
+        "lock2-badge": "Style & Comfort",
+        "lock3-name": "Lock with Video Peephole",
+        "lock3-desc": "Integration with Jaify app, two-way intercom, and cloud storage.",
+        "lock3-badge": "Security",
+        "lock4-name": "Reinforced Bolt Mechanism",
+        "lock4-desc": "Alarm notifications, access control, and permission sharing.",
+        "lock4-badge": "Protection",
+        "lock5-name": "Lithium Battery Model",
+        "lock5-desc": "Autonomous power from a large-capacity battery with Wi-Fi support and remote control.",
+        "lock5-badge": "Energy Efficiency",
+        "lock6-name": "Flagship with 3D Face Recognition",
+        "lock6-desc": "Large 4.5-inch OLED screen, hands-free access, video call via Jaify app.",
+        "lock6-badge": "Flagship 2026",
+        "locks-specs-title": "⚙️ Lineup Technical Specifications",
+        "locks-specs-subtitle": "Detailed characteristics of basic and flagship smart lock models for your facility.",
+        "locks-base-title": "🔒 Basic Series",
+        "locks-base-text": "• Multiple door opening methods<br>• Fingerprint unlocking<br>• Safe handle and electronic doorbell<br>• User management<br>• Bluetooth network & voice navigation settings<br>• Autonomous power: 4*AA batteries",
+        "locks-flag-title": "👑 Flagship Series",
+        "locks-flag-text": "• 3D face recognition and hands-free access<br>• 4.5-inch OLED screen<br>• Video call via Jaify app<br>• Two-way intercom + Cloud storage<br>• Wi-Fi module and rechargeable lithium battery<br>• Alarm notifications and permission sharing",
+        "locks-btn": "Find Smart Lock for Your Door",
+
+        "bundles-title": "📦 Turnkey Equipment Bundles",
+        "bundles-subtitle": "All necessary equipment, consumables, and professional installation are already included in the price.",
+        "b1-title": "Kit «Start»",
+        "b1-sub": "For small office / shop",
+        "b1-li1": "4× Dome IP cameras (2 MP, IR illumination up to 30m)",
+        "b1-li2": "1× Network video recorder NVR (4 channels)",
+        "b1-li3": "1× HDD 1 TB (Up to 2 weeks of archive)",
+        "b1-li4": "1× PoE switch (Power and network via single cable)",
+        "b1-li5": "Consumables (UTP cable, connectors, boxes)",
+        "b1-li6": "Installation, alignment, and free phone setup",
+        "bundle-price-text": "Equipment + Turnkey Work",
+        "b-hit": "HIT",
+        "b2-title": "Kit «Business»",
+        "b2-sub": "For warehouses, retail, and restaurants",
+        "b2-li1": "8× Outdoor/dome IP cameras (4 MP, Built-in microphone)",
+        "b2-li2": "ColorVu / ColorMaker technology (Color night shooting)",
+        "b2-li3": "1× NVR video recorder (8 channels)",
+        "b2-li4": "1× HDD 2 TB (Special CCTV series)",
+        "b2-li5": "1× PoE switch (9 ports)",
+        "b2-li6": "All necessary consumables and protective routes",
+        "b2-li7": "Installation, commissioning, and remote access setup",
+        "b3-title": "Kit «Premium»",
+        "b3-sub": "Maximum facility protection",
+        "b3-li1": "4× Premium IP cameras (4 MP, AI Smart analytics)",
+        "b3-li2": "1× High-speed PTZ camera (25x zoom, auto-tracking)",
+        "b3-li3": "Face recognition and human/vehicle detection system",
+        "b3-li4": "1× NVR video recorder (16 channels) + HDD 4 TB",
+        "b3-li5": "1× Seamless UniFi Wi-Fi access point for the facility",
+        "b3-li6": "Comprehensive high-tech turnkey installation",
+
+        "projects-title": "💼 Completed Projects",
+        "projects-subtitle": "Real examples of how we solve technical tasks for our clients.",
+        "p1-badge": "Logistics",
+        "p1-title": "Distribution Warehouse",
+        "proj-task": "Task:",
+        "proj-sol": "Solution:",
+        "p1-task": "Cover blind spots on the loading ramp and along the warehouse perimeter (Tashkent).",
+        "p1-sol": "Installed 32 Tiandy 4MP IP cameras with line-crossing analytics, pulled network, set up security post.",
+        "p2-badge": "Business Centers",
+        "p2-title": "Modern Company Office",
+        "p2-task": "Restrict unauthorized access to the server room and automate working time tracking for 120 employees.",
+        "p2-sol": "Integrated Hikvision ACS system with face recognition and thermography, set up HR reporting schedules.",
+        "p3-badge": "Infrastructure",
+        "p3-title": "Production Plant",
+        "p3-task": "Connect two workshops 800 meters apart into a single local network and video surveillance system.",
+        "p3-sol": "Laid optical line, installed media converters, SFP modules, and powerful UniFi switches.",
+
+        "reviews-title": "💬 Client Reviews",
+        "reviews-subtitle": "We are trusted with the security of business and property.",
+        "rev-1-text": "«We ordered IP video surveillance installation from WatchPoint for our warehouse complex. The team arrived for the survey the same day, selected great cameras. Installation was neat, remote phone access set up. Recommended!»",
+        "rev-1-author": "Farhod Sh.",
+        "rev-1-comp": "Logistics Center, Tashkent",
+        "rev-2-text": "«Contacted them to upgrade IT network and install biometric access control. Employee time tracking task fully solved. Hikvision terminals recognize faces instantly. Thanks to the engineers for the work.»",
+        "rev-2-author": "Elena V.",
+        "rev-2-comp": "IT Company / Office Center",
+        "rev-3-text": "«Great service and honest approach. Installed security alarm and perimeter video surveillance for a country house. Everything works without false alarms, support is always in touch. Real warranty.»",
+        "rev-3-author": "Anvar aka",
+        "rev-3-comp": "Private sector, Tashkent Region",
+
+        "faq-title": "❓ Frequently Asked Questions",
+        "faq-subtitle": "Answering key questions before starting cooperation.",
+        "faq-q1": "Do you work under an official contract and bank transfer (with VAT)?",
+        "faq-a1": "Yes, we are a legal entity. We conclude an official contract, provide a full package of closing documents, estimates, and work via bank transfer. All processes are transparent.",
+        "faq-q2": "Is remote viewing setup on phones included in the total cost?",
+        "faq-a2": "Yes, upon project handover, our engineers completely free of charge install official apps and set up remote access from smartphones, tablets, or computers for all responsible persons.",
+        "faq-q3": "How is archive depth (camera recording retention time) calculated?",
+        "faq-a3": "Archive depth is selected individually according to your security requirements (usually 14 to 30 days). We calculate the exact volume of specialized hard drives (HDD) based on camera resolution and motion detection recording.",
+
+        "contacts-title": "📞 Contacts & Location",
+        "contacts-subtitle": "Contact us for a detailed discussion of your technical specifications or to order a free survey visit.",
+        "contact-center": "WatchPoint Engineering Center:",
+        "contact-slogan": "🚀 We operate promptly with visits across the entire republic!",
+        "contact-hours-title": "Working Hours:",
+        "contact-hours-text": "Monday — Saturday, from 09:00 to 18:00.",
+        "btn-call": "Call Engineer",
+        "btn-tg": "Contact via Telegram",
+        "btn-wa": "Write on WhatsApp",
+        "btn-email": "Send Specs to Email",
+
+        "cta-box-title": "Order Free Survey 📐",
+        "cta-box-desc": "Our lead engineer will visit your facility, calculate camera viewing angles, select equipment specifications, and prepare an accurate estimate absolutely free.",
+        "cta-box-btn": "Get Project Estimate",
+
+        "seo-h4": "Professional Design and Installation of Security Systems in Uzbekistan",
+        "seo-p1": "Engineering company WatchPoint Security performs complex integration of low-voltage networks and digital control ecosystems throughout Tashkent, Tashkent region (including Chirchik, Almalyk, Angren) and other regions of the Republic of Uzbekistan. We specialize in designing high-precision IP video surveillance systems, cloud Wi-Fi/4G cameras, smart electronic locks, biometric access control (ACS), automatic turnstiles, perimeter security sensors, and IT infrastructure (LAN, fiber optic lines, server racks).",
+        "seo-p2": "Turnkey security systems design and installation with a 1-year warranty.",
+        "footer-text": "© 2026 WatchPoint Security. All rights reserved."
       },
       uz: {
         "nav-about": "Biz haqimizda",
@@ -918,7 +1288,193 @@
         "nav-projects": "Loyihalar",
         "nav-faq": "FAQ",
         "nav-contacts": "Aloqa",
-        "cta-btn": "Hisob so'rash"
+        "cta-btn": "Hisob so'rash",
+
+        "slide-1-desc": "Boshqalar ko'ra olmaydigan narsalarni ko'ramiz. O'zbekistonda ilg'or texnologiyalar ishonchli nazorati ostida.",
+        "slide-1-btn": "Tayyor to'plamni tanlash",
+        "slide-2-title": "Biznesingiz xavfsizligi",
+        "slide-2-desc": "Omborlar, ofislar va ishlab chiqarish uchun kalit ostida IP kameralar, SKUD terminallari va aqlli videoanalitikani o'rnatish.",
+        "slide-2-btn": "Xizmatlarimizni ko'rish",
+        "slide-3-title": "Rasmiy shartnoma va kafolat",
+        "slide-3-desc": "Rasmiy shartnoma, QQS bilan o'tkazma orqali ish, montaj uchun 1 yil kafolat va Toshkent bo'ylab bepul o'lchov.",
+        "slide-3-btn": "Bepul o'lchovga buyurtma berish",
+
+        "about-title": "🔎 Kompaniya haqida",
+        "about-desc": "WatchPoint Security — Toshkentdagi muhandislik kompaniyasi bo'lib, xavfsizlikning kompleks tizimlarini loyihalash, yetkazib berish va o'rnatishga ixtisoslashgan. Biz O'zbekiston Respublikasi bo'ylab sanoat obyektlari, logistika markazlari, tijorat ofislari va xususiy sektorni himoya qilish uchun ishonchli raqamli yechimlarni ishlab chiqamiz va joriy etamiz. 2026 yildan boshlab biz zamonaviy bulutli kameralar va elektron qulflar qatorini kengaytirgan holda xalqaro IoT tizimlari ishlab chiqaruvchisi Tech bilan hamkorlikni boshladik.",
+
+        "features-title": "💎 Nima uchun bizni tanlashadi",
+        "features-subtitle": "Biz qattiq B2B standartlariga yo'naltirilgan texnologik yechimlarni yaratamiz.",
+        "feat-1-title": "🛡️ 1 yil kafolat",
+        "feat-1-desc": "Tezkor texnik yordam chiqishi bilan barcha o'rnatilgan uskunalar va montaj ishlari uchun to'liq rasmiy kafolat taqdim etamiz.",
+        "feat-2-title": "📐 Bepul o'lchov",
+        "feat-2-desc": "Ko'rish burchaklari, ko'r zonalarni batafsil tahlil qilish va shaffof smeta tuzish uchun Toshkent va viloyat bo'ylab muhandisning bepul chiqishi.",
+        "feat-3-title": "💡 Sertifikatlangan brendlar",
+        "feat-3-desc": "Faqat bozor yetakchilarining sinovdan o'tgan, litsenziyalangan uskunalari bilan ishlaymiz. Proshivka xatoliklari va aloqa barqarorligi muammolari yo'q.",
+
+        "standards-title": "🛠️ Muhandislik montaj standartlari",
+        "standards-subtitle": "Videokuzatuv shunchaki kameralar emas, bu muhandislik tarmog'idir. Biz yillar davomida uzluksiz ishlashni kafolatlaydigan reglamentga qat'iy rioya qilamiz.",
+        "std-1-title": "⚡ GOST bo'yicha 100% mis kabel",
+        "std-1-desc": "Biz hech qachon yarim yilda qorayadigan va signalni yo'qotadigan arzon bimetallik (alyuminiy) kabel ishlatmaymiz. Faqat yuqori sifatli toza mis (UTP/FTP), muzlashlarsiz barqaror PoE quvvati va oqim tezligini ta'minlaydi.",
+        "std-2-title": "🔒 Kabel tarmoqlarini to'liq himoya qilish",
+        "std-2-desc": "Barcha aloqa liniyalari maxsus himoya kabellariga, PVX гофра yoki qattiq quvurlarga yotqiziladi. Sanoat obyektlarida metall lotinlarga o'rnatamiz. Bu tarmoqni kemiruvchilar, ultrabinafsha, namlik va mexanik zararlardan himoya qiladi.",
+        "std-3-title": "🌧️ Germetik kommutatsiya qutilari",
+        "std-3-desc": "Barcha tashqi ulagichlar, RJ-45 konnektorlari va qabul qiluvchilarni IP66 dan past bo'lmagan himoya darajasidagi taqsimlash qutilarida ishonchli izolyatsiya qilamiz. Qor, yomg'ir yoki Toshkent changi qisqa tutashuv keltirib chiqarmaydi.",
+        "std-4-title": "🗄️ Server shkaflarini markirovka qilish",
+        "std-4-desc": "Patch-panelga keladigan har bir kabel loyiha sxemasiga muvofiq markalanadi. Server shkafi ichidagi simlarni tartibli joylashtiramiz. Har qanday tizim administratori tarmoqni 5 daqiqada tushunib oladi.",
+
+        "services-title": "⚙️ Xizmatlarimiz va narxlar",
+        "services-subtitle": "Jahon texnologik yetakchilarining ilg'or uskunalarini kalit ostida integratsiya qilamiz.",
+        "srv-1-title": "📹 Videokuzatuv",
+        "srv-1-desc": "IP tizimlar va bulutli Wi-Fi/4G kameralarni loyihalash, aqlli kameralarni o'rnatish (ColorVu, gumbazli, PTZ), NVR registrar va videoanalitikani sozlash.",
+        "srv-1-price": "1 200 000 so'mdan",
+        "srv-2-title": "🔐 Aqlli smart qulflar",
+        "srv-2-desc": "Kvartiralar, kottejlar va ofislar uchun biometric elektron qulflarni o'rnatish. Face ID, barmoq izi, PIN-kod va smartfon orqali ochish.",
+        "srv-2-price": "1 800 000 so'mdan",
+        "srv-3-title": "🚪 Kirishni nazorat qilish (SKUD)",
+        "srv-3-desc": "Yuzni tanish terminallari, turniketlar, RFID o'quvchilar va elektromagnit qulflarni o'rnatish. Ish vaqtini hisobga olishni to'liq avtomatlashtirish.",
+        "srv-3-price": "1 500 000 so'mdan",
+        "srv-4-title": "💻 IT infratuzilma",
+        "srv-4-desc": "Strukturaviy kabel tarmoqlarini (SKT) o'rnatish, uzluksiz Wi-Fi, kommutatorlar, SFP modullar, optik yo'llar va server shkaflarini yig'ish.",
+        "srv-4-price": "2 000 000 so'mdan",
+
+        "jaify-badge": "Yangi yo'nalish • 2026 yildan",
+        "jaify-h2-part1": "bilan hamkorlik",
+        "jaify-desc": "2026 yildan boshlab WatchPoint Security xalqaro aqlli xavfsizlik tizimlari ishlab chiqaruvchisi Zhejiang JAIFY Co., Ltd. bilan hamkorlikni boshladi. Endi loyihalarimizda ushbu brendning zamonaviy bulutli kameralari va smart qulflari mavjud.",
+        "jaify-box1-title": "☁️ Ishonchli bulutli platforma",
+        "jaify-box1-desc": "Jaify o'zining R&D bazasini (3 ta ilmiy-tadqiqot markazi) rivojlantiradi va global bulutli serverlardan (AWS, Google Cloud) foydalanib, dunyo bo'ylab 100 milliondan ortiq foydalanuvchiga barqaror ishlaydi.",
+        "jaify-box1-li1": "✔ Dunyoning istalgan nuqtasidan muzlashlarsiz barqaror masofaviy kirish",
+        "jaify-box1-li2": "✔ Bulutda va 256 GB gacha TF kartada videoarxivni xavfsiz saqlash",
+        "jaify-box1-li3": "✔ Smartfonga darhol xavotirli push-bildirishnomalar (iOS / Android)",
+        "jaify-box2-title": "🧠 Aqlli ko'rish va Ssenariy AI",
+        "jaify-box2-desc": "Uskunalar uy, oila va biznes xavfsizligining aniq vazifalari uchun sun'iy intellekt algoritmlari bilan jihozlangan:",
+        "jaify-box2-li1-strong": "Perimetr nazorati (Outdoor):",
+        "jaify-box2-li1-text": "odamlar, mashinalar, hayvonlarni tanish va yong'inni erta aniqlash",
+        "jaify-box2-li2-strong": "Yaqinlarni parvarish qilish (Elderly/Child Care):",
+        "jaify-box2-li2-text": "keksalarning yiqilishini aniqlash va bolalar uchun xavfli zonalarni nazorat qilish",
+        "jaify-box2-li3-strong": "Xodimlarni nazorat qilish (Job Inspection):",
+        "jaify-box2-li3-text": "ish joyida mavjudligini qayd etish",
+        "jaify-box2-li4-strong": "AOV texnologiyasi va 2 ta obyektiv:",
+        "jaify-box2-li4-text": "H.265 kodek bilan ko'r zonasiz 24/7 uzluksiz yozuv",
+        "jaify-bottom-title": "Vazifalaringiz uchun kameralar va smart qulflar",
+        "jaify-bottom-desc": "Ikki tomonlama ovozli ichki buriluvchi (Pan&Tilt) kameralar, ob-havodan himoyalangan IP66/IP67 tashqi Wi-Fi va 4G kameralar, shuningdek smartfon orqali boshqariladigan zamonaviy elektron qulflarni tanlab o'rnatamiz.",
+        "jaify-btn1": " Kameralarni tanlash",
+        "jaify-btn2": "Smart qulflar",
+
+        "locks-title": "🔐 Smart qulflar — Kalitlarsiz xavfsizlik",
+        "locks-subtitle": "Loyihalarimizga Tech tomonidan intellektual elektron qulflarni integratsiya qilamiz. Uy va biznesingiz uchun ishonchli himoya va zamonaviy dizayn.",
+        "lock1-name": "Asosiy qulf modeli",
+        "lock1-desc": "Bir nechta ochish usullari, xavfsiz tutqich, barmoq izi bilan ochish, elektron qo'ng'iroq, 4*AA quvvat.",
+        "lock1-badge": "Asosiy to'plam",
+        "lock2-name": "Premium qora dizayn",
+        "lock2-desc": "Foydalanuvchilarni boshqarish, ovozli navigatsiya va Bluetooth tarmog'ini sozlash.",
+        "lock2-badge": "Uslub va qulaylik",
+        "lock3-name": "Video eshik ko'zchali qulf",
+        "lock3-desc": "Jaify ilovasi bilan integratsiya, ikki tomonlama domofon va bulutli xotira.",
+        "lock3-badge": "Xavfsizlik",
+        "lock4-name": "Kuchaytirilgan rigel mexanizmi",
+        "lock4-desc": "Xavotir bildirishnomalari, kirishni nazorat qilish va ruxsatlarni ulashish.",
+        "lock4-badge": "Himoya",
+        "lock5-name": "Litiy batareyali model",
+        "lock5-desc": "Wi-Fi va masofaviy nazoratni qo'llab-quvvatlaydigan sig'imli akkumulyatordan avtonom quvvat.",
+        "lock5-badge": "Energiya samaradorligi",
+        "lock6-name": "3D yuzni tanish flagmani",
+        "lock6-desc": "Katta 4.5 dyuymli OLED ekran, qo'lsiz kirish, Jaify ilovasi orqali videoqo'ng'iroq.",
+        "lock6-badge": "Flagman 2026",
+        "locks-specs-title": "⚙️ Qator texnik xususiyatlari",
+        "locks-specs-subtitle": "Obyektingiz uchun aqlli qulflarning asosiy va flagman modellarining batafsil tavsiflari.",
+        "locks-base-title": "🔒 Asosiy seriya",
+        "locks-base-text": "• Eshikni ochishning bir nechta usullari<br>• Barmoq izini ochish<br>• Xavfsiz tutqich va elektron qo'ng'iroq<br>• Foydalanuvchilarni boshqarish<br>• Bluetooth tarmoq va ovozli navigatsiya sozlamalari<br>• Avtonom quvvat: 4*AA batareya",
+        "locks-flag-title": "👑 Flagman seriyasi",
+        "locks-flag-text": "• 3D yuzni tanish va qo'lsiz kirish<br>• 4.5 dyuymli OLED ekran<br>• Jaify ilovasi orqali videoqo'ng'iroq<br>• Ikki tomonlama domofon + Bulutli xotira<br>• Wi-Fi moduli va litiy batareya zaryadlash bilan<br>• Xavotir bildirishnomalari va ruxsatlarni ulashish",
+        "locks-btn": "Eshigingizga mos smart qulfni tanlash",
+
+        "bundles-title": "📦 Tayyor «Kalit ostidagi» uskunalar to'plami",
+        "bundles-subtitle": "Barcha kerakli uskunalar, sarf materiallari va professional montaj narxga allaqachon kiritilgan.",
+        "b1-title": "«Start» to'plami",
+        "b1-sub": "Kichik ofis / do'kon uchun",
+        "b1-li1": "4× Gumbazli IP kameralar (2 MP, IR yoritish 30m gacha)",
+        "b1-li2": "1× Tarmoq videoregistratori NVR (4 kanal)",
+        "b1-li3": "1× Qattiq disk HDD 1 TB (2 haftagacha arxiv)",
+        "b1-li4": "1× PoE kommutator (Bitta kabel orqali quvvat va tarmoq)",
+        "b1-li5": "Sarf materiallari (UTP kabel, konnektorlar, qutilar)",
+        "b1-li6": "Montaj, sozlash va telefonda bepul sozlash",
+        "bundle-price-text": "Uskunalar + Kalit ostida ish",
+        "b-hit": "XIT",
+        "b2-title": "«Biznes» to'plami",
+        "b2-sub": "Omborlar, chakana savdo va restoranlar uchun",
+        "b2-li1": "8× Tashqi/gumbazli IP kameralar (4 MP, o'rnatilgan mikrofon)",
+        "b2-li2": "ColorVu / ColorMaker texnologiyasi (Kechasi rangli suratga olish)",
+        "b2-li3": "1× Videoregistrator NVR (8 kanal)",
+        "b2-li4": "1× Qattiq disk HDD 2 TB (Videokuzatuv uchun maxsus)",
+        "b2-li5": "1× PoE kommutator (9 port)",
+        "b2-li6": "Barcha kerakli sarf materiallari va himoya trassalari",
+        "b2-li7": "Montaj, ishga tushirish va masofaviy kirishni ulash",
+        "b3-title": "«Premial» to'plami",
+        "b3-sub": "Obyektni maksimal darajada himoya qilish",
+        "b3-li1": "4× Premium IP kameralar (4 MP, Smart-analitika AI)",
+        "b3-li2": "1× Tezkor buriluvchi PTZ kamera (25x zoom, avtotreking)",
+        "b3-li3": "Yuzni tanish va odamlar/transportni aniqlash tizimi",
+        "b3-li4": "1× Videoregistrator NVR (16 kanal) + HDD 4 TB",
+        "b3-li5": "1× Obyekt uchun uzluksiz UniFi Wi-Fi kirish nuqtasi",
+        "b3-li6": "Kompleks yuqori texnologiyali kalit ostida montaj",
+
+        "projects-title": "💼 Bajarilgan loyihalar",
+        "projects-subtitle": "Mijozlarimizning texnik vazifalarini qanday hal qilishimizning real misollari.",
+        "p1-badge": "Logistika",
+        "p1-title": "Taqsimot ombori",
+        "proj-task": "Vazifa:",
+        "proj-sol": "Yechim:",
+        "p1-task": "Yuk ortish rampasida va ombor hududi perimetrida ko'r zonalarni yopish (Toshkent).",
+        "p1-sol": "Chiziqlarni kesib o'tish tahliliga ega 32 ta Tiandy 4MP IP kamera o'rnatildi, tarmoq tortildi, qo'riqlash posti sozlindi.",
+        "p2-badge": "Biznes-markazlar",
+        "p2-title": "Kompaniyaning zamonaviy ofisi",
+        "p2-task": "Server xonasiga begonalarning kirishini cheklash va 120 nafar xodim uchun ish vaqtini hisobga olishni avtomatlashtirish.",
+        "p2-sol": "Yuzni tanish va termografiyaga ega Hikvision SKUD tizimi integratsiya qilindi, HR uchun hisobot grafiklari sozlindi.",
+        "p3-badge": "Infratuzilma",
+        "p3-title": "Ishlab chiqarish sexi",
+        "p3-task": "800 metr masofadagi ikki tsexni yagona lokal tarmoq va videokuzatuv tizimiga birlashtirish.",
+        "p3-sol": "Optik liniya yotqizildi, mediakonverterlar, SFP modullar va quvvatli UniFi kommutatorlari o'rnatildi.",
+
+        "reviews-title": "💬 Mijozlarimiz sharhlari",
+        "reviews-subtitle": "Bizga biznes va mulk xavfsizligini ishonib topshirishadi.",
+        "rev-1-text": "«WatchPoint-dan ombor majmuamizga IP videokuzatuv o'rnatishni buyurtma qildik. Yigitlar o'sha kuni o'lchovga kelishdi, zo'r kameralarni tanlashdi. Montajni ehtiyotkorlik bilan qilishdi, telefonda masofaviy kirishni sozlab berishdi. Tavsiya qilamiz!»",
+        "rev-1-author": "Farhod Sh.",
+        "rev-1-comp": "Logistika markazi, Toshkent",
+        "rev-2-text": "«IT tarmoqni modernizatsiya qilish va biometric kirishni nazorat qilishni o'rnatish uchun murojaat qildik. Xodimlarning ish vaqtini hisobga olish vazifasi to'liq hal qilindi. Hikvision terminallari yuzlarni darhol taniydi. Muhandislarga rahmat.»",
+        "rev-2-author": "Yelena V.",
+        "rev-2-comp": "IT kompaniya / Ofis markazi",
+        "rev-3-text": "«Ajoyib servis va halol yondashuv. Hovli uyi uchun qo'riqlash signalligi va perimetr videokuzatuvini o'rnatishdi. Hammasi xato signallarsiz ishlaydi, qo'llab-quvvatlash doim aloqada. Haqiqiy kafolat.»",
+        "rev-3-author": "Anvar aka",
+        "rev-3-comp": "Xususiy sektor, Toshkent viloyati",
+
+        "faq-title": "❓ Ko'p beriladigan savollar",
+        "faq-subtitle": "Birgalikda ishlashni boshlashdan oldin asosiy savollarga javob beramiz.",
+        "faq-q1": "Siz rasmiy shartnoma va o'tkazma (QQS bilan) bo'yicha ishlaysizmi?",
+        "faq-a1": "Ha, biz yuridik shaxsmiz. Rasmiy shartnoma tuzamiz, yopish hujjatlari, smetalarning to'liq paketini taqdim etamiz va o'tkazma orqali ishlaymiz. Barcha jarayonlar shaffof.",
+        "faq-q2": "Telefonlarda masofaviy ko'rishni sozlash umumiy narxga kiradimi?",
+        "faq-a2": "Ha, obyektni topshirish vaqtida muhandislarimiz barcha mas'ul shaxslar uchun rasmiy ilovalarni mutlaqo bepul o'rnatadilar va smartfon, planshet yoki kompyuterlardan masofaviy kirishni sozlaydilar.",
+        "faq-q3": "Arxiv chuqurligi (kameralar yozuvlarini saqlash vaqti) qanday hisoblanadi?",
+        "faq-a3": "Arxiv chuqurligi xavfsizlik talablaringizga qarab individual tanlanadi (odatda 14 dan 30 kungacha). Kameralar ruxsati va harakat datchigi bo'yicha yozuv asosida maxsus qattiq disklar (HDD) hajmini aniq hisoblaymiz.",
+
+        "contacts-title": "📞 Aloqa va manzil",
+        "contacts-subtitle": "Texnik topshirig'ingizni batafsil muhokama qilish yoki bepul o'lchovga buyurtma berish uchun biz bilan bog'laning.",
+        "contact-center": "WatchPoint muhandislik markazi:",
+        "contact-slogan": "🚀 Respublikaning barcha hududlariga chiqib tezkor ishlaymiz!",
+        "contact-hours-title": "Ish tartibi:",
+        "contact-hours-text": "Dushanba — Shanba, 09:00 dan 18:00 gacha.",
+        "btn-call": "Muhandisga qo'ng'iroq qilish",
+        "btn-tg": "Telegramda bog'lanish",
+        "btn-wa": "WhatsApp-ga yozish",
+        "btn-email": "TZ-ni Email-ga yuborish",
+
+        "cta-box-title": "Bepul o'lchovga buyurtma berish 📐",
+        "cta-box-desc": "Bosh muhandisimiz obyektingizga kelib, kameralarning ko'rish burchaklarini hisoblaydi, uskunalar spetsifikatsiyasini tanlaydi va aniq smetani mutlaqo bepul tuzadi.",
+        "cta-box-btn": "Loyiha hisobini olish",
+
+        "seo-h4": "O'zbekistonda xavfsizlik tizimlarini professional loyihalash va montaj qilish",
+        "seo-p1": "WatchPoint Security muhandislik kompaniyasi Toshkent, Toshkent viloyati (Chirchiq, Olmaliq, Angren shu jumladan) va O'zbekiston Respublikasining boshqa hududlari bo'ylab kuchsiz tarmoqlar va nazorat raqamli ekotizimlarini kompleks integratsiya qiladi. Biz yuqori aniqlikdagi IP videokuzatuv tizimlari, bulutli Wi-Fi/4G kameralar, aqlli elektron smart qulflar, biometric kirish nazorati (SKUD), avtomatik turniketlar, perimetrni qo'riqlash datchiklari va IT infratuzilmani loyihalashga ixtisoslashganmiz.",
+        "seo-p2": "1 yillik kafolat bilan kalit ostida xavfsizlik tizimlarini loyihalash va o'rnatish.",
+        "footer-text": "© 2026 WatchPoint Security. Barcha huquqlar himoyalangan."
       }
     };
 
@@ -929,7 +1485,7 @@
       document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-          element.textContent = translations[lang][key];
+          element.innerHTML = translations[lang][key];
         }
       });
     }
