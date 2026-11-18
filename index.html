@@ -364,7 +364,7 @@
     /* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
     @media (max-width: 1100px) {
       nav { padding: 0 15px; justify-content: space-between; height: 70px; }
-      .nav-menu { display: none; } /* Можно развернуть в гамбургер при необходимости */
+      .nav-menu { display: none; }
       body { padding-top: 70px; }
       #about, #features, #standards, #services, #jaify-partner, #smart-locks, #bundles, #projects, #reviews, #faq, #contacts { scroll-margin-top: 80px; }
     }
@@ -372,7 +372,7 @@
 </head>
 <body>
 
-  <!-- НОВАЯ ШАПКА САЙТА -->
+  <!-- НОВАЯ ШАПКА САЙТА С ПОДДЕРЖКОЙ ЯЗЫКОВ -->
   <nav>
     <a href="#home" class="nav-brand">
       <img src="logo.png" alt="WatchPoint Logo">
@@ -383,16 +383,16 @@
     </a>
 
     <ul class="nav-menu">
-      <li><a href="#about">О нас</a></li>
-      <li><a href="#features">Преимущества</a></li>
-      <li><a href="#standards">Стандарты</a></li>
-      <li><a href="#services">Услуги</a></li>
+      <li><a href="#about" data-i18n="nav-about">О нас</a></li>
+      <li><a href="#features" data-i18n="nav-features">Преимущества</a></li>
+      <li><a href="#standards" data-i18n="nav-standards">Стандарты</a></li>
+      <li><a href="#services" data-i18n="nav-services">Услуги</a></li>
       <li><a href="#jaify-partner"><img src="jaify-logo.png.png" alt="Jaify" class="jaify-inline-nav"> 2026</a></li>
-      <li><a href="#smart-locks">Смарт-замки</a></li>
-      <li><a href="#bundles">Комплекты</a></li>
-      <li><a href="#projects">Проекты</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contacts">Контакты</a></li>
+      <li><a href="#smart-locks" data-i18n="nav-locks">Смарт-замки</a></li>
+      <li><a href="#bundles" data-i18n="nav-bundles">Комплекты</a></li>
+      <li><a href="#projects" data-i18n="nav-projects">Проекты</a></li>
+      <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
+      <li><a href="#contacts" data-i18n="nav-contacts">Контакты</a></li>
     </ul>
 
     <div class="nav-actions">
@@ -401,7 +401,7 @@
         <button class="lang-btn active" onclick="setLang('ru')">RU</button>
         <button class="lang-btn" onclick="setLang('uz')">UZ</button>
       </div>
-      <a href="https://t.me/watchpointcctv24" target="_blank" class="nav-cta-btn">Запросить расчёт</a>
+      <a href="https://t.me/watchpointcctv24" target="_blank" class="nav-cta-btn" data-i18n="cta-btn">Запросить расчёт</a>
     </div>
   </nav>
 
@@ -882,11 +882,56 @@
   <button id="toTop" aria-label="Наверх">↑</button>
 
   <script id="slider-logic">
-    // Интерактив для переключения языков
+    // Словарь переводов для меню и кнопки
+    const translations = {
+      ru: {
+        "nav-about": "О нас",
+        "nav-features": "Преимущества",
+        "nav-standards": "Стандарты",
+        "nav-services": "Услуги",
+        "nav-locks": "Смарт-замки",
+        "nav-bundles": "Комплекты",
+        "nav-projects": "Проекты",
+        "nav-faq": "FAQ",
+        "nav-contacts": "Контакты",
+        "cta-btn": "Запросить расчёт"
+      },
+      en: {
+        "nav-about": "About Us",
+        "nav-features": "Features",
+        "nav-standards": "Standards",
+        "nav-services": "Services",
+        "nav-locks": "Smart Locks",
+        "nav-bundles": "Bundles",
+        "nav-projects": "Projects",
+        "nav-faq": "FAQ",
+        "nav-contacts": "Contacts",
+        "cta-btn": "Request Quote"
+      },
+      uz: {
+        "nav-about": "Biz haqimizda",
+        "nav-features": "Afzalliklar",
+        "nav-standards": "Standartlar",
+        "nav-services": "Xizmatlar",
+        "nav-locks": "Smart qulflar",
+        "nav-bundles": "To'plamlar",
+        "nav-projects": "Loyihalar",
+        "nav-faq": "FAQ",
+        "nav-contacts": "Aloqa",
+        "cta-btn": "Hisob so'rash"
+      }
+    };
+
     function setLang(lang) {
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
-      // Здесь в будущем можно подключить смену локализации при необходимости
+
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
     }
 
     let currentSlideIdx = 0;
